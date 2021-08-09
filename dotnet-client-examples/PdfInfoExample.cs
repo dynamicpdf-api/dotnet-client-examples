@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace dotnet_client_examples
+namespace DynamicPdfCloudApiClientExamples
 {
     public static class PdfInfoExample
     {

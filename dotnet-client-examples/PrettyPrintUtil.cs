@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace dotnet_client_examples
+namespace DynamicPdfCloudApiClientExamples
 {
     class PrettyPrintUtil
     {

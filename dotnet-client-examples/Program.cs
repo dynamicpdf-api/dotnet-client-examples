@@ -1,7 +1,7 @@
 ﻿using System;
 using DynamicPDF.Api;
 
-namespace dotnet_client_examples
+namespace DynamicPdfCloudApiClientExamples
 {
    
 
@@ -10,11 +10,11 @@ namespace dotnet_client_examples
 
     class Program
     {
-        // replace with your key, only for debug use, you should always keep keys safe.
-        static String key = "DP.poEtD7F5tD1Ulp3qPcolUFaCcQFxWOvuNUqm/WragUdOSaAesnu3L6XE";
+        // first argument is the API Key
+
         static void Main(string[] args)
         {
-            PdfInfoExample.PdfInfoExampleOne(key);
+            PdfInfoExample.PdfInfoExampleOne(args[0]);
         }
     }
 }
