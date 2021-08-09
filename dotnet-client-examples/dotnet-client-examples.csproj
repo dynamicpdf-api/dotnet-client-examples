@@ -6,4 +6,15 @@
     <RootNamespace>dotnet_client_examples</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="106.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DynamicPDF.Api">
+      <HintPath>..\..\dotnet-client\DynamicPDF.Api\bin\Debug\netstandard2.0\DynamicPDF.Api.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
