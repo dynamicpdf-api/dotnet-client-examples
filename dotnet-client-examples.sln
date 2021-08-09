@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-client-examples", "dotnet-client-examples\dotnet-client-examples.csproj", "{EC19CC76-A225-4344-89D0-DC69AB6364A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicPdfCloudApiClientExamples", "dotnet-client-examples\DynamicPdfCloudApiClientExamples.csproj", "{EC19CC76-A225-4344-89D0-DC69AB6364A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
