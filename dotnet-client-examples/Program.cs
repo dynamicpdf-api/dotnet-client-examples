@@ -15,6 +15,20 @@ namespace DynamicPdfCloudApiClientExamples
         static void Main(string[] args)
         {
             PdfInfoExample.PdfInfoExampleOne(args[0]);
+            PrintDivider();
+            ImageInfoExample.ImageInfoExampleOne(args[0]);
+            PrintDivider();
+            ImageInfoExample.ImageInfoExampleTwo(args[0]);
+            PrintDivider();
+            PdfTextExample.PdfInfoExampleOne(args[0]);
+            PrintDivider();
+            PdfXmpExample.PdfXmpExampleOne(args[0]);
+            PdfExample.PdfExampleOne(args[0]);
+        }
+
+        static void PrintDivider()
+        {
+            Console.WriteLine("============================================");
         }
     }
 }
