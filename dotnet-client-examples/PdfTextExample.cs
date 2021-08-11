@@ -8,9 +8,9 @@ namespace DynamicPdfCloudApiClientExamples
     class PdfTextExample
     {
         // simple example from Getting Started - pdf-text
-        public static void PdfInfoExampleOne(String key)
+        public static void PdfInfoExampleOne(String key, String basePath)
         {
-            PdfResource resource = new PdfResource(@"c:/holding/pdf-text/fw4.pdf");
+            PdfResource resource = new PdfResource(basePath + "/fw4.pdf");
             PdfText pdfText = new PdfText(resource);
             pdfText.ApiKey = key;
             PdfTextResponse response = pdfText.Process();

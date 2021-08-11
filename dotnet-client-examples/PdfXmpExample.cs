@@ -7,9 +7,9 @@ namespace DynamicPdfCloudApiClientExamples
 {
     class PdfXmpExample
     {
-        public static void PdfXmpExampleOne(String apiKey)
+        public static void PdfXmpExampleOne(String apiKey, String basePath)
         {
-            PdfResource resource = new PdfResource(@"c:/holding/pdf-text/fw4.pdf");
+            PdfResource resource = new PdfResource(basePath + "/fw4.pdf");
             PdfXmp pdfXmp = new PdfXmp(resource);
             pdfXmp.ApiKey = apiKey;
             XmlResponse response = pdfXmp.Process();

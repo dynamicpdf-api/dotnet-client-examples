@@ -8,9 +8,9 @@ namespace DynamicPdfCloudApiClientExamples
     public static class PdfInfoExample
     {
         // simple example from Getting Started - pdf-info
-        public static void PdfInfoExampleOne(String key)
+        public static void PdfInfoExampleOne(String key, String basePath)
         {
-            PdfResource resource = new PdfResource(@"c:/holding/pdf-text/fw4.pdf");
+            PdfResource resource = new PdfResource(basePath + "/fw4.pdf");
             PdfInfo pdfInfo = new PdfInfo(resource);
             pdfInfo.ApiKey = key;
             PdfInfoResponse response = pdfInfo.Process();
