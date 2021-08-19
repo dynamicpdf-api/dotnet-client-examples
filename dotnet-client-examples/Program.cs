@@ -1,12 +1,10 @@
 ﻿using System;
 using DynamicPDF.Api;
+using DynamicPdfCloudApiClientExamples.instructions;
 
 namespace DynamicPdfCloudApiClientExamples
 {
    
-
-    // NEVER INCLUDE YOUR KEY VALUE IN A GITHUB REPOSITORY.
-    // Assumes the base url of api.dynamicpdf.com
 
     class Program
     {
@@ -14,20 +12,29 @@ namespace DynamicPdfCloudApiClientExamples
 
         static void Main(string[] args)
         {
-            
+
             //PdfInfoExample.PdfInfoExampleOne(args[0], args[1]);
-           // PrintDivider();
+            // PrintDivider();
             //ImageInfoExample.ImageInfoExampleOne(args[0], args[1]);
-           // PrintDivider();
-           // ImageInfoExample.ImageInfoExampleTwo(args[0], args[1]);
-           // PrintDivider();
-           // PdfTextExample.PdfInfoExampleOne(args[0], args[1]);
-           // PrintDivider();
+            // PrintDivider();
+            // ImageInfoExample.ImageInfoExampleTwo(args[0], args[1]);
+            // PrintDivider();
+            // PdfTextExample.PdfInfoExampleOne(args[0], args[1]);
+            // PrintDivider();
             //PdfXmpExample.PdfXmpExampleOne(args[0], args[1]);
-           //PdfExample.PdfExampleOne(args[0], args[1]);
-           // PrintDivider();
-            DlexLayoutExample.DlexLayoutExampleOne(args[0], args[1]);
+            //PdfExample.PdfExampleOne(args[0], args[1]);
+            //PrintDivider();
+            // DlexLayoutExample.DlexLayoutExampleOne(args[0], args[1]);
+            Program.DoInstructionsExamples(args);
         }
+
+        static void DoInstructionsExamples(string[] args)
+        {
+           InstructionsExample.DemoInstructions(args);
+ 
+        }
+
+
 
         static void PrintDivider()
         {

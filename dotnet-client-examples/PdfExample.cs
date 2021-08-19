@@ -24,8 +24,6 @@ namespace DynamicPdfCloudApiClientExamples
             pageInput.Elements.Add(pageNumberingElement);
             PdfResponse pdfResponse = pdf.Process();
             File.WriteAllBytes(basePath + "/pageExample.pdf", pdfResponse.Content);
-
-
         }
     }
 }
