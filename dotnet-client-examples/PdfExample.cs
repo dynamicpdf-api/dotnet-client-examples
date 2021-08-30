@@ -23,7 +23,7 @@ namespace DynamicPdfCloudApiClientExamples
             pageNumberingElement.FontSize = 24;
             pageInput.Elements.Add(pageNumberingElement);
             PdfResponse pdfResponse = pdf.Process();
-            File.WriteAllBytes(basePath + "/pageExample.pdf", pdfResponse.Content);
+            File.WriteAllBytes(basePath + "/output/pageExample.pdf", pdfResponse.Content);
         }
     }
 }
