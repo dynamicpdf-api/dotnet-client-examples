@@ -10,6 +10,7 @@ namespace DynamicPdfCloudApiClientExamples.instructions
     class InstructionsExample
     {
 
+
 		public static Pdf MergeOptions(String basePath)
         {
 			String cloudResource = "samples/shared/pdf/documentA.pdf";
@@ -24,6 +25,7 @@ namespace DynamicPdfCloudApiClientExamples.instructions
 
 			PdfResource pdfResource = new PdfResource(fileResource);
 			pdf.AddPdf(pdfResource);
+			return pdf;
 		}
 
 		public static Pdf MergingExample(String basePath)
@@ -70,6 +72,95 @@ namespace DynamicPdfCloudApiClientExamples.instructions
 
 		}
 
+		public static Pdf AddOutlinesExistingPdf(String basePath)
+		{
+			Pdf pdf = new Pdf();
+			pdf.Author = "John Doe";
+			pdf.Title = "Existing Pdf Example";
+
+			PdfResource resource1 = new PdfResource(basePath + "/DocumentA100.pdf");
+			PdfInput input1 = pdf.AddPdf(resource1);
+			input1.Id = "document2";
+
+			PdfResource resource2 = new PdfResource(basePath + "/Invoice.pdf");
+			PdfInput input2 = pdf.AddPdf(resource2);
+			input2.Id = "invoice";
+
+			Outline rootOutline = new Outline("Root Outline");
+			rootOutline.Expanded = true;
+
+			Outline outline1 = new Outline("DocumentA 100");
+			outline1.Expanded = true;
+
+			GoToAction linkTo2 = new GoToAction(input1);
+			linkTo2.PageOffset = 0;
+			linkTo2.PageZoom = PageZoom.FitPage;
+			outline1.Action = linkTo2;
+
+			Outline outline2 = new Outline("Invoice");
+			outline2.Expanded = true;
+
+			GoToAction linkTo = new GoToAction(input2);
+			outline2.Action = linkTo;
+
+			rootOutline.Children.Add(outline1);
+			rootOutline.Children.Add(outline2);
+
+			pdf.Outlines.Add(rootOutline);
+			return pdf;
+
+		}
+
+		public static Pdf AddOutlinesForNewPdf()
+		{
+			String name = "TextElement";
+			Pdf pdf = new Pdf();
+			pdf.Author = "John Doe";
+			pdf.Title = "Sample Pdf";
+
+			PageInput pageInput = pdf.AddPage();
+			pageInput.Id = "page1";
+			TextElement element = new TextElement("Hello World 1", ElementPlacement.TopCenter);
+			pageInput.Elements.Add(element);
+
+			PageInput pageInput1 = pdf.AddPage();
+			pageInput1.Id = "page2";
+			TextElement element1 = new TextElement("Hello World 2", ElementPlacement.TopCenter);
+			pageInput1.Elements.Add(element1);
+
+			PageInput pageInput2 = pdf.AddPage();
+			pageInput2.Id = "page3";
+			TextElement element2 = new TextElement("Hello World 3", ElementPlacement.TopCenter);
+			pageInput2.Elements.Add(element2);
+
+
+			Outline rootOutline = new Outline("Root Outline");
+			rootOutline.Expanded = true;
+
+			Outline outline = new Outline("Page 1");
+			outline.Expanded = true;
+			GoToAction linkTo = new GoToAction(pageInput);
+			outline.Action = linkTo;
+
+			Outline outline2 = new Outline("Page 2");
+			outline2.Expanded = true;
+			GoToAction linkTo1 = new GoToAction(pageInput1);
+			outline2.Action = linkTo1;
+
+			Outline outline3 = new Outline("Page 3");
+			outline3.Expanded = true;
+			GoToAction linkTo3 = new GoToAction(pageInput2);
+			outline3.Action = linkTo3;
+
+			rootOutline.Children.Add(outline);
+			rootOutline.Children.Add(outline2);
+			rootOutline.Children.Add(outline3);
+
+			pdf.Outlines.Add(rootOutline);
+
+			return pdf;
+		}
+
 		public static void DemoInstructions(String[] args)
 		{
 			Pdf exampleOne = InstructionsExample.topLevelMetaData();
@@ -81,6 +172,16 @@ namespace DynamicPdfCloudApiClientExamples.instructions
 
 			Pdf exampleFour = InstructionsExample.FormFieldsExample();
 			InstructionsExample.printOut(exampleFour, args[0], args[2], "c-sharp-fonts.pdf");
+
+			Pdf exampleFive = InstructionsExample.MergeOptions(args[2]);
+			InstructionsExample.printOut(exampleFive, args[0], args[2], "c-sharp-merge-options.pdf");
+
+			Pdf exampleSix = InstructionsExample.AddOutlinesExistingPdf(args[2]);
+			InstructionsExample.printOut(exampleSix, args[0], args[2], "c-sharp-outline-existing.pdf");
+
+			Pdf exampleSeven = InstructionsExample.AddOutlinesForNewPdf();
+			InstructionsExample.printOut(exampleSeven, args[0], args[2], "c-sharp-outline-create.pdf");
+
 		}
 
 		public static Pdf topLevelMetaData()

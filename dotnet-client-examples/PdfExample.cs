@@ -16,8 +16,7 @@ namespace DynamicPdfCloudApiClientExamples
             pdf.Author = "John Doe";
             pdf.Title = "My Blank PDF Page";
             PageInput pageInput = pdf.AddPage(1008, 612);
-            PageNumberingElement pageNumberingElement = 
-                new PageNumberingElement("1", ElementPlacement.TopRight);
+            PageNumberingElement pageNumberingElement = new PageNumberingElement("1", ElementPlacement.TopRight);
             pageNumberingElement.Color = RgbColor.Red;
             pageNumberingElement.Font = Font.Courier;
             pageNumberingElement.FontSize = 24;
