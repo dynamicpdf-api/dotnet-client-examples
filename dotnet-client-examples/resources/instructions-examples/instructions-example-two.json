@@ -1,0 +1,187 @@
+{
+  "ReportName": "Monthly Beverage Order List",
+  "Date": "09/21/2021",
+  "Author": "John Doe",
+  "Coffee": [
+    {
+      "ProductID": 568,
+      "Type": "Arabica",
+      "Variety": "Arusha",
+      "Price": 7.99
+    },
+    {
+      "ProductID": 120,
+      "Type": "Arabica",
+      "Variety": "Blue Mountain",
+      "Price": 12.21
+    },
+    {
+      "ProductID": 235,
+      "Type": "Robusta",
+      "Variety": "Italian Espresso",
+      "Price": 15.22
+    },
+    {
+      "ProductID": 568,
+      "Type": "Arabica",
+      "Variety": "Arusha",
+      "Price": 7.99
+    },
+    {
+      "ProductID": 120,
+      "Type": "Arabica",
+      "Variety": "Blue Mountain",
+      "Price": 12.21
+    },
+    {
+      "ProductID": 235,
+      "Type": "Robusta",
+      "Variety": "Italian Espresso",
+      "Price": 15.22
+    },
+    {
+      "ProductID": 568,
+      "Type": "Arabica",
+      "Variety": "Arusha",
+      "Price": 7.99
+    },
+    {
+      "ProductID": 120,
+      "Type": "Arabica",
+      "Variety": "Blue Mountain",
+      "Price": 12.21
+    },
+    {
+      "ProductID": 235,
+      "Type": "Robusta",
+      "Variety": "Italian Espresso",
+      "Price": 15.22
+    },
+    {
+      "ProductID": 568,
+      "Type": "Arabica",
+      "Variety": "Arusha",
+      "Price": 7.99
+    },
+    {
+      "ProductID": 120,
+      "Type": "Arabica",
+      "Variety": "Blue Mountain",
+      "Price": 12.21
+    },
+    {
+      "ProductID": 235,
+      "Type": "Robusta",
+      "Variety": "Italian Espresso",
+      "Price": 15.22
+    },
+    {
+      "ProductID": 568,
+      "Type": "Arabica",
+      "Variety": "Arusha",
+      "Price": 7.99
+    },
+    {
+      "ProductID": 120,
+      "Type": "Arabica",
+      "Variety": "Blue Mountain",
+      "Price": 12.21
+    },
+    {
+      "ProductID": 235,
+      "Type": "Robusta",
+      "Variety": "Italian Espresso",
+      "Price": 15.22
+    },
+    {
+      "ProductID": 568,
+      "Type": "Arabica",
+      "Variety": "Arusha",
+      "Price": 7.99
+    },
+    {
+      "ProductID": 120,
+      "Type": "Arabica",
+      "Variety": "Blue Mountain",
+      "Price": 12.21
+    },
+    {
+      "ProductID": 235,
+      "Type": "Robusta",
+      "Variety": "Italian Espresso",
+      "Price": 15.22
+    },
+    {
+      "ProductID": 568,
+      "Type": "Arabica",
+      "Variety": "Arusha",
+      "Price": 7.99
+    },
+    {
+      "ProductID": 120,
+      "Type": "Arabica",
+      "Variety": "Blue Mountain",
+      "Price": 12.21
+    },
+    {
+      "ProductID": 235,
+      "Type": "Robusta",
+      "Variety": "Italian Espresso",
+      "Price": 15.22
+    },
+    {
+      "ProductID": 568,
+      "Type": "Arabica",
+      "Variety": "Arusha",
+      "Price": 7.99
+    },
+    {
+      "ProductID": 120,
+      "Type": "Arabica",
+      "Variety": "Blue Mountain",
+      "Price": 12.21
+    },
+    {
+      "ProductID": 235,
+      "Type": "Robusta",
+      "Variety": "Italian Espresso",
+      "Price": 15.22
+    },
+    {
+      "ProductID": 568,
+      "Type": "Arabica",
+      "Variety": "Arusha",
+      "Price": 7.99
+    },
+    {
+      "ProductID": 120,
+      "Type": "Arabica",
+      "Variety": "Blue Mountain",
+      "Price": 12.21
+    },
+    {
+      "ProductID": 235,
+      "Type": "Robusta",
+      "Variety": "Italian Espresso",
+      "Price": 15.22
+    },
+    {
+      "ProductID": 568,
+      "Type": "Arabica",
+      "Variety": "Arusha",
+      "Price": 7.99
+    },
+    {
+      "ProductID": 120,
+      "Type": "Arabica",
+      "Variety": "Blue Mountain",
+      "Price": 12.21
+    },
+    {
+      "ProductID": 235,
+      "Type": "Robusta",
+      "Variety": "Italian Espresso",
+      "Price": 15.22
+    }
+  ]
+}
