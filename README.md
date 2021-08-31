@@ -10,7 +10,7 @@ After opening the application in Visual Studio, add following runtime parameters
 args[0] := <api-key> args[1] := <base-path-endpoints> args[2] := <base-path-instructions>
 ```
 
-## Resources
+### Resources
 
 The needed local resources are contained in the `resources` folder in this project. The needed resources in the DynamicPdf Cloud API are contained in the `samples/shared` sub-folders.
 
