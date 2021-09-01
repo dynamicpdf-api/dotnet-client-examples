@@ -78,85 +78,49 @@ namespace DynamicPdfCloudApiClientExamples.instructions
 			pdf.Author = "John Doe";
 			pdf.Title = "Existing Pdf Example";
 
-			PdfResource resource1 = new PdfResource(basePath + "/DocumentA100.pdf");
+			PdfResource resource = new PdfResource(basePath + "/AllPageElements.pdf");
+			PdfInput input = pdf.AddPdf(resource);
+			input.Id = "AllPageElements";
+			pdf.Inputs.Add(input);
+
+			PdfResource resource1 = new PdfResource(basePath + "/outline-existing.pdf");
 			PdfInput input1 = pdf.AddPdf(resource1);
-			input1.Id = "document2";
+			input1.Id = "outlineDoc1";
+			pdf.Inputs.Add(input1);
 
-			PdfResource resource2 = new PdfResource(basePath + "/Invoice.pdf");
-			PdfInput input2 = pdf.AddPdf(resource2);
-			input2.Id = "invoice";
-
-			Outline rootOutline = new Outline("Root Outline");
+			Outline rootOutline = pdf.Outlines.Add("Imported Outline");
 			rootOutline.Expanded = true;
 
-			Outline outline1 = new Outline("DocumentA 100");
-			outline1.Expanded = true;
+			rootOutline.Children.AddPdfOutlines(input);
+			rootOutline.Children.AddPdfOutlines(input1);
 
-			GoToAction linkTo2 = new GoToAction(input1);
-			linkTo2.PageOffset = 0;
-			linkTo2.PageZoom = PageZoom.FitPage;
-			outline1.Action = linkTo2;
-
-			Outline outline2 = new Outline("Invoice");
-			outline2.Expanded = true;
-
-			GoToAction linkTo = new GoToAction(input2);
-			outline2.Action = linkTo;
-
-			rootOutline.Children.Add(outline1);
-			rootOutline.Children.Add(outline2);
-
-			pdf.Outlines.Add(rootOutline);
 			return pdf;
 
 		}
 
 		public static Pdf AddOutlinesForNewPdf()
 		{
-			String name = "TextElement";
 			Pdf pdf = new Pdf();
 			pdf.Author = "John Doe";
 			pdf.Title = "Sample Pdf";
 
 			PageInput pageInput = pdf.AddPage();
-			pageInput.Id = "page1";
 			TextElement element = new TextElement("Hello World 1", ElementPlacement.TopCenter);
 			pageInput.Elements.Add(element);
 
 			PageInput pageInput1 = pdf.AddPage();
-			pageInput1.Id = "page2";
 			TextElement element1 = new TextElement("Hello World 2", ElementPlacement.TopCenter);
 			pageInput1.Elements.Add(element1);
 
 			PageInput pageInput2 = pdf.AddPage();
-			pageInput2.Id = "page3";
 			TextElement element2 = new TextElement("Hello World 3", ElementPlacement.TopCenter);
 			pageInput2.Elements.Add(element2);
 
+			Outline rootOutline = pdf.Outlines.Add("Root Outline");
 
-			Outline rootOutline = new Outline("Root Outline");
-			rootOutline.Expanded = true;
-
-			Outline outline = new Outline("Page 1");
-			outline.Expanded = true;
-			GoToAction linkTo = new GoToAction(pageInput);
-			outline.Action = linkTo;
-
-			Outline outline2 = new Outline("Page 2");
-			outline2.Expanded = true;
-			GoToAction linkTo1 = new GoToAction(pageInput1);
-			outline2.Action = linkTo1;
-
-			Outline outline3 = new Outline("Page 3");
-			outline3.Expanded = true;
-			GoToAction linkTo3 = new GoToAction(pageInput2);
-			outline3.Action = linkTo3;
-
-			rootOutline.Children.Add(outline);
-			rootOutline.Children.Add(outline2);
-			rootOutline.Children.Add(outline3);
-
-			pdf.Outlines.Add(rootOutline);
+			rootOutline.Children.Add("Page 1", pageInput);
+			rootOutline.Children.Add("Page 2", pageInput1);
+			rootOutline.Children.Add("Page 3", pageInput2);
 
 			return pdf;
 		}
@@ -181,6 +145,9 @@ namespace DynamicPdfCloudApiClientExamples.instructions
 
 			Pdf exampleSeven = InstructionsExample.AddOutlinesForNewPdf();
 			InstructionsExample.printOut(exampleSeven, args[0], args[2], "c-sharp-outline-create.pdf");
+
+			Pdf exampleEight = InstructionsExample.BarcodeExample(args[2]);
+			InstructionsExample.printOut(exampleEight, args[0], args[2], "c-sharp-barcode.pdf");
 
 		}
 
@@ -270,6 +237,25 @@ namespace DynamicPdfCloudApiClientExamples.instructions
 			return pdf;
 		}
 
+		public static Pdf BarcodeExample(String basePath)
+        {
+
+			Pdf pdf = new Pdf();
+			pdf.Author = "John Doe";
+			pdf.Title = "Barcode Example";
+
+			PdfResource resource = new PdfResource(basePath + "/DocumentA100.pdf");
+			PdfInput input = new PdfInput(resource);
+			pdf.Inputs.Add(input);
+
+			Template template = new Template("Temp1");
+
+			AztecBarcodeElement element = new AztecBarcodeElement("Hello World", 0, 0);
+			template.Elements.Add(element);
+			input.Template = template;
+			return pdf;
+		}
+
 		public static void printOut(Pdf pdf, String apiKey, String basePath, String outputFile)
 		{
 			pdf.ApiKey = apiKey;
@@ -281,7 +267,7 @@ namespace DynamicPdfCloudApiClientExamples.instructions
 			}
 			else
 			{
-				Console.WriteLine(PrettyPrintUtil.JsonPrettify(pdf.GetInstructions()));
+				Console.WriteLine(PrettyPrintUtil.JsonPrettify(pdf.GetInstructonsJson()));
 				Console.WriteLine("==================================================================");
 				File.WriteAllBytes(basePath + "/output/" + outputFile, response.Content);
 			}
