@@ -10,6 +10,21 @@ namespace DynamicPdfCloudApiClientExamples.instructions
     class InstructionsExample
     {
 
+		public static Pdf TemplateExample(String basePath)
+        {
+			Pdf pdf = new Pdf();
+			pdf.Author = "John User";
+			pdf.Title = "Template Example One";
+			PdfResource resource = new PdfResource(basePath + "/DocumentA100.pdf");
+			PdfInput input = new PdfInput(resource);
+			pdf.Inputs.Add(input);
+
+			Template template = new Template("Temp1");
+			TextElement element = new TextElement("Hello World", ElementPlacement.TopCenter);
+			template.Elements.Add(element);
+			input.Template = template;
+			return pdf;
+		}
 
 		public static Pdf MergeOptions(String basePath)
         {
@@ -149,6 +164,9 @@ namespace DynamicPdfCloudApiClientExamples.instructions
 			Pdf exampleEight = InstructionsExample.BarcodeExample(args[2]);
 			InstructionsExample.printOut(exampleEight, args[0], args[2], "c-sharp-barcode.pdf");
 
+			Pdf exampleNine = InstructionsExample.TemplateExample(args[2]);
+			InstructionsExample.printOut(exampleNine, args[0], args[2], "c-sharp-template.pdf");
+
 		}
 
 		public static Pdf topLevelMetaData()
@@ -250,7 +268,7 @@ namespace DynamicPdfCloudApiClientExamples.instructions
 
 			Template template = new Template("Temp1");
 
-			AztecBarcodeElement element = new AztecBarcodeElement("Hello World", 0, 0);
+			AztecBarcodeElement element = new AztecBarcodeElement("Hello World", ElementPlacement.TopCenter, 0, 500);
 			template.Elements.Add(element);
 			input.Template = template;
 			return pdf;
