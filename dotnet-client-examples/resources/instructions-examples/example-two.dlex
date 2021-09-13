@@ -1,0 +1,35 @@
+<document xmlns="http://www.dynamicpdf.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dynamicpdf.com DLEX12.xsd" version="1.2" author="" keywords="" subject="" title="" id="Document1">
+  <report id="Report1" dataName="Coffee" pageSize="letter" pageOrientation="portrait" leftMargin="50" topMargin="50" rightMargin="50" bottomMargin="50">
+    <template id="Template1"/>
+    <header id="Header1" height="25">
+      <label id="Label1" x="10" y="2" width="100" height="14" underline="false" text="Product ID"/>
+      <label id="Label2" x="130" y="2" width="136" height="14" underline="false" text="Variety"/>
+      <label id="Label3" x="285" y="2" width="100" height="14" underline="false" text="Coffee Type"/>
+      <label id="Label4" x="400" y="2" width="100" height="14" align="right" underline="false" text="Price Per Pound"/>
+      <line id="Line2" x1="10" y1="20" x2="501" y2="21"/>
+    </header>
+    <detail id="Detail1" autoSplit="false" height="20">
+      <recordBox id="RecordBox3" x="10" y="3" width="100" height="14" underline="false" autoLeading="true" cleanParagraphBreaks="true" expandable="false" splittable="false" dataName="ProductID"/>
+      <recordBox id="RecordBox4" x="130" y="3" width="136" height="14" underline="false" autoLeading="true" cleanParagraphBreaks="true" expandable="false" splittable="false" dataName="Variety"/>
+      <recordBox id="RecordBox5" x="285" y="2" width="100" height="14" underline="false" autoLeading="true" cleanParagraphBreaks="true" expandable="false" splittable="false" dataName="Type"/>
+      <recordArea id="RecordArea2" x="400" y="2" width="100" height="14" align="right" underline="false" autoLeading="true" cleanParagraphBreaks="true" expandable="false" splittable="false">
+        <text>$#Price#</text>
+      </recordArea>
+    </detail>
+    <footer id="Footer1" height="25">
+      <line id="Line3" x1="10" y1="3" x2="500" y2="2"/>
+      <recordArea id="RecordArea3" x="10" y="7" width="192" height="14" font="HelveticaOblique" fontSize="10" underline="false" autoLeading="true" cleanParagraphBreaks="true" expandable="false" splittable="false">
+        <text>Report created by #Author#</text>
+      </recordArea>
+    </footer>
+  </report>
+  <page id="Page1" pageSize="letter" pageOrientation="portrait" leftMargin="50" topMargin="50" rightMargin="50" bottomMargin="50">
+    <image id="Image1" x="126" y="111" width="255" height="195" path="samples/shared/coffee.jpg"/>
+    <line id="Line1" x1="205" y1="328" x2="305" y2="328"/>
+    <recordBox id="RecordBox1" x="39" y="340" width="435" height="28" align="center" fontSize="22" underline="false" autoLeading="true" cleanParagraphBreaks="true" expandable="false" splittable="false" dataName="ReportName"/>
+    <recordBox id="RecordBox2" x="212" y="375" width="100" height="14" align="center" underline="false" autoLeading="true" cleanParagraphBreaks="true" expandable="false" splittable="false" dataName="Date"/>
+    <recordArea id="RecordArea1" x="142" y="396" width="242" height="14" align="center" underline="false" autoLeading="true" cleanParagraphBreaks="true" expandable="false" splittable="false">
+      <text>Prepared by #Author#</text>
+    </recordArea>
+  </page>
+</document>

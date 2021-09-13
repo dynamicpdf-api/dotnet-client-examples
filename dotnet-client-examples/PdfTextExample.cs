@@ -5,15 +5,15 @@ using System.Text;
 
 namespace DynamicPdfCloudApiClientExamples
 {
-    public static class PdfInfoExample
+    class PdfTextExample
     {
-        // simple example from Getting Started - pdf-info
+        // simple example from Getting Started - pdf-text
         public static void PdfInfoExampleOne(String key, String basePath)
         {
             PdfResource resource = new PdfResource(basePath + "/fw4.pdf");
-            PdfInfo pdfInfo = new PdfInfo(resource);
-            pdfInfo.ApiKey = key;
-            PdfInfoResponse response = pdfInfo.Process();
+            PdfText pdfText = new PdfText(resource);
+            pdfText.ApiKey = key;
+            PdfTextResponse response = pdfText.Process();
             Console.WriteLine(PrettyPrintUtil.JsonPrettify(response.JsonContent));
         }
     }
