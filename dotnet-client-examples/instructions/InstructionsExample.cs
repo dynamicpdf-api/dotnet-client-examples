@@ -26,64 +26,25 @@ namespace DynamicPdfCloudApiClientExamples.instructions
 			return pdf;
 		}
 
-		public static Pdf MergeOptions(String basePath)
-        {
-			String cloudResource = "samples/shared/pdf/documentA.pdf";
-			String fileResource = basePath + "/documentB.pdf";
-
-			// add pdf from cloud resources
-
-			Pdf pdf = new Pdf();
-			pdf.AddPdf(cloudResource);
-
-			// add pdf from local file path
-
-			PdfResource pdfResource = new PdfResource(fileResource);
-			pdf.AddPdf(pdfResource);
-			return pdf;
-		}
-
-		public static Pdf MergingExample(String basePath)
+		public static Pdf DoMergeOptions()
 		{
-
-			String cloudResource = "samples/shared/pdf/documentA.pdf";
-			String fileResource = basePath + "/documentB.pdf";
+			String cloudResourceA = "samples/shared/pdf/merge-options.pdf";
+			String cloudResourceB = "samples/shared/pdf/merge-options.pdf";
 
 			// add pdf from cloud resources
 
 			Pdf pdf = new Pdf();
-			pdf.AddPdf(cloudResource);
 
-			// add pdf from local file path
+			MergeOptions mergeOptionsA = new MergeOptions();
+			mergeOptionsA.DocumentInfo = false;
+			mergeOptionsA.PageAnnotations = false;
 
-			PdfResource pdfResource = new PdfResource(fileResource);
-			pdf.AddPdf(pdfResource);
-
-			// add blank page to pdf
-
-			PageInput pageInput = pdf.AddPage(1008, 612);
-
-			// add image to pdf from cloud api
-
-			pdf.AddImage("samples/shared/image/Image3.png");
-
-			// add image to pdf from local file system
-
-			ImageResource imageResource = new ImageResource(basePath + "/Image1.jpg");
-			pdf.AddImage(imageResource);
-
-			// add dlex to pdf from cloud
-
-			LayoutDataResource layoutData = new LayoutDataResource(basePath + "/getting-started-data.json");
-			pdf.AddDlex("samples/getting-started/getting-started.dlex", layoutData);
-
-			// add dlex to pdf from local
-
-			DlexResource dlexResource = new DlexResource(basePath + "/example-two.dlex");
-			layoutData = new LayoutDataResource(basePath + "/example-two.json");
-			pdf.AddDlex(dlexResource, layoutData);
+			pdf.AddPdf(cloudResourceA, mergeOptionsA);
+			pdf.AddPdf(cloudResourceB);
 
 			return pdf;
+
+
 
 		}
 
@@ -142,30 +103,27 @@ namespace DynamicPdfCloudApiClientExamples.instructions
 
 		public static void DemoInstructions(String[] args)
 		{
-			Pdf exampleOne = InstructionsExample.topLevelMetaData();
-			InstructionsExample.printOut(exampleOne, args[0], args[2], "c-sharp-top-level-metadata.pdf");
-			Pdf exampleTwo = InstructionsExample.SecurityExample(args[2]);
-			InstructionsExample.printOut(exampleTwo, args[0], args[2], "c-sharp-security.pdf");
-			Pdf exampleThree = InstructionsExample.MergingExample(args[2]);
-			InstructionsExample.printOut(exampleThree, args[0], args[2], "c-sharp-merging.pdf");
+		//	Pdf exampleOne = InstructionsExample.topLevelMetaData();
+		//	InstructionsExample.printOut(exampleOne, args[0], args[2], "c-sharp-top-level-metadata.pdf");
+//			Pdf exampleTwo = InstructionsExample.SecurityExample(args[2]);
+	//		InstructionsExample.printOut(exampleTwo, args[0], args[2], "c-sharp-security.pdf");
+			Pdf exampleThree = InstructionsExample.DoMergeOptions();
+			InstructionsExample.printOut(exampleThree, args[0], args[2], "c-sharp-merge-options.pdf");
 
-			Pdf exampleFour = InstructionsExample.FormFieldsExample();
-			InstructionsExample.printOut(exampleFour, args[0], args[2], "c-sharp-fonts.pdf");
+	//		Pdf exampleFour = InstructionsExample.FormFieldsExample();
+	//		InstructionsExample.printOut(exampleFour, args[0], args[2], "c-sharp-fonts.pdf");
 
-			Pdf exampleFive = InstructionsExample.MergeOptions(args[2]);
-			InstructionsExample.printOut(exampleFive, args[0], args[2], "c-sharp-merge-options.pdf");
+		//	Pdf exampleSix = InstructionsExample.AddOutlinesExistingPdf(args[2]);
+//			InstructionsExample.printOut(exampleSix, args[0], args[2], "c-sharp-outline-existing.pdf");
 
-			Pdf exampleSix = InstructionsExample.AddOutlinesExistingPdf(args[2]);
-			InstructionsExample.printOut(exampleSix, args[0], args[2], "c-sharp-outline-existing.pdf");
+	//		Pdf exampleSeven = InstructionsExample.AddOutlinesForNewPdf();
+		//	InstructionsExample.printOut(exampleSeven, args[0], args[2], "c-sharp-outline-create.pdf");
 
-			Pdf exampleSeven = InstructionsExample.AddOutlinesForNewPdf();
-			InstructionsExample.printOut(exampleSeven, args[0], args[2], "c-sharp-outline-create.pdf");
+		//	Pdf exampleEight = InstructionsExample.BarcodeExample(args[2]);
+//			InstructionsExample.printOut(exampleEight, args[0], args[2], "c-sharp-barcode.pdf");
 
-			Pdf exampleEight = InstructionsExample.BarcodeExample(args[2]);
-			InstructionsExample.printOut(exampleEight, args[0], args[2], "c-sharp-barcode.pdf");
-
-			Pdf exampleNine = InstructionsExample.TemplateExample(args[2]);
-			InstructionsExample.printOut(exampleNine, args[0], args[2], "c-sharp-template.pdf");
+//			Pdf exampleNine = InstructionsExample.TemplateExample(args[2]);
+	//		InstructionsExample.printOut(exampleNine, args[0], args[2], "c-sharp-template.pdf");
 
 		}
 
