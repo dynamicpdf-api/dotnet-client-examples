@@ -13,19 +13,20 @@ namespace DynamicPdfCloudApiClientExamples
         static void Main(string[] args)
         {
 
-            PdfInfoExample.PdfInfoExampleOne(args[0], args[1]);
-            PrintDivider();
-            ImageInfoExample.ImageInfoExampleOne(args[0], args[1]);
-            PrintDivider();
-            ImageInfoExample.ImageInfoExampleTwo(args[0], args[1]);
-            PrintDivider();
-            PdfTextExample.PdfInfoExampleOne(args[0], args[1]);
-            PrintDivider();
-            PdfXmpExample.PdfXmpExampleOne(args[0], args[1]);
-            PdfExample.PdfExampleOne(args[0], args[1]);
-            PrintDivider();
-            DlexLayoutExample.DlexLayoutExampleOne(args[0], args[1]);
-            InstructionsExample.DemoInstructions(args);
+            // PdfInfoExample.PdfInfoExampleOne(args[0], args[1]);
+            //           PrintDivider();
+            //         ImageInfoExample.ImageInfoExampleOne(args[0], args[1]);
+            //         PrintDivider();
+            //        ImageInfoExample.ImageInfoExampleTwo(args[0], args[1]);
+            //         PrintDivider();
+            //         PdfTextExample.PdfInfoExampleOne(args[0], args[1]);
+            //         PrintDivider();
+            //         PdfXmpExample.PdfXmpExampleOne(args[0], args[1]);
+            //         PdfExample.PdfExampleOne(args[0], args[1]);
+            //         PrintDivider();
+            //         DlexLayoutExample.DlexLayoutExampleOne(args[0], args[1]);
+            //         InstructionsExample.DemoInstructions(args);
+            DlexLayoutTutorial.DlexLayoutExampleOne(args[0]);
         }
 
         static void PrintDivider()
