@@ -26,7 +26,8 @@ namespace DynamicPdfCloudApiClientExamples
             //         PrintDivider();
             //         DlexLayoutExample.DlexLayoutExampleOne(args[0], args[1]);
             //         InstructionsExample.DemoInstructions(args);
-            DlexLayoutTutorial.DlexLayoutExampleOne(args[0]);
+            //DlexLayoutTutorial.DlexLayoutExampleOne(args[0]);
+            ImageInfoExampleTutorial.ImageInfoExampleOne(args[0]);
         }
 
         static void PrintDivider()
