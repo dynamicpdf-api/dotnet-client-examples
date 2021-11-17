@@ -27,7 +27,9 @@ namespace DynamicPdfCloudApiClientExamples
             //         DlexLayoutExample.DlexLayoutExampleOne(args[0], args[1]);
             //         InstructionsExample.DemoInstructions(args);
             //DlexLayoutTutorial.DlexLayoutExampleOne(args[0]);
-            ImageInfoExampleTutorial.ImageInfoExampleOne(args[0]);
+            //ImageInfoExampleTutorial.ImageInfoExampleOne(args[0]);
+            //PdfMergeTutorialExample.PdfMerge(args[0], args[1]);
+            FormFillExample.FormFill(args[0], args[1]);
         }
 
         static void PrintDivider()
