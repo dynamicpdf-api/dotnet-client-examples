@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DynamicPdfCloudApiClientExamples
 {
-    class PdfMergeTutorialExample
+    class SimpleDlexMergeExample
     {
         public static void PdfMerge(String apiKey, String basePath)
         {
