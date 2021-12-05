@@ -8,15 +8,15 @@ namespace DynamicPdfCloudApiClientExamples
 {
     class DlexLayoutTutorial
     {
-        public static void DlexLayoutExampleOne(String apiKey)
+        public static void DlexLayoutExampleOne(String apiKey, String basePath)
         {
-            LayoutDataResource layoutData = new LayoutDataResource(@"C:/dynamicpdf/getting-started-examples/getting-started-data.json");
+            LayoutDataResource layoutData = new LayoutDataResource(basePath + "getting-started-data.json");
             DlexLayout dlexEndpoint = new DlexLayout("samples/shared/dlex/getting-started.dlex", layoutData);
             dlexEndpoint.ApiKey = apiKey;
             PdfResponse response = dlexEndpoint.Process();
             if (response.ErrorJson == null)
             {
-                File.WriteAllBytes(@"C:/dynamicpdf/getting-started-examples/dlex-output.pdf", (byte[])response.Content);
+                File.WriteAllBytes(basePath + "dlex-output.pdf", (byte[])response.Content);
             }
             else
             {
