@@ -12,10 +12,10 @@ namespace DynamicPdfCloudApiClientExamples
         {
             Pdf pdf = new Pdf();
             pdf.ApiKey = apiKey;
-            LayoutDataResource layoutDataResource = new LayoutDataResource(@"c:/dynamicpdf/getting-started-examples/SimpleReportData.json");
+            LayoutDataResource layoutDataResource = new LayoutDataResource(basePath + "SimpleReportData.json");
             pdf.AddDlex("samples/shared/dlex/SimpleReportWithCoverPage.dlex", layoutDataResource);
 
-            PdfResource pdfResource = new PdfResource(@"c:/dynamicpdf/getting-started-examples/DocumentA100.pdf");
+            PdfResource pdfResource = new PdfResource(basePath + "DocumentA100.pdf");
             pdf.AddPdf(pdfResource);
 
 
@@ -27,7 +27,7 @@ namespace DynamicPdfCloudApiClientExamples
             }
             else
             {
-                File.WriteAllBytes(@"c:/dynamicpdf/getting-started-examples/simple-report-data.pdf", response.Content);
+                File.WriteAllBytes(basePath + "simple-report-data.pdf", response.Content);
             }
         }
     }

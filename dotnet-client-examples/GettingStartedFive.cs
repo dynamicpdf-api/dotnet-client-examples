@@ -10,7 +10,7 @@ namespace DynamicPdfCloudApiClientExamples
     {
         public static void Run(String apiKey, String basePath)
         {
-            LayoutDataResource layoutDataResource = new LayoutDataResource(@"C:/holding/instructions-examples/getting-started-data.json");
+            LayoutDataResource layoutDataResource = new LayoutDataResource(basePath + "getting-started-data.json");
             DlexLayout dlexLayout = new DlexLayout("samples/shared/dlex/getting-started.dlex", layoutDataResource);
             dlexLayout.ApiKey = apiKey;
 
