@@ -10,15 +10,15 @@ namespace DynamicPdfCloudApiClientExamples
     {
         public static void Run(String apiKey, String basePath)
         {
-            LayoutDataResource layoutDataResource = new LayoutDataResource(basePath + "getting-started-data.json");
-            DlexLayout dlexLayout = new DlexLayout("samples/shared/dlex/getting-started.dlex", layoutDataResource);
+            LayoutDataResource layoutDataResource = new LayoutDataResource(basePath + "getting-started.json");
+            DlexLayout dlexLayout = new DlexLayout("samples/Getting-Started/getting-started.dlex", layoutDataResource);
             dlexLayout.ApiKey = apiKey;
 
             PdfResponse pdfResponse = dlexLayout.Process();
 
             if (pdfResponse.IsSuccessful)
             {
-                File.WriteAllBytes(basePath + "/getting-started-output.pdf", pdfResponse.Content);
+                File.WriteAllBytes(basePath + "getting-started-csharp-output.pdf", pdfResponse.Content);
             }
             else
             {
