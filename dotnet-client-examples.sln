@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicPdfCloudApiClientExa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GettingStartedInFive", "GettingStartedInFive\GettingStartedInFive.csproj", "{3E855BBE-6C1B-4E06-897A-C02EB2BB1BE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeMultiplePdfs", "MergeMultiplePdfs\MergeMultiplePdfs.csproj", "{B7DD3989-C0A7-4812-B590-BDB1D4ADE6EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergePdfs", "MergeMultiplePdfs\MergePdfs.csproj", "{B7DD3989-C0A7-4812-B590-BDB1D4ADE6EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
