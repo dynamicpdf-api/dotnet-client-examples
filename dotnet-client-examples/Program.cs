@@ -13,7 +13,7 @@ namespace DynamicPdfCloudApiClientExamples
 
         static void Main(string[] args)
         {
-            // GettingStartedFive.Run(args[0], args[1]);
+            GettingStartedFive.Run(args[0], args[1]);
             // FormFillExample.FormFill(args[0], args[1]);
             // SimpleDlexMergeExample.PdfMerge(args[0], args[1]);
             // OutlineTutorialExample.OutlinesExample(args[0], args[1]);
