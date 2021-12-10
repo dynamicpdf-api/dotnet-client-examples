@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 
-namespace MergeMultiplePdfs
+namespace MergePdfs
 {
     class Program
     {
@@ -19,8 +19,8 @@ namespace MergeMultiplePdfs
             pdf.ApiKey = apiKey;
 
             // add pdfs to merge from the cloud
-            pdf.AddPdf("samples/merge-multiple-pdfs/DocumentA.pdf");
-            pdf.AddPdf("samples/merge-multiple-pdfs/DocumentB.pdf");
+            pdf.AddPdf("samples/merge-pdfs/DocumentA.pdf");
+            pdf.AddPdf("samples/merge-pdfs/DocumentB.pdf");
 
             // add pdf from local file system
             PdfResource pdfResource = new PdfResource(basePath + "DocumentC.pdf");
