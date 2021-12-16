@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetXmpMetaData", "GetXmpMet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreatingPdfDlexLayout", "CreatePdfDlexLayout\CreatingPdfDlexLayout.csproj", "{35B53B1B-C718-40BA-ADD7-DBF9555BCA9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractingText", "ExtractingText\ExtractingText.csproj", "{F81D2534-8F37-4209-92EE-CF6BDAC7ADBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtractingText", "ExtractingText\ExtractingText.csproj", "{F81D2534-8F37-4209-92EE-CF6BDAC7ADBF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetPdfInfo", "GetPdfInfo\GetPdfInfo.csproj", "{E74D88B3-2682-4E87-87EE-BE4147BFAD60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetImageInfo", "GetImageInfo\GetImageInfo.csproj", "{398228C3-5AF0-4142-9792-3E3C172129BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{F81D2534-8F37-4209-92EE-CF6BDAC7ADBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F81D2534-8F37-4209-92EE-CF6BDAC7ADBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F81D2534-8F37-4209-92EE-CF6BDAC7ADBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74D88B3-2682-4E87-87EE-BE4147BFAD60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74D88B3-2682-4E87-87EE-BE4147BFAD60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74D88B3-2682-4E87-87EE-BE4147BFAD60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74D88B3-2682-4E87-87EE-BE4147BFAD60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{398228C3-5AF0-4142-9792-3E3C172129BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{398228C3-5AF0-4142-9792-3E3C172129BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{398228C3-5AF0-4142-9792-3E3C172129BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{398228C3-5AF0-4142-9792-3E3C172129BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
