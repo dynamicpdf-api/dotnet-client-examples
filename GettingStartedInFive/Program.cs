@@ -8,7 +8,7 @@ namespace GettingStartedInFive
     {
         static void Main(string[] args)
         {
-            Run("DP.jNFADSRTMGk60fv4+QY1qID9bzpp+mrkC8IU8wcWtl2wSYcQFV1S3Mww", "C:/temp/dynamicpdf-api-samples/");
+            Run("DynamicPdfApiKey", "C:/temp/dynamicpdf-api-samples/");
         }
 
         public static void Run(String apiKey, String basePath)
