@@ -8,7 +8,9 @@ namespace DynamicPdfCloudApiClientExamples
 {
     class OutlineTutorialExample
     {
-        public static void OutlinesExample(String apiKey, String basePath)
+
+
+        public static void Run(String apiKey, String basePath)
         {
             Pdf pdf = new Pdf();
             pdf.Author = "John Doe";
