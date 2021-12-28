@@ -32,21 +32,15 @@ namespace UsersGuidePdfInstructions
 			Pdf exampleSix = InstructionsExample.AddOutlinesNewPdf();
 			InstructionsExample.printOut(exampleSix, apiKey, basePath, "c-sharp-new-outline-output.pdf");
 
-			//		Pdf exampleFour = InstructionsExample.FormFieldsExample();
-			//		InstructionsExample.printOut(exampleFour, args[0], args[2], "c-sharp-fonts.pdf");
+			Pdf exampleSeven = InstructionsExample.AddOutlinesExistingPdf(basePath);
+			InstructionsExample.printOut(exampleSeven, apiKey, basePath, "c-sharp-outline-existing-output.pdf");
 
-			//	Pdf exampleSix = InstructionsExample.AddOutlinesExistingPdf(args[2]);
-			//			InstructionsExample.printOut(exampleSix, args[0], args[2], "c-sharp-outline-existing.pdf");
+			Pdf exampleEight = InstructionsExample.TemplateExample(basePath);
+			InstructionsExample.printOut(exampleEight, apiKey, basePath, "c-sharp-template-output.pdf");
 
-			//		Pdf exampleSeven = InstructionsExample.AddOutlinesForNewPdf();
-			//	InstructionsExample.printOut(exampleSeven, args[0], args[2], "c-sharp-outline-create.pdf");
-
-			//	Pdf exampleEight = InstructionsExample.BarcodeExample(args[2]);
-			//			InstructionsExample.printOut(exampleEight, args[0], args[2], "c-sharp-barcode.pdf");
-
-			//			Pdf exampleNine = InstructionsExample.TemplateExample(args[2]);
-			//		InstructionsExample.printOut(exampleNine, args[0], args[2], "c-sharp-template.pdf");
-
+			Pdf exampleNine = InstructionsExample.BarcodeExample(basePath);
+			InstructionsExample.printOut(exampleNine, apiKey, basePath, "c-sharp-barcode-output.pdf");
+					
 		}
 
 
@@ -182,38 +176,18 @@ namespace UsersGuidePdfInstructions
 			return pdf;
 		}
 
-		// 8888888888888888888888888888 stopped here 888888888888888888888888888888
-
-		public static Pdf TemplateExample(String basePath)
-        {
-			Pdf pdf = new Pdf();
-			pdf.Author = "John User";
-			pdf.Title = "Template Example One";
-			PdfResource resource = new PdfResource(basePath + "/DocumentA100.pdf");
-			PdfInput input = new PdfInput(resource);
-			pdf.Inputs.Add(input);
-
-			Template template = new Template("Temp1");
-			TextElement element = new TextElement("Hello World", ElementPlacement.TopCenter);
-			template.Elements.Add(element);
-			input.Template = template;
-			return pdf;
-		}
-
-
-
 		public static Pdf AddOutlinesExistingPdf(String basePath)
 		{
 			Pdf pdf = new Pdf();
 			pdf.Author = "John Doe";
 			pdf.Title = "Existing Pdf Example";
 
-			PdfResource resource = new PdfResource(basePath + "/AllPageElements.pdf");
+			PdfResource resource = new PdfResource(basePath + "AllPageElements.pdf");
 			PdfInput input = pdf.AddPdf(resource);
 			input.Id = "AllPageElements";
 			pdf.Inputs.Add(input);
 
-			PdfResource resource1 = new PdfResource(basePath + "/outline-existing.pdf");
+			PdfResource resource1 = new PdfResource(basePath + "OutlineExisting.pdf");
 			PdfInput input1 = pdf.AddPdf(resource1);
 			input1.Id = "outlineDoc1";
 			pdf.Inputs.Add(input1);
@@ -228,37 +202,35 @@ namespace UsersGuidePdfInstructions
 
 		}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-		public static Pdf BarcodeExample(String basePath)
-        {
-
+		public static Pdf TemplateExample(String basePath)
+		{
 			Pdf pdf = new Pdf();
-			pdf.Author = "John Doe";
-			pdf.Title = "Barcode Example";
-
-			PdfResource resource = new PdfResource(basePath + "/DocumentA100.pdf");
+			pdf.Author = "John User";
+			pdf.Title = "Template Example One";
+			PdfResource resource = new PdfResource(basePath + "/DocumentA.pdf");
 			PdfInput input = new PdfInput(resource);
 			pdf.Inputs.Add(input);
 
 			Template template = new Template("Temp1");
-
-			AztecBarcodeElement element = new AztecBarcodeElement("Hello World", ElementPlacement.TopCenter, 0, 500);
+			TextElement element = new TextElement("Hello World", ElementPlacement.TopCenter);
 			template.Elements.Add(element);
 			input.Template = template;
 			return pdf;
 		}
 
+		public static Pdf BarcodeExample(String basePath)
+		{
+			Pdf pdf = new Pdf();
+			PdfResource resource = new PdfResource(basePath + "/DocumentA.pdf");
+			PdfInput input = new PdfInput(resource);
+			pdf.Inputs.Add(input);
+
+			Template template = new Template("Temp1");
+
+			AztecBarcodeElement element = new AztecBarcodeElement("Hello Barcode", ElementPlacement.TopCenter, 0, 500);
+			template.Elements.Add(element);
+			input.Template = template;
+			return pdf;
+		}
 	}
 }
