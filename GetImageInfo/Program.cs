@@ -1,13 +1,17 @@
 ﻿using DynamicPDF.Api;
 using System;
 
+// resources available at cloud.dynamicpdf.com Get Image Information (image-info Endpoint) in the Resource Manager
+// tutorial: https://cloud.dynamicpdf.com/docs/tutorials/cloud-api/image-info/tutorial-image-info
+
+
 namespace GetImageInfo
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Run("DP.NKSoPxiwOgZoypSVYaXyEARo2cO9Kk5BRgY2ZRC0jF/KQq4pDzhfK8yO", "c:/temp/dynamicpdf-api-samples/get-image-info/");
+            Run("DP.xxx--api-key--xxx", "c:/temp/dynamicpdf-api-samples/get-image-info/");
         }
 
         public static void Run(String apiKey, String basePath)

@@ -2,6 +2,10 @@
 using System;
 using System.IO;
 
+// resources available at cloud.dynamicpdf.com Merge PDFs in the Resource Manager
+// tutorial: https://cloud.dynamicpdf.com/docs/tutorials/cloud-api/pdf-tutorial-merging-pdfs
+
+
 namespace MergePdfs
 {
     class Program

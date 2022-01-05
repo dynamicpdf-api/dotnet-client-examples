@@ -3,11 +3,15 @@ using System;
 
 namespace GetPdfInfo
 {
+
+    // resources available at cloud.dynamicpdf.com Get PDF Info in the Resource Manager
+    // tutorial: https://cloud.dynamicpdf.com/docs/tutorials/cloud-api/pdf-info/tutorial-pdf-info
+
     class Program
     {
         static void Main(string[] args)
         {
-            Run("DP.NKSoPxiwOgZoypSVYaXyEARo2cO9Kk5BRgY2ZRC0jF/KQq4pDzhfK8yO", "c:/temp/dynamicpdf-api-samples/get-pdf-info/");
+            Run("DP.xxx--api-key--xxx", "c:/temp/dynamicpdf-api-samples/get-pdf-info/");
         }
 
         public static void Run(String apiKey, String basePath)

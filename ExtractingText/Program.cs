@@ -1,13 +1,16 @@
 ﻿using DynamicPDF.Api;
 using System;
 
+// resources available at cloud.dynamicpdf.com Extract Text (pdf-text Endpoint) in the Resource Manager
+// tutorial: https://cloud.dynamicpdf.com/docs/tutorials/cloud-api/pdf-text/tutorial-pdf-text
+
 namespace ExtractingText
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Run("DP.NKSoPxiwOgZoypSVYaXyEARo2cO9Kk5BRgY2ZRC0jF/KQq4pDzhfK8yO", "C:/temp/dynamicpdf-api-samples/extract-text/");
+            Run("DP.xxx--api-key--xxx", "C:/temp/dynamicpdf-api-samples/extract-text/");
         }
 
         public static void Run(String apiKey, String basePath)

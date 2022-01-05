@@ -2,13 +2,16 @@
 using System;
 using System.IO;
 
+// resources available at cloud.dynamicpdf.com Fill an AcroForm in the Resource Manager
+// tutorial: https://cloud.dynamicpdf.com/docs/tutorials/cloud-api/pdf-tutorial-form-completion
+
 namespace CompletingAcroForm
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Run("DP.NyNZ2fiOnPyKla12/Li1xla6NbcErkEEsnF9LbNWlewtS4IZl626HSNb", "C:/temp/dynamicpdf-api-samples/");
+            Run("DP.xxx--api-key--xxx", "C:/temp/dynamicpdf-api-samples/");
         }
 
         public static void Run(String apiKey, String basePath)

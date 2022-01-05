@@ -9,7 +9,7 @@ namespace PdfExample
     {
         static void Main(string[] args)
         {
-            Run("DP.TrJj2UBRFfrxiLYYD9xQryHXnFoSRKVPTBYH0LRpVWWnTZPOmgRO6yX6", "C:/temp/dynamicpdf-api-usersguide-examples/");
+            Run("DP.xxx--api-key--xxx", "C:/temp/dynamicpdf-api-usersguide-examples/");
         }
 
         public static void Run(String apiKey, String basePath)

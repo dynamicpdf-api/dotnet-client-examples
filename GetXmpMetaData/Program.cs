@@ -1,13 +1,16 @@
 ﻿using DynamicPDF.Api;
 using System;
 
+// resources available at cloud.dynamicpdf.com Get XMP Metadata in the Resource Manager
+// tutorial: https://cloud.dynamicpdf.com/docs/tutorials/cloud-api/pdf-xmp/tutorial-pdf-xmp
+
 namespace GetXmpMetaData
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Run("DP.JtmSyCt8jfAi5IfSa5+Egl7HDj7TBdUsNPy2pu9JqiWWS4AJ+g5/HkMF", "C:/temp/dynamicpdf-api-samples/get-xmp-metadata");
+            Run("DP.xxx---api-key--xxx", "C:/temp/dynamicpdf-api-samples/get-xmp-metadata");
         }
 
         public static void Run(String apiKey, String basePath)

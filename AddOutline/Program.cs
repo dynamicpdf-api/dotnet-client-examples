@@ -2,13 +2,16 @@
 using System;
 using System.IO;
 
+// resources available at cloud.dynamicpdf.com Adding Bookmarksin the Resource Manager
+// tutorial: https://cloud.dynamicpdf.com/docs/tutorials/cloud-api/pdf-tutorial-bookmarks
+
 namespace AddBookmarks
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Run("DP.OxhJEc44gxTwzGkzRVJJ7Z+ijY9AbiF5E3CO87mwfEnvTrFoyWsRPv8R", "C:/temp/dynamicpdf-api-samples/add-bookmarks/");
+            Run("DP.xxx--api-key--xxx", "C:/temp/dynamicpdf-api-samples/add-bookmarks/");
         }
 
         public static void Run(String apiKey, String basePath)

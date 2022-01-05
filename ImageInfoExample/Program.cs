@@ -7,8 +7,8 @@ namespace ImageInfoExample
     {
         static void Main(string[] args)
         {
-            RunOne("DP.TrJj2UBRFfrxiLYYD9xQryHXnFoSRKVPTBYH0LRpVWWnTZPOmgRO6yX6", "C:/temp/dynamicpdf-api-usersguide-examples/");
-            RunTwo("DP.TrJj2UBRFfrxiLYYD9xQryHXnFoSRKVPTBYH0LRpVWWnTZPOmgRO6yX6", "C:/temp/dynamicpdf-api-usersguide-examples/");
+            RunOne("DP.xxx---apikey--xxx", "C:/temp/dynamicpdf-api-usersguide-examples/");
+            RunTwo("DP.xxx--apikey--xxx", "C:/temp/dynamicpdf-api-usersguide-examples/");
         }
 
         public static void RunOne(String key, String basePath)

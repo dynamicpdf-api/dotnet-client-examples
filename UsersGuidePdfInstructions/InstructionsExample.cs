@@ -11,7 +11,7 @@ namespace UsersGuidePdfInstructions
     {
 		public static void DemoInstructions()
 		{
-			String apiKey = "DP.TrJj2UBRFfrxiLYYD9xQryHXnFoSRKVPTBYH0LRpVWWnTZPOmgRO6yX6";
+			String apiKey = "DP.xxx--api-key--xxx";
 			String basePath = "C:/temp/dynamicpdf-api-usersguide-examples/";
 
 			Pdf exampleOne = InstructionsExample.TopLevelMetaData();

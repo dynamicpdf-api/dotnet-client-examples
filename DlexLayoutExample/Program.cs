@@ -8,7 +8,7 @@ namespace DlexLayoutExample
     {
         static void Main(string[] args)
         {
-			Run("DP.TrJj2UBRFfrxiLYYD9xQryHXnFoSRKVPTBYH0LRpVWWnTZPOmgRO6yX6", "C:/temp/dynamicpdf-api-samples/create-pdf-dlex/");
+			Run("DP.xxx--api-key--xxx", "C:/temp/dynamicpdf-api-samples/create-pdf-dlex/");
 		}
 
 		public static void Run(String apiKey, String basePath)
