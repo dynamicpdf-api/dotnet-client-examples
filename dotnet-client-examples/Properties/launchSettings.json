@@ -2,7 +2,7 @@
   "profiles": {
     "DynamicPdfCloudApiClientExamples": {
       "commandName": "Project",
-      "commandLineArgs": "DynamicPdfApiKey c:/holding/client-libraries-examples/  c:/holding/instructions-examples/"
+      "commandLineArgs": "DP.xxxxx c:/holding/client-libraries-examples/  c:/holding/instructions-examples/"
     }
   }
 }

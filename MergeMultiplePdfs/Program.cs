@@ -2,6 +2,10 @@
 using System;
 using System.IO;
 
+// resources available at cloud.dynamicpdf.com Merge PDFs in the Resource Manager
+// tutorial: https://cloud.dynamicpdf.com/docs/tutorials/cloud-api/pdf-tutorial-merging-pdfs
+
+
 namespace MergePdfs
 {
     class Program
@@ -9,7 +13,7 @@ namespace MergePdfs
     
  static void Main(string[] args)
         {
-            Run("DynamicPdfApiKey", "C:/temp/dynamicpdf-api-samples/");
+            Run("DP.xxxxxxxxxxx", "C:/temp/dynamicpdf-api-samples/");
         }
 
         public static void Run(String apiKey, String basePath)
@@ -18,13 +22,17 @@ namespace MergePdfs
             Pdf pdf = new Pdf();
             pdf.ApiKey = apiKey;
 
-            // add pdfs to merge from the cloud
-            pdf.AddPdf("samples/merge-pdfs/DocumentA.pdf");
-            pdf.AddPdf("samples/merge-pdfs/DocumentB.pdf");
+            var inputA = pdf.AddPdf(new PdfResource(basePath + "DocumentA.pdf"));
+            inputA.StartPage = 1;
+            inputA.PageCount = 1;
 
-            // add pdf from local file system
-            PdfResource pdfResource = new PdfResource(basePath + "DocumentC.pdf");
-            pdf.AddPdf(pdfResource);
+            // add all of pdf from local filesystem
+
+            pdf.AddPdf(new PdfResource(basePath + "DocumentB.pdf"));
+
+            // add pdf from cloud in resource manager
+
+            pdf.AddPdf("/samples/merge-pdfs-pdf-endpoint/DocumentC.pdf");
 
             PdfResponse pdfResponse = pdf.Process();
 
@@ -32,7 +40,7 @@ namespace MergePdfs
 
             if(pdfResponse.IsSuccessful)
             {
-                File.WriteAllBytes(Path.Combine(basePath, "merge-multiple-documents-output.pdf"), pdfResponse.Content);
+                File.WriteAllBytes(Path.Combine(basePath, "merge-pdfs-output.pdf"), pdfResponse.Content);
             } else
             {
                 Console.WriteLine(pdfResponse.ErrorJson);
