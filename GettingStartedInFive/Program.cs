@@ -11,7 +11,7 @@ namespace GettingStartedInFive
     {
         static void Main(string[] args)
         {
-            Run("DP.xxx--apikey--xxx", "C:/temp/dynamicpdf-api-samples/");
+            Run("DP.TrJj2UBRFfrxiLYYD9xQryHXnFoSRKVPTBYH0LRpVWWnTZPOmgRO6yX6", "C:/holding/getting-started/");
         }
 
         public static void Run(String apiKey, String basePath)

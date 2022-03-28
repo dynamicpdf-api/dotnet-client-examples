@@ -11,10 +11,10 @@ namespace CompletingAcroForm
     {
         static void Main(string[] args)
         {
-            Run("DP.xxx--api-key--xxx", "C:/temp/dynamicpdf-api-samples/");
+            Run("DP API KEY", "C:/temp/dynamicpdf-api-samples/fill-acro-form/");
         }
 
-        public static void Run(String apiKey, String basePath)
+        public static void Run(string apiKey, string basePath)
         {
             // create new pdf instance and set api key
             Pdf pdf = new Pdf();
@@ -55,7 +55,7 @@ namespace CompletingAcroForm
             }
             else
             {
-                File.WriteAllBytes(basePath + "form-fill-output.pdf", response.Content);
+                File.WriteAllBytes(basePath + "form-fill-output-csharp.pdf", response.Content);
             }
 
         }

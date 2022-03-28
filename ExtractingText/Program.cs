@@ -10,7 +10,7 @@ namespace ExtractingText
     {
         static void Main(string[] args)
         {
-            Run("DP.xxx--api-key--xxx", "C:/temp/dynamicpdf-api-samples/extract-text/");
+            Run("DP --- apikey ---", "C:/temp/dynamicpdf-api-samples/extract-text/");
         }
 
         public static void Run(String apiKey, String basePath)
