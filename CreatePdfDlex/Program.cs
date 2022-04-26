@@ -11,7 +11,7 @@ namespace CreatePdfDlex
     {
         static void Main(string[] args)
         {
-            Run("DP.xxx--api-key--xxx", "C:/temp/dynamicpdf-api-samples/create-pdf-dlex/");
+            Run("DP.S24WDZzwg9qgRqzVhZIO1Ff68jHbjoJKezkxnMv+U5C2RK0sHXhWG8KS", "C:/temp/dynamicpdf-api-samples/create-pdf-dlex/");
         }
 
         public static void Run(String apiKey, String basePath)
@@ -22,10 +22,6 @@ namespace CreatePdfDlex
             LayoutDataResource layoutDataResource = new LayoutDataResource(basePath + "SimpleReportWithCoverPage.json");
 
             pdf.AddDlex("samples/creating-pdf-pdf-endpoint/SimpleReportWithCoverPage.dlex", layoutDataResource);
-
-            PdfResource pdfResource = new PdfResource(basePath + "/DocumentA.pdf");
-            pdf.AddPdf(pdfResource);
-
 
             PdfResponse response = pdf.Process();
 
