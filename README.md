@@ -11,15 +11,19 @@ The DynamicPDF Cloud API consists of the following endpoints.
 - `pdf-text`
 - `pdf-xmp`
 
-The C# client project is available on Github ([java-client](https://github.com/dynamicpdf-api/-client)). For more information, please visit [DynamicPDF Cloud API](https://cloud.dynamicpdf.com/). Support for other languages/platforms (PHP, C#, Node.js) is available on GitHub ([DynamicPDF Cloud API at GitHub](https://github.com/dynamicpdf-api)).Resources
+The C# client examples project is available on Github ([dotnet-client-examples](https://github.com/dynamicpdf-api/dotnet-client-examples)). For more information, please visit [DynamicPDF Cloud API](https://cloud.dynamicpdf.com/). Support for other languages/platforms (PHP, C#, Node.js) is available on GitHub ([DynamicPDF Cloud API at GitHub](https://github.com/dynamicpdf-api)).
 
-The DynamicPDF.API library is available on NuGet.
+## NuGet
+
+* The DynamicPDF.API library is available on NuGet.
 
 ```bash
 Install-Package DynamicPDF.API
 ```
 
-To obtain the resources for the project, login to cloud.dynamicpdf.com (assuming you have an account), and go to the **Resource Manager**. You use the `samples` folder to add the resources for the tutorials and examples from this project.
+## Resources
+
+To obtain the resources for the project, login to [cloud.dynamicpdf.com](https://cloud.dynamicpdf.com/) (assuming you have an account), and go to the **Resource Manager**. You use the `samples` folder to add the resources for the tutorials and examples from this project.
 
 - [Resource Manager Samples](https://cloud.dynamicpdf.com/docs/usersguide/environment-manager/environment-manager-sample-resources)  
 
@@ -30,9 +34,7 @@ For more information on the tutorials and example code, refer to:
 
 ## **Tutorials**
 
-The following table lists the tutorial project or file name.  In Visual Studio each tutorial is it's own project. In the remaining client libraries each tutorial is its own individual class.
-
-The following table lists the tutorial project or file name.  In Visual Studio each tutorial is it's own project. In the remaining client libraries each tutorial is its own individual class.
+The following table lists the tutorial project or file name.  In Visual Studio each tutorial is it's own project. In the remaining client libraries each tutorial is its own individual class. 
 
 | Tutorial Title                                     | Project/File/Class      | Tutorial Location                                            |
 | -------------------------------------------------- | ----------------------- | ------------------------------------------------------------ |
