@@ -1,3 +1,5 @@
+![](./logo-banner2.png)
+
 # dotnet-client-examples
 
 The C# .NET Client Examples project uses the DynamicPDF Cloud API C# client library (`dotnet-client`) to create, merge, split, form fill, stamp, obtain metadata, convert, and secure/encrypt PDF documents. This project contains numerous sample projects for the tutorials and examples on [cloud.dynamicpdf.com](https://cloud.dynamicpdf.com/).
