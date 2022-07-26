@@ -60,4 +60,4 @@ Ticket support is available to Pro Plan subscribers. But we still encourage you 
 
 # License
 
-The `java-client` library is licensed under the [MIT License](./LICENSE).
+The `dotnet-client-examples` library is licensed under the [MIT License](./LICENSE).
