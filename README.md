@@ -11,7 +11,7 @@ The DynamicPDF Cloud API consists of the following endpoints.
 - `pdf-text`
 - `pdf-xmp`
 
-The C# client examples project is available on Github ([dotnet-client-examples](https://github.com/dynamicpdf-api/dotnet-client-examples)). For more information, please visit [DynamicPDF Cloud API](https://cloud.dynamicpdf.com/). Support for other languages/platforms (PHP, C#, Node.js) is available on GitHub ([DynamicPDF Cloud API at GitHub](https://github.com/dynamicpdf-api)).
+The C# client library (`dotnet-client`) is available on Github ([dotnet-client](https://github.com/dynamicpdf-api/dotnet-client)). For more information, please visit [DynamicPDF Cloud API](https://cloud.dynamicpdf.com/). Support for other languages/platforms (PHP, C#, Node.js) is available on GitHub ([DynamicPDF Cloud API at GitHub](https://github.com/dynamicpdf-api)).
 
 ## NuGet
 
