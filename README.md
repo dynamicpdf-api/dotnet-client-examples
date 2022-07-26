@@ -1,6 +1,6 @@
 # dotnet-client-examples
 
-The C# .NET Client Examples project uses the DynamicPDF Cloud API C# client library to create, merge, split, form fill, stamp, obtain metadata, convert, and secure/encrypt PDF documents. This project contains numerous sample projects for the tutorials and examples on [cloud.dynamicpdf.com](https://github.com/dynamicpdf-api/java-client-examples/blob/main/cloud.dynamicpdf.com).
+The C# .NET Client Examples project uses the DynamicPDF Cloud API C# client library (`dotnet-client`) to create, merge, split, form fill, stamp, obtain metadata, convert, and secure/encrypt PDF documents. This project contains numerous sample projects for the tutorials and examples on [cloud.dynamicpdf.com](https://github.com/dynamicpdf-api/java-client-examples/blob/main/cloud.dynamicpdf.com).
 
 The DynamicPDF Cloud API consists of the following endpoints.
 
@@ -48,3 +48,14 @@ The following table lists the tutorial project or file name.  In Visual Studio e
 | Extracting PDF's Text                              | `ExtractingText`        | https://cloud.dynamicpdf.com/docs/tutorials/cloud-api/pdf-text |
 | Extract XMP Metadata                               | `GetXmpMetaData`        | https://cloud.dynamicpdf.com/docs/tutorials/cloud-api/pdf-xmp |
 
+# Support
+
+The primary source for the DynamicPDF Cloud API support is through [Stack Overflow](https://stackoverflow.com/questions/tagged/dynamicpdf-api). Please use the "[dynamicpdf-api](https://stackoverflow.com/questions/tagged/dynamicpdf-api)" tag to ask questions. Our support team actively monitors the tag and responds promptly to any questions.  Also, let us know you asked the question by following up with an email to [support@dynamicpdf.com](mailto:support@dynamicpdf.com). 
+
+## Pro Plan Subscribers[#](https://cloud.dynamicpdf.com/support#pro-plan-subscribers)
+
+Ticket support is available to Pro Plan subscribers. But we still encourage you to help the community by posting on Stack Overflow when possible. You can also email [support@dynamicpdf.com](mailto:support@dynamicpdf.com) if you need to ask something specific to your use case that may not help the DynamicPDF Cloud API community.
+
+# License
+
+The `java-client` library is licensed under the [MIT License](./LICENSE).
