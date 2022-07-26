@@ -1,8 +1,17 @@
 # dotnet-client-examples
 
-The project contains numerous Visual Studio C# Console App (.NET Core) command-line project. Each example is its own project in the `dotnet-client-examples` solution.
+The C# .NET Client Examples project uses the DynamicPDF Cloud API C# client library to create, merge, split, form fill, stamp, obtain metadata, convert, and secure/encrypt PDF documents. This project contains numerous sample projects for the tutorials and examples on [cloud.dynamicpdf.com](https://github.com/dynamicpdf-api/java-client-examples/blob/main/cloud.dynamicpdf.com).
 
-## Resources
+The DynamicPDF Cloud API consists of the following endpoints.
+
+- `dlex-layout`
+- `image-info`
+- `pdf`
+- `pdf-info`
+- `pdf-text`
+- `pdf-xmp`
+
+The C# client project is available on Github ([java-client](https://github.com/dynamicpdf-api/-client)). For more information, please visit [DynamicPDF Cloud API](https://cloud.dynamicpdf.com/). Support for other languages/platforms (PHP, C#, Node.js) is available on GitHub ([DynamicPDF Cloud API at GitHub](https://github.com/dynamicpdf-api)).Resources
 
 The DynamicPDF.API library is available on NuGet.
 
