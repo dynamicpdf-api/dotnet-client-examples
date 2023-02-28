@@ -8,7 +8,7 @@ namespace MergePdfs
     {
         static void Main(string[] args)
         {
-            Run("DP.TrJj2UBRFfrxiLYYD9xQryHXnFoSRKVPTBYH0LRpVWWnTZPOmgRO6yX6", "c:/temp/dynamicpdf-api-samples/");
+            Run("DP<API-KEY>,", "c:/temp/dynamicpdf-api-samples/");
         }
 
         public static void Run(string apiKey, string basePath)
