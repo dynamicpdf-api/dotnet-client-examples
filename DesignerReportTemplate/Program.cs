@@ -8,7 +8,7 @@ namespace DesignerReportTemplate
     {
         static void Main(string[] args)
         {
-            Run("DP.API-KEY", "c:/temp/dynamicpdf-api-samples/using-dlex-layout/");
+            Run("DP.xxx-api-key-xxx", "c:/temp/dynamicpdf-api-samples/using-dlex-layout/");
         }
 
         public static void Run(string apiKey, string basePath)

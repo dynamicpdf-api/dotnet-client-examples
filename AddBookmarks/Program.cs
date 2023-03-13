@@ -8,7 +8,7 @@ namespace AddBookmarks
     {
         static void Main(string[] args)
         {
-            Run("DP.Y0hWTIaVHr2dmKjGcfAQe1S4px4ZaBcnjIALid4zOUt1TZDepDH3uRv0", "c:/temp/dynamicpdf-api-samples/add-bookmarks/");
+            Run("DP.xxx-api-key-xxx", "c:/temp/dynamicpdf-api-samples/add-bookmarks/");
         }
 
         public static void Run(string apiKey, string basePath)

@@ -8,12 +8,10 @@ namespace CallDlexLayoutUsingTemplateExample
 	{
 		static void Main(string[] args)
 		{
-			Run("", "C:/temp/dynamicpdf-api-samples/dlex-layout-template/", "csharp-dlex-layout-example2-output.pdf");
-
-
+			Run("DP.xxx-api-key-xxx", "c:/temp/dynamicpdf-api-samples/dlex-layout-template/");			
 		}
 
-		public static void Run(String apiKey, String basePath, String outputFile)
+		public static void Run(String apiKey, String basePath)
 		{
 			LayoutDataResource layoutData = new LayoutDataResource(basePath + "consent-form.json");
 			DlexLayout dlexEndpoint = new DlexLayout("samples/creating-a-page-template-designer/consent-form.dlex", layoutData);
@@ -22,7 +20,7 @@ namespace CallDlexLayoutUsingTemplateExample
 
 			if (response.IsSuccessful)
 			{
-				File.WriteAllBytes(basePath + outputFile, response.Content);
+				File.WriteAllBytes(basePath + "csharp-dlex-layout-example2-output.pdf", response.Content);
 			}
 			else
 			{

@@ -8,7 +8,7 @@ namespace InstructionsDocumentExample
     {
         static void Main(string[] args)
         {
-            Run("DP.xxx---apikey---xxx", "C:/temp/dynamicpdf-api-usersguide-examples/");
+            Run("DP.xxx-api-key-xxx", "c:/temp/dynamicpdf-api-usersguide-examples/");
         }
 
         public static void Run(String apiKey, String basePath)

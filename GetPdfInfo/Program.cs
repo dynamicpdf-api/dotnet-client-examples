@@ -7,7 +7,7 @@ namespace GetPdfInfo
     {
         static void Main(string[] args)
         {
-            Run("DP --- APIKEY ---", "c:/temp/dynamicpdf-api-samples/get-pdf-info/");
+            Run("DP.xxx-api-key-xxx", "c:/temp/dynamicpdf-api-samples/get-pdf-info/");
         }
 
         static void Run(string apiKey, string basePath)

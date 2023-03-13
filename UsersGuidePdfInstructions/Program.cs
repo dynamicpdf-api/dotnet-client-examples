@@ -6,7 +6,7 @@ namespace UsersGuidePdfInstructions
     {
         static void Main(string[] args)
         {
-            InstructionsExample.DemoInstructions();
+            InstructionsExample.DemoInstructions("DP.xxx-api-key-xxx", "c:/temp/dynamicpdf-api-samples/");
         }
     }
 }

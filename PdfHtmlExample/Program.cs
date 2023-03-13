@@ -7,13 +7,10 @@ namespace PdfHtmlExample
     {
         static void Main(string[] args)
         {
-            string key = "<api key>";
-            string savePath = "c:/temp/html-pdf/html-output.pdf";
-            string resourcePath = "c:/temp/html-pdf/test.html";
-            Program.Run(key, savePath, resourcePath);
+            Run("DP.xxx-api-key-xxx", "c:/temp/dynamicpdf-api-samples/html-pdf/");
         }
 
-        public static void Run(string apiKey, string savePath, string resourcePath)
+        public static void Run(string apiKey, string basePath)
         {
             Pdf pdf = new Pdf();
             pdf.ApiKey = apiKey;
@@ -24,7 +21,7 @@ namespace PdfHtmlExample
 
             // add html from a path on local drive
 
-            HtmlResource resource = new HtmlResource(System.IO.File.ReadAllText(@"c:/temp/html-pdf/test.html"));
+            HtmlResource resource = new HtmlResource(System.IO.File.ReadAllText(basePath + "HtmlWithAllTags.html"));
             pdf.AddHtml(resource);
 
             // use basepath in an HTML string
@@ -35,7 +32,7 @@ namespace PdfHtmlExample
 
 
             PdfResponse pdfResponse = pdf.Process();
-            System.IO.File.WriteAllBytes(savePath, pdfResponse.Content);
+            System.IO.File.WriteAllBytes(basePath + "html-output-csharp.pdf", pdfResponse.Content);
         }
     }
 }

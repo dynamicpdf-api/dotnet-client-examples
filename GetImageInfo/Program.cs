@@ -11,7 +11,7 @@ namespace GetImageInfo
     {
         static void Main(string[] args)
         {
-            Run("DP.xxx--api-key--xxx", "c:/temp/dynamicpdf-api-samples/get-image-info/");
+            Run("DP.xxx-api-key-xxx", "c:/temp/dynamicpdf-api-samples/get-image-info/");
         }
 
         public static void Run(String apiKey, String basePath)

@@ -11,7 +11,7 @@ namespace CompletingAcroForm
     {
         static void Main(string[] args)
         {
-            Run("DP API KEY", "C:/temp/dynamicpdf-api-samples/fill-acro-form/");
+            Run("DP.xxx-api-key-xxx", "c:/temp/dynamicpdf-api-samples/fill-acro-form/");
         }
 
         public static void Run(string apiKey, string basePath)

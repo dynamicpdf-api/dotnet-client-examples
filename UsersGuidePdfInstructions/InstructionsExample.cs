@@ -9,11 +9,8 @@ namespace UsersGuidePdfInstructions
 {
     class InstructionsExample
     {
-		public static void DemoInstructions()
-		{
-			String apiKey = "DP.xxx--api-key--xxx";
-			String basePath = "C:/temp/dynamicpdf-api-usersguide-examples/";
-
+		public static void DemoInstructions(String apiKey, String basePath)
+		{			
 			Pdf exampleOne = InstructionsExample.TopLevelMetaData();
 			InstructionsExample.printOut(exampleOne, apiKey, basePath, "c-sharp-top-level-metadata-output.pdf");
 
