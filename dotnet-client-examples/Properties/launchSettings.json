@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "DynamicPdfCloudApiClientExamples": {
-      "commandName": "Project",
-      "commandLineArgs": "DP.xxxxx c:/holding/client-libraries-examples/  c:/holding/instructions-examples/"
-    }
-  }
-}
