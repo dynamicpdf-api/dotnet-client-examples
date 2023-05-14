@@ -1,5 +1,6 @@
 ﻿using DynamicPDF.Api;
 using DynamicPDF.Api.Elements;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,10 +11,10 @@ namespace UsersGuidePdfInstructions
     class InstructionsExample
     {
 		public static void DemoInstructions(String apiKey, String basePath)
-		{			
+		{
 			Pdf exampleOne = InstructionsExample.TopLevelMetaData();
 			InstructionsExample.printOut(exampleOne, apiKey, basePath, "c-sharp-top-level-metadata-output.pdf");
-
+/*
 			Pdf exampleTwo = InstructionsExample.FontsExample(basePath);
 			InstructionsExample.printOut(exampleTwo, apiKey, basePath, "c-sharp-font-output.pdf");
 
@@ -37,9 +38,18 @@ namespace UsersGuidePdfInstructions
 
 			Pdf exampleNine = InstructionsExample.BarcodeExample(basePath);
 			InstructionsExample.printOut(exampleNine, apiKey, basePath, "c-sharp-barcode-output.pdf");
-					
-		}
+			
+			Pdf exampleTen = InstructionsExample.imageExample();
+			InstructionsExample.printOut(exampleTen, apiKey, basePath, "image-output.pdf");
+			
 
+			Pdf exampleEleven = InstructionsExample.dlexResourceExample();
+			InstructionsExample.printOut(exampleEleven, apiKey, basePath, "dlex-resource-output.pdf");
+
+			Pdf exampleTwelve = InstructionsExample.deserializeJsonDlexExample();
+			InstructionsExample.printOut(exampleTwelve, apiKey, basePath, "dlex-object-serialize-//dlex-output.pdf");
+*/
+		}
 
 		public static void printOut(Pdf pdf, String apiKey, String basePath, String outputFile)
 		{
@@ -57,6 +67,46 @@ namespace UsersGuidePdfInstructions
 				File.WriteAllBytes(basePath + outputFile, response.Content);
 			}
 		}
+
+
+		public static Pdf deserializeJsonDlexExample()
+        {
+			Product product = new Product();
+
+			product.Name = "Apple";
+			product.ExpiryDate = new DateTime(2008, 12, 28);
+			product.Price = 3.99;
+
+			Pdf pdf = new Pdf();
+			//DlexResource dlex = new DlexResource("serialize-dlex/ObjectExample.dlex");
+			LayoutDataResource layout = new LayoutDataResource(product);
+			pdf.AddDlex("serialize-dlex/ObjectExample.dlex", layout);
+
+			return pdf;			
+			
+		}
+
+
+		public static Pdf dlexResourceExample()
+        {
+			Pdf pdf = new Pdf();
+			DlexResource dlex = new DlexResource("c:/temp/dlex-resource/SimpleReportWithCoverPage.dlex");
+			LayoutDataResource layout = new LayoutDataResource("c:/temp/dlex-resource/SimpleReportWithCoverPage.json");
+
+
+			pdf.AddDlex(dlex, layout);
+
+			return pdf;
+
+        }
+
+		public static Pdf imageExample()
+        {
+			Pdf pdf = new Pdf();
+			ImageResource ir = new ImageResource("C:/temp/dynamicpdf-api-samples/image-info/getting-started.png", "getting-started.png");
+			pdf.AddImage(ir);
+			return pdf;
+        }
 
 		public static Pdf TopLevelMetaData()
 		{

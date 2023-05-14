@@ -9,14 +9,14 @@ namespace PdfExample
     {
         static void Main(string[] args)
         {
-            Run("DP.xxx-api-key-xxx", "c:/temp/dynamicpdf-api-usersguide-examples/");
+            Run("DP.tlfNvFa4Rdx1CX73eomqeD2w5dG/xb2OyUHI8VMLxzFtSY6B7GgF3QGS", "c:/temp/dynamicpdf-api-examples/");
         }
 
         public static void Run(String apiKey, String basePath)
         {
             Pdf pdf = new Pdf();
             pdf.ApiKey = apiKey;
-
+           
             PageInput pageInput = pdf.AddPage(1008, 612);
             PageNumberingElement pageNumberingElement = new PageNumberingElement("1", ElementPlacement.TopRight);
             pageNumberingElement.Color = RgbColor.Red;
