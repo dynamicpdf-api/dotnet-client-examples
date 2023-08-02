@@ -12,43 +12,46 @@ namespace UsersGuidePdfInstructions
     {
 		public static void DemoInstructions(String apiKey, String basePath)
 		{
-			Pdf exampleOne = InstructionsExample.TopLevelMetaData();
-			InstructionsExample.printOut(exampleOne, apiKey, basePath, "c-sharp-top-level-metadata-output.pdf");
-/*
-			Pdf exampleTwo = InstructionsExample.FontsExample(basePath);
-			InstructionsExample.printOut(exampleTwo, apiKey, basePath, "c-sharp-font-output.pdf");
+			/*
+				Pdf exampleOne = InstructionsExample.TopLevelMetaData();
+				InstructionsExample.printOut(exampleOne, apiKey, basePath, "c-sharp-top-level-metadata-output.pdf");
 
-			Pdf exampleThree = InstructionsExample.SecurityExample(basePath);
-			InstructionsExample.printOut(exampleThree, apiKey, basePath, "c-sharp-security-output.pdf");
+				Pdf exampleTwo = InstructionsExample.FontsExample(basePath);
+				InstructionsExample.printOut(exampleTwo, apiKey, basePath, "c-sharp-font-output.pdf");
 
-			Pdf exampleFour = InstructionsExample.MergeExample(basePath);
-			InstructionsExample.printOut(exampleFour, apiKey, basePath, "c-sharp-merge-output.pdf");
+				Pdf exampleThree = InstructionsExample.SecurityExample(basePath);
+				InstructionsExample.printOut(exampleThree, apiKey, basePath, "c-sharp-security-output.pdf");
 
-			Pdf exampleFive = InstructionsExample.FormFieldsExample(basePath);
-			InstructionsExample.printOut(exampleFive, apiKey, basePath, "c-sharp-form-fields-output.pdf");
+				Pdf exampleFour = InstructionsExample.MergeExample(basePath);
+				InstructionsExample.printOut(exampleFour, apiKey, basePath, "c-sharp-merge-output.pdf");
 
-			Pdf exampleSix = InstructionsExample.AddOutlinesNewPdf();
-			InstructionsExample.printOut(exampleSix, apiKey, basePath, "c-sharp-new-outline-output.pdf");
+				Pdf exampleFive = InstructionsExample.FormFieldsExample(basePath);
+				InstructionsExample.printOut(exampleFive, apiKey, basePath, "c-sharp-form-fields-output.pdf");
 
-			Pdf exampleSeven = InstructionsExample.AddOutlinesExistingPdf(basePath);
-			InstructionsExample.printOut(exampleSeven, apiKey, basePath, "c-sharp-outline-existing-output.pdf");
+				Pdf exampleSix = InstructionsExample.AddOutlinesNewPdf();
+				InstructionsExample.printOut(exampleSix, apiKey, basePath, "c-sharp-new-outline-output.pdf");
 
-			Pdf exampleEight = InstructionsExample.TemplateExample(basePath);
-			InstructionsExample.printOut(exampleEight, apiKey, basePath, "c-sharp-template-output.pdf");
+				Pdf exampleSeven = InstructionsExample.AddOutlinesExistingPdf(basePath);
+				InstructionsExample.printOut(exampleSeven, apiKey, basePath, "c-sharp-outline-existing-output.pdf");
 
-			Pdf exampleNine = InstructionsExample.BarcodeExample(basePath);
-			InstructionsExample.printOut(exampleNine, apiKey, basePath, "c-sharp-barcode-output.pdf");
-			
-			Pdf exampleTen = InstructionsExample.imageExample();
-			InstructionsExample.printOut(exampleTen, apiKey, basePath, "image-output.pdf");
-			
+				Pdf exampleEight = InstructionsExample.TemplateExample(basePath);
+				InstructionsExample.printOut(exampleEight, apiKey, basePath, "c-sharp-template-output.pdf");
 
-			Pdf exampleEleven = InstructionsExample.dlexResourceExample();
-			InstructionsExample.printOut(exampleEleven, apiKey, basePath, "dlex-resource-output.pdf");
+				Pdf exampleNine = InstructionsExample.BarcodeExample(basePath);
+				InstructionsExample.printOut(exampleNine, apiKey, basePath, "c-sharp-barcode-output.pdf");
+
+				Pdf exampleTen = InstructionsExample.imageExample();
+				InstructionsExample.printOut(exampleTen, apiKey, basePath, "image-output.pdf");
+
+
+				Pdf exampleEleven = InstructionsExample.dlexResourceExample();
+				InstructionsExample.printOut(exampleEleven, apiKey, basePath, "dlex-resource-output.pdf");
+
+				*/
 
 			Pdf exampleTwelve = InstructionsExample.deserializeJsonDlexExample();
-			InstructionsExample.printOut(exampleTwelve, apiKey, basePath, "dlex-object-serialize-//dlex-output.pdf");
-*/
+			InstructionsExample.printOut(exampleTwelve, apiKey, basePath, "dlex-object-serialize-dlex-output.pdf");
+
 		}
 
 		public static void printOut(Pdf pdf, String apiKey, String basePath, String outputFile)
@@ -78,7 +81,6 @@ namespace UsersGuidePdfInstructions
 			product.Price = 3.99;
 
 			Pdf pdf = new Pdf();
-			//DlexResource dlex = new DlexResource("serialize-dlex/ObjectExample.dlex");
 			LayoutDataResource layout = new LayoutDataResource(product);
 			pdf.AddDlex("serialize-dlex/ObjectExample.dlex", layout);
 
