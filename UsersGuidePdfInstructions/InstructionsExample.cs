@@ -74,15 +74,34 @@ namespace UsersGuidePdfInstructions
 
 		public static Pdf deserializeJsonDlexExample()
         {
-			Product product = new Product();
 
-			product.Name = "Apple";
-			product.ExpiryDate = new DateTime(2008, 12, 28);
-			product.Price = 3.99;
+
+
+			Product p1 = new Product();
+			p1.ProductID = 17;
+			p1.ProductName = "Alice Mutton";
+			p1.QuantityPerUnit = "20 - 1 kg tins";
+			p1.UnitPrice = 39;
+			p1.Discontinued = true;
+
+			Product p2 = new Product();
+			p2.ProductID = 3;
+			p2.ProductName = "Aniseed Syrup";
+			p2.QuantityPerUnit = "12 - 550 ml bottles";
+			p2.UnitPrice = 10;
+			p2.Discontinued = false;
+
+			
+
+			SimpleReport simpleReport = new SimpleReport();
+			simpleReport.Products = new List<Product>();
+			simpleReport.Products.Add(p1);
+			simpleReport.Products.Add(p2);
+
 
 			Pdf pdf = new Pdf();
-			LayoutDataResource layout = new LayoutDataResource(product);
-			pdf.AddDlex("serialize-dlex/ObjectExample.dlex", layout);
+			LayoutDataResource layout = new LayoutDataResource(simpleReport);
+			pdf.AddDlex("samples/dlex-layout/SimpleReportWithCoverPage.dlex", layout);
 
 			return pdf;			
 			

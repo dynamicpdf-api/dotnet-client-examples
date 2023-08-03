@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace UsersGuidePdfInstructions
 {
     class Product
     {
-
-        public string Name { get; set; }
-		public DateTime ExpiryDate { get; set; }
-        public Double Price{get; set;}
-     }
+        public int ProductID { get; set; }
+        public String ProductName { get; set; }
+        public String QuantityPerUnit { get; set; }
+        public double UnitPrice { get; set; }
+        public bool Discontinued { get; set; }
+    }
 }
