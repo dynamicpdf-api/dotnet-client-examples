@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace UsersGuidePdfInstructions
+namespace DlexLayoutObjectExample
 {
     class SimpleReport
     {
