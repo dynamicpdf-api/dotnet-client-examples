@@ -12,6 +12,7 @@ namespace UsersGuidePdfInstructions
     {
 		public static void DemoInstructions(String apiKey, String basePath)
 		{
+
 			/*
 				Pdf exampleOne = InstructionsExample.TopLevelMetaData();
 				InstructionsExample.printOut(exampleOne, apiKey, basePath, "c-sharp-top-level-metadata-output.pdf");
@@ -47,7 +48,11 @@ namespace UsersGuidePdfInstructions
 				Pdf exampleEleven = InstructionsExample.dlexResourceExample();
 				InstructionsExample.printOut(exampleEleven, apiKey, basePath, "dlex-resource-output.pdf");
 
-				*/
+			*/
+
+			Pdf exampleTwelve = InstructionsExample.GoogleFontsExample();
+			InstructionsExample.printOut(exampleTwelve, apiKey, basePath, "google-fonts-c-sharp-output.pdf");
+				
 
 		}
 
@@ -69,7 +74,29 @@ namespace UsersGuidePdfInstructions
 		}
 
 
+		public static Pdf GoogleFontsExample()
+		{
 
+			Pdf pdf = new Pdf();
+
+			PageInput pageInput = pdf.AddPage(1008, 612);
+			PageNumberingElement pageNumberingElement = new PageNumberingElement("A", ElementPlacement.TopRight);
+			pageNumberingElement.Color = RgbColor.Red;
+			pageNumberingElement.Font = Font.Helvetica;
+			pageNumberingElement.FontSize = 12;
+
+			
+			PageNumberingElement pageNumberingElementTwo = new PageNumberingElement("Test", ElementPlacement.TopLeft);
+			pageNumberingElementTwo.Color = RgbColor.DarkOrange;
+			pageNumberingElementTwo.Font =  Font.Google("Borel", false, false);
+			pageNumberingElementTwo.FontSize = 42;
+
+
+			pageInput.Elements.Add(pageNumberingElement);
+			pageInput.Elements.Add(pageNumberingElementTwo);
+
+			return pdf;
+		}
 
 
 		public static Pdf dlexResourceExample()
