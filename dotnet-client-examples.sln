@@ -25,8 +25,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PdfTextExample", "PdfTextEx
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PdfXmpExample", "PdfXmpExample\PdfXmpExample.csproj", "{248141D9-084C-46CF-AACD-1774A0CBC5C0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstructionsDocumentExample", "InstructionsDocumentExample\InstructionsDocumentExample.csproj", "{0DAC1597-D29E-424B-8DF6-D25D888AFC37}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergePdfs", "MergePdfs\MergePdfs.csproj", "{2A9CEE83-CF55-45DD-AF26-987DC165A651}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetPdfInfo", "GetPdfInfo\GetPdfInfo.csproj", "{395D98D6-EEAD-46D6-85D3-160366AF669F}"
@@ -47,7 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncExample", "AsyncExample\AsyncExample.csproj", "{9E65F4DE-030C-4C43-99B7-740FD195069C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DlexLayoutObjectExample", "DlexLayoutObjectExample\DlexLayoutObjectExample.csproj", "{86E498D2-06BA-4D0A-B994-1AAA983ED8B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DlexLayoutObjectExample", "DlexLayoutObjectExample\DlexLayoutObjectExample.csproj", "{86E498D2-06BA-4D0A-B994-1AAA983ED8B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,10 +97,6 @@ Global
 		{248141D9-084C-46CF-AACD-1774A0CBC5C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{248141D9-084C-46CF-AACD-1774A0CBC5C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{248141D9-084C-46CF-AACD-1774A0CBC5C0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0DAC1597-D29E-424B-8DF6-D25D888AFC37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DAC1597-D29E-424B-8DF6-D25D888AFC37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DAC1597-D29E-424B-8DF6-D25D888AFC37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DAC1597-D29E-424B-8DF6-D25D888AFC37}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2A9CEE83-CF55-45DD-AF26-987DC165A651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2A9CEE83-CF55-45DD-AF26-987DC165A651}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A9CEE83-CF55-45DD-AF26-987DC165A651}.Release|Any CPU.ActiveCfg = Release|Any CPU

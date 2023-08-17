@@ -6,7 +6,7 @@ namespace UsersGuidePdfInstructions
     {
         static void Main(string[] args)
         {
-            InstructionsExample.DemoInstructions("DP---API-KEY---", "BASE-PATH");
+            InstructionsExample.DemoInstructions("DP.---API-KEY---", "c:/temp/instructions-example/out/");
         }
     }
 }

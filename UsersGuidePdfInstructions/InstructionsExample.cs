@@ -25,7 +25,6 @@ namespace UsersGuidePdfInstructions
 
 				Pdf exampleFour = InstructionsExample.MergeExample(basePath);
 				InstructionsExample.printOut(exampleFour, apiKey, basePath, "c-sharp-merge-output.pdf");
-
 				Pdf exampleFive = InstructionsExample.FormFieldsExample(basePath);
 				InstructionsExample.printOut(exampleFive, apiKey, basePath, "c-sharp-form-fields-output.pdf");
 
@@ -40,6 +39,7 @@ namespace UsersGuidePdfInstructions
 
 				Pdf exampleNine = InstructionsExample.BarcodeExample(basePath);
 				InstructionsExample.printOut(exampleNine, apiKey, basePath, "c-sharp-barcode-output.pdf");
+			
 
 				Pdf exampleTen = InstructionsExample.imageExample();
 				InstructionsExample.printOut(exampleTen, apiKey, basePath, "image-output.pdf");
@@ -48,11 +48,13 @@ namespace UsersGuidePdfInstructions
 				Pdf exampleEleven = InstructionsExample.dlexResourceExample();
 				InstructionsExample.printOut(exampleEleven, apiKey, basePath, "dlex-resource-output.pdf");
 
-			*/
+	
+				Pdf exampleTwelve = InstructionsExample.GoogleFontsExample();
+				InstructionsExample.printOut(exampleTwelve, apiKey, basePath, "google-fonts-c-sharp-output.pdf");
+*/
 
-			Pdf exampleTwelve = InstructionsExample.GoogleFontsExample();
-			InstructionsExample.printOut(exampleTwelve, apiKey, basePath, "google-fonts-c-sharp-output.pdf");
-				
+			Pdf exampleThirteen = InstructionsExample.PdfInputExample();
+			InstructionsExample.printOut(exampleThirteen, apiKey, basePath, "pdf-input-output.pdf");
 
 		}
 
@@ -73,6 +75,28 @@ namespace UsersGuidePdfInstructions
 			}
 		}
 
+		public static Pdf PdfInputExample()
+        {
+
+			Pdf pdf = new Pdf();
+
+			//get pdf from local file system
+
+			pdf.AddPdf(new PdfResource("c:/temp/users-guide-resources/DocumentA.pdf"));
+			
+			// get pdf from bytes
+
+			PdfResource resource = new PdfResource(File.ReadAllBytes("c:/temp/users-guide-resources/DocumentB.pdf"));
+
+			pdf.AddPdf(resource);
+
+			//get pdf from cloud storage
+
+			pdf.AddPdf("samples/users-guide-resources/DocumentC.pdf");
+
+			return pdf;
+
+		}
 
 		public static Pdf GoogleFontsExample()
 		{
@@ -102,11 +126,16 @@ namespace UsersGuidePdfInstructions
 		public static Pdf dlexResourceExample()
         {
 			Pdf pdf = new Pdf();
-			DlexResource dlex = new DlexResource("c:/temp/dlex-resource/SimpleReportWithCoverPage.dlex");
-			LayoutDataResource layout = new LayoutDataResource("c:/temp/dlex-resource/SimpleReportWithCoverPage.json");
+			DlexResource dlexResource = new DlexResource("c:/temp/users-guide-resources/SimpleReportWithCoverPage.dlex");
+			LayoutDataResource layout = new LayoutDataResource("c:/temp/users-guide-resources/SimpleReportWithCoverPage.json");
+			pdf.AddDlex(dlexResource, layout);
+			pdf.AddAdditionalResource("c:/temp/users-guide-resources/NorthwindLogo.gif");
 
 
-			pdf.AddDlex(dlex, layout);
+			string stringLayoutData = File.ReadAllText("c:/temp/users-guide-resources/SimpleReportWithCoverPage.json");
+			LayoutDataResource layoutTwo = new LayoutDataResource(stringLayoutData);
+			pdf.AddDlex("samples/users-guide-resources/SimpleReportWithCoverPage.dlex", layoutTwo);
+
 
 			return pdf;
 
@@ -115,8 +144,15 @@ namespace UsersGuidePdfInstructions
 		public static Pdf imageExample()
         {
 			Pdf pdf = new Pdf();
-			ImageResource ir = new ImageResource("C:/temp/dynamicpdf-api-samples/image-info/getting-started.png", "getting-started.png");
+			ImageResource ir = new ImageResource("C:/temp/users-guide-resources/A.png");
 			pdf.AddImage(ir);
+
+			ImageResource ir2 = new ImageResource(File.ReadAllBytes("C:/temp/users-guide-resources/B.png"));
+			pdf.AddImage(ir2);
+
+
+			pdf.AddImage("samples/users-guide-resources/C.png");
+
 			return pdf;
         }
 

@@ -10,7 +10,7 @@ namespace DlexLayoutObjectExample
         static void Main(string[] args)
         {
 			Pdf pdf = DeserializeJsonDlexExample();
-			PrintOut(pdf, "DP.jp1OeWjCQG0FCbkUt7MGXeJCXXEAjy7C5iSJNBNnKzJ9Q5Ss8+SjczcH", "C:/temp/dlex-layout-example/", "dlex-layou-object-csharp-output.pdf");
+			PrintOut(pdf, "DP---API-KEY---", "C:/temp/dlex-layout-example/", "dlex-layou-object-csharp-output.pdf");
         }
 
 
@@ -43,7 +43,7 @@ namespace DlexLayoutObjectExample
 
 			Pdf pdf = new Pdf();
 			LayoutDataResource layout = new LayoutDataResource(simpleReport);
-			pdf.AddDlex("samples/dlex-layout/SimpleReportWithCoverPage.dlex", layout);
+			pdf.AddDlex("samples/users-guide-resources/SimpleReportWithCoverPage.dlex", layout);
 
 			return pdf;
 
