@@ -10,55 +10,59 @@ namespace UsersGuidePdfInstructions
 {
     class InstructionsExample
     {
-		public static void DemoInstructions(String apiKey, String basePath)
+		public static void DemoInstructions(String apiKey, String basePath, String outputPath)
 		{
 
-			/*
+			
 				Pdf exampleOne = InstructionsExample.TopLevelMetaData();
-				InstructionsExample.printOut(exampleOne, apiKey, basePath, "c-sharp-top-level-metadata-output.pdf");
+				InstructionsExample.printOut(exampleOne, apiKey, outputPath, "c-sharp-top-level-metadata-output.pdf");
 
 				Pdf exampleTwo = InstructionsExample.FontsExample(basePath);
-				InstructionsExample.printOut(exampleTwo, apiKey, basePath, "c-sharp-font-output.pdf");
+				InstructionsExample.printOut(exampleTwo, apiKey, outputPath, "c-sharp-font-output.pdf");
 
 				Pdf exampleThree = InstructionsExample.SecurityExample(basePath);
-				InstructionsExample.printOut(exampleThree, apiKey, basePath, "c-sharp-security-output.pdf");
+				InstructionsExample.printOut(exampleThree, apiKey, outputPath, "c-sharp-security-output.pdf");
 
 				Pdf exampleFour = InstructionsExample.MergeExample(basePath);
-				InstructionsExample.printOut(exampleFour, apiKey, basePath, "c-sharp-merge-output.pdf");
+				InstructionsExample.printOut(exampleFour, apiKey, outputPath, "c-sharp-merge-output.pdf");
 				Pdf exampleFive = InstructionsExample.FormFieldsExample(basePath);
-				InstructionsExample.printOut(exampleFive, apiKey, basePath, "c-sharp-form-fields-output.pdf");
+				InstructionsExample.printOut(exampleFive, apiKey, outputPath, "c-sharp-form-fields-output.pdf");
 
 				Pdf exampleSix = InstructionsExample.AddOutlinesNewPdf();
-				InstructionsExample.printOut(exampleSix, apiKey, basePath, "c-sharp-new-outline-output.pdf");
+				InstructionsExample.printOut(exampleSix, apiKey, outputPath, "c-sharp-new-outline-output.pdf");
 
 				Pdf exampleSeven = InstructionsExample.AddOutlinesExistingPdf(basePath);
-				InstructionsExample.printOut(exampleSeven, apiKey, basePath, "c-sharp-outline-existing-output.pdf");
+				InstructionsExample.printOut(exampleSeven, apiKey, outputPath, "c-sharp-outline-existing-output.pdf");
 
 				Pdf exampleEight = InstructionsExample.TemplateExample(basePath);
-				InstructionsExample.printOut(exampleEight, apiKey, basePath, "c-sharp-template-output.pdf");
+				InstructionsExample.printOut(exampleEight, apiKey, outputPath, "c-sharp-template-output.pdf");
 
 				Pdf exampleNine = InstructionsExample.BarcodeExample(basePath);
-				InstructionsExample.printOut(exampleNine, apiKey, basePath, "c-sharp-barcode-output.pdf");
+				InstructionsExample.printOut(exampleNine, apiKey, outputPath, "c-sharp-barcode-output.pdf");
 			
+		
+				Pdf exampleTen = InstructionsExample.imageExample(basePath);
+				InstructionsExample.printOut(exampleTen, apiKey, outputPath, "image-output.pdf");
 
-				Pdf exampleTen = InstructionsExample.imageExample();
-				InstructionsExample.printOut(exampleTen, apiKey, basePath, "image-output.pdf");
 
-
-				Pdf exampleEleven = InstructionsExample.dlexResourceExample();
-				InstructionsExample.printOut(exampleEleven, apiKey, basePath, "dlex-resource-output.pdf");
+				Pdf exampleEleven = InstructionsExample.dlexResourceExample(basePath);
+				InstructionsExample.printOut(exampleEleven, apiKey, outputPath, "dlex-resource-output.pdf");
 
 	
 				Pdf exampleTwelve = InstructionsExample.GoogleFontsExample();
-				InstructionsExample.printOut(exampleTwelve, apiKey, basePath, "google-fonts-c-sharp-output.pdf");
-*/
+				InstructionsExample.printOut(exampleTwelve, apiKey, outputPath, "google-fonts-c-sharp-output.pdf");
 
-			Pdf exampleThirteen = InstructionsExample.PdfInputExample();
-			InstructionsExample.printOut(exampleThirteen, apiKey, basePath, "pdf-input-output.pdf");
+
+			Pdf exampleThirteen = InstructionsExample.PdfInputExample(basePath);
+			InstructionsExample.printOut(exampleThirteen, apiKey, outputPath, "pdf-input-output.pdf");
+
+
+			Pdf exampleFourteen = InstructionsExample.HtmlExample(basePath);
+			InstructionsExample.printOut(exampleThirteen, apiKey, outputPath, "pdf-html-output.pdf");
 
 		}
 
-		public static void printOut(Pdf pdf, String apiKey, String basePath, String outputFile)
+		public static void printOut(Pdf pdf, String apiKey, String outputPath, String outputFile)
 		{
 			pdf.ApiKey = apiKey;
 			PdfResponse response = pdf.Process();
@@ -71,22 +75,45 @@ namespace UsersGuidePdfInstructions
 			{
 				Console.WriteLine(PrettyPrintUtil.JsonPrettify(pdf.GetInstructionsJson()));
 				Console.WriteLine("==================================================================");
-				File.WriteAllBytes(basePath + outputFile, response.Content);
+				File.WriteAllBytes(outputPath + outputFile, response.Content);
 			}
 		}
+		
 
-		public static Pdf PdfInputExample()
+		public static Pdf HtmlExample(String basePath)
+        {
+
+			Pdf pdf = new Pdf();
+
+			pdf.AddHtml("<html>An example HTML fragment.</html>", null, PageSize.Letter, PageOrientation.Portrait, 1F);
+
+			// use basepath in an HTML string
+			pdf.AddHtml("<html><p style='color:red;font-family:verdana;font-size:30px'>HTML with basePath.</p><img src='./images/logo.png'></img></html>",
+					"https://www.dynamicpdf.com", PageSize.Letter, PageOrientation.Portrait, 1F);
+
+			// add html from a path on local drive
+			String temp = File.ReadAllText(basePath + "products.html");
+			
+			HtmlResource resource = new HtmlResource(temp);
+			pdf.AddHtml(resource, null, PageSize.Letter, PageOrientation.Portrait, 1F);
+
+			return pdf;
+
+		}
+
+
+		public static Pdf PdfInputExample(String basePath)
         {
 
 			Pdf pdf = new Pdf();
 
 			//get pdf from local file system
 
-			pdf.AddPdf(new PdfResource("c:/temp/users-guide-resources/DocumentA.pdf"));
+			pdf.AddPdf(new PdfResource(basePath + "DocumentA.pdf"));
 			
 			// get pdf from bytes
 
-			PdfResource resource = new PdfResource(File.ReadAllBytes("c:/temp/users-guide-resources/DocumentB.pdf"));
+			PdfResource resource = new PdfResource(File.ReadAllBytes(basePath + "DocumentB.pdf"));
 
 			pdf.AddPdf(resource);
 
@@ -123,16 +150,16 @@ namespace UsersGuidePdfInstructions
 		}
 
 
-		public static Pdf dlexResourceExample()
+		public static Pdf dlexResourceExample(String basePath)
         {
 			Pdf pdf = new Pdf();
-			DlexResource dlexResource = new DlexResource("c:/temp/users-guide-resources/SimpleReportWithCoverPage.dlex");
-			LayoutDataResource layout = new LayoutDataResource("c:/temp/users-guide-resources/SimpleReportWithCoverPage.json");
+			DlexResource dlexResource = new DlexResource(basePath + "SimpleReportWithCoverPage.dlex");
+			LayoutDataResource layout = new LayoutDataResource(basePath + "SimpleReportWithCoverPage.json");
 			pdf.AddDlex(dlexResource, layout);
-			pdf.AddAdditionalResource("c:/temp/users-guide-resources/NorthwindLogo.gif");
+			pdf.AddAdditionalResource(basePath + "NorthwindLogo.gif");
 
 
-			string stringLayoutData = File.ReadAllText("c:/temp/users-guide-resources/SimpleReportWithCoverPage.json");
+			string stringLayoutData = File.ReadAllText(basePath + "SimpleReportWithCoverPage.json");
 			LayoutDataResource layoutTwo = new LayoutDataResource(stringLayoutData);
 			pdf.AddDlex("samples/users-guide-resources/SimpleReportWithCoverPage.dlex", layoutTwo);
 
@@ -141,13 +168,13 @@ namespace UsersGuidePdfInstructions
 
         }
 
-		public static Pdf imageExample()
+		public static Pdf imageExample(String basePath)
         {
 			Pdf pdf = new Pdf();
-			ImageResource ir = new ImageResource("C:/temp/users-guide-resources/A.png");
+			ImageResource ir = new ImageResource(basePath + "A.png");
 			pdf.AddImage(ir);
 
-			ImageResource ir2 = new ImageResource(File.ReadAllBytes("C:/temp/users-guide-resources/B.png"));
+			ImageResource ir2 = new ImageResource(File.ReadAllBytes(basePath + "B.png"));
 			pdf.AddImage(ir2);
 
 
@@ -187,7 +214,7 @@ namespace UsersGuidePdfInstructions
 			pageNumberingElement.Font = Font.Helvetica;
 			pageNumberingElement.FontSize = 42;
 
-			String cloudResourceName = "old_samples/shared/font/Calibri.otf";
+			String cloudResourceName = "samples/users-guide-resources/Calibri.otf";
 
 			PageNumberingElement pageNumberingElementTwo = new PageNumberingElement("B", ElementPlacement.TopLeft);
 			pageNumberingElementTwo.Color = RgbColor.DarkOrange;
@@ -227,7 +254,7 @@ namespace UsersGuidePdfInstructions
 		{
 			Pdf pdf = new Pdf();
 			PdfResource resourceA = new PdfResource(basePath + "DocumentA.pdf");
-			ImageResource imageResource = new ImageResource(basePath + "dynamicpdfLogo.png");
+			ImageResource imageResource = new ImageResource(basePath + "DPDFLogo.png");
 			PdfResource resourceB = new PdfResource(basePath + "DocumentB.pdf");
 			pdf.AddPdf(resourceA);
 			pdf.AddImage(imageResource);
@@ -302,7 +329,7 @@ namespace UsersGuidePdfInstructions
 			Pdf pdf = new Pdf();
 			pdf.Author = "John User";
 			pdf.Title = "Template Example One";
-			PdfResource resource = new PdfResource(basePath + "/DocumentA.pdf");
+			PdfResource resource = new PdfResource(basePath + "DocumentA.pdf");
 			PdfInput input = new PdfInput(resource);
 			pdf.Inputs.Add(input);
 
@@ -316,7 +343,7 @@ namespace UsersGuidePdfInstructions
 		public static Pdf BarcodeExample(String basePath)
 		{
 			Pdf pdf = new Pdf();
-			PdfResource resource = new PdfResource(basePath + "/DocumentA.pdf");
+			PdfResource resource = new PdfResource(basePath + "DocumentA.pdf");
 			PdfInput input = new PdfInput(resource);
 			pdf.Inputs.Add(input);
 
