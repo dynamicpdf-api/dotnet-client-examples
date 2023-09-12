@@ -47,7 +47,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncExample", "AsyncExampl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DlexLayoutObjectExample", "DlexLayoutObjectExample\DlexLayoutObjectExample.csproj", "{86E498D2-06BA-4D0A-B994-1AAA983ED8B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DlexError", "DlexError\DlexError.csproj", "{DD816822-3153-4E98-A840-627F7EBD8D05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DlexError", "DlexError\DlexError.csproj", "{DD816822-3153-4E98-A840-627F7EBD8D05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfHtmlCssWorkaroundExample", "PdfHtmlCssWorkaroundExample\PdfHtmlCssWorkaroundExample.csproj", "{D0830B12-B082-4998-95A9-5F28971BF534}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,6 +145,10 @@ Global
 		{DD816822-3153-4E98-A840-627F7EBD8D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD816822-3153-4E98-A840-627F7EBD8D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD816822-3153-4E98-A840-627F7EBD8D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0830B12-B082-4998-95A9-5F28971BF534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0830B12-B082-4998-95A9-5F28971BF534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0830B12-B082-4998-95A9-5F28971BF534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0830B12-B082-4998-95A9-5F28971BF534}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
