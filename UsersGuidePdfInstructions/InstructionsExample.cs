@@ -60,6 +60,9 @@ namespace UsersGuidePdfInstructions
 			Pdf exampleFourteen = InstructionsExample.HtmlExample(basePath);
 			InstructionsExample.printOut(exampleThirteen, apiKey, outputPath, "pdf-html-output.pdf");
 
+			Pdf exampleFifteen = InstructionsExample.WordExample(basePath);
+			InstructionsExample.printOut(exampleFifteen, apiKey, outputPath, "pdf-word-output.pdf");
+
 		}
 
 		public static void printOut(Pdf pdf, String apiKey, String outputPath, String outputFile)
@@ -79,6 +82,30 @@ namespace UsersGuidePdfInstructions
 			}
 		}
 		
+
+
+		public static Pdf WordExample(string basePath)
+        {
+
+			Pdf pdf = new Pdf();
+
+			WordResource wordResource = new WordResource(basePath + "Doc1.docx");
+			WordInput word = new WordInput(wordResource);
+
+			word.PageWidth = 300;
+			word.PageHeight = 200;
+
+			word.TopMargin = 10;
+			word.BottomMargin = 10;
+			word.RightMargin = 40;
+			word.LeftMargin = 40;
+
+			pdf.Inputs.Add(word);
+
+			return pdf;
+
+		}
+
 
 		public static Pdf HtmlExample(String basePath)
         {
