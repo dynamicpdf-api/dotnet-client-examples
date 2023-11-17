@@ -8,7 +8,7 @@ namespace DlexError
     {
 		static void Main(string[] args)
 		{
-			//Run("DP.+pFFWi0szG/OW8fdYBESOhtbtUpwkMULfodXuuA52sPIQpjYP3djUw1Z", "c:/temp/dlexerror/");
+			//Run("DP.xxx-api-key-xxx", "c:/temp/dlexerror/");
 			DlexResourceExample();
 		}
 
@@ -34,7 +34,7 @@ namespace DlexError
 		public static void DlexResourceExample()
 		{
 			Pdf pdf = new Pdf();
-			pdf.ApiKey = "DP.+pFFWi0szG/OW8fdYBESOhtbtUpwkMULfodXuuA52sPIQpjYP3djUw1Z";
+			pdf.ApiKey = "DP.xxx-api-key-xxx";
 			DlexResource dlexResource = new DlexResource("c:/temp/dlexerror/consent-formB.dlex");
 			LayoutDataResource layout = new LayoutDataResource("c:/temp/dlexerror/consent-formB.json");
 			pdf.AddDlex(dlexResource, layout);

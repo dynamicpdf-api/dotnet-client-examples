@@ -6,7 +6,7 @@ namespace UsersGuidePdfInstructions
     {
         static void Main(string[] args)
         {
-            InstructionsExample.DemoInstructions("DP---API-KEY---", "c:/temp/users-guide-resources/", "c:/temp/dynamicpdf-api-usersguide-examples/csharp-output/");
+            InstructionsExample.DemoInstructions("DP.xxx-api-key-xxx", "c:/temp/users-guide-resources/", "c:/temp/dynamicpdf-api-usersguide-examples/csharp-output/");
         }
     }
 }

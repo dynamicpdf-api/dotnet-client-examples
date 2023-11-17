@@ -14,7 +14,7 @@ namespace AsyncExample
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
-            RunAsync("DP ---apikey---", "c:/temp/dynamicpdf-api-samples/async-example/");
+            RunAsync("DP.xxx-api-key-xxx", "c:/temp/dynamicpdf-api-samples/async-example/");
 
             Console.WriteLine("Total time: " + sw.Elapsed.TotalSeconds);
 
