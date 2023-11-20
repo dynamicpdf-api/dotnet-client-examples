@@ -10,7 +10,7 @@ namespace DlexLayoutObjectExample
         static void Main(string[] args)
         {
 			Pdf pdf = DeserializeJsonDlexExample();
-			PrintOut(pdf, "DP---API-KEY---", "C:/temp/dlex-layout-example/", "dlex-layou-object-csharp-output.pdf");
+			PrintOut(pdf, "DP.xxx-api-key-xxx", "C:/temp/dlex-layout-example/", "dlex-layou-object-csharp-output.pdf");
         }
 
 

@@ -9,7 +9,7 @@ namespace PdfHtmlCssWorkaroundExample
     {
         static void Main(string[] args)
         {
-			Run("DP---API-KEY---", "c:/temp/users-guide-resources/", "c:/temp/dynamicpdf-api-usersguide-examples/csharp-output/", "html-css-workaround.pdf");
+			Run("DP.xxx-api-key-xxx", "c:/temp/users-guide-resources/", "c:/temp/dynamicpdf-api-usersguide-examples/csharp-output/", "html-css-workaround.pdf");
         }
 
         static void Run(String apiKey, string basePath, string outputPath, string outputFile)

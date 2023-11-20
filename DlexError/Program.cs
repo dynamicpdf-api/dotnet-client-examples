@@ -8,7 +8,7 @@ namespace DlexError
     {
 		static void Main(string[] args)
 		{
-			//Run("DP.+pFFWi0szG/OW8fdYBESOhtbtUpwkMULfodXuuA52sPIQpjYP3djUw1Z", "c:/temp/dlexerror/");
+			//Run("DP.xxx-api-key-xxx", "c:/temp/dlexerror/");
 			DlexResourceExample();
 		}
 

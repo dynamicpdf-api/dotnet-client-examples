@@ -70,14 +70,16 @@ namespace UsersGuidePdfInstructions
 			pdf.ApiKey = apiKey;
 			PdfResponse response = pdf.Process();
 
+			Console.WriteLine("===================== JSON Instructions Document ======================");
+			Console.WriteLine(PrettyPrintUtil.JsonPrettify(pdf.GetInstructionsJson()));
+			Console.WriteLine("=========================================================================");
+
 			if (response.ErrorJson != null)
 			{
 				Console.WriteLine(PrettyPrintUtil.JsonPrettify(response.ErrorJson));
 			}
 			else
 			{
-				Console.WriteLine(PrettyPrintUtil.JsonPrettify(pdf.GetInstructionsJson()));
-				Console.WriteLine("==================================================================");
 				File.WriteAllBytes(outputPath + outputFile, response.Content);
 			}
 		}
@@ -184,6 +186,12 @@ namespace UsersGuidePdfInstructions
 			LayoutDataResource layout = new LayoutDataResource(basePath + "SimpleReportWithCoverPage.json");
 			pdf.AddDlex(dlexResource, layout);
 			pdf.AddAdditionalResource(basePath + "NorthwindLogo.gif");
+			pdf.Creator = "Acme Inc.";
+			pdf.Author = "John Doe.";
+			pdf.Title = "Simple Report With Cover Page";
+			pdf.Subject = "Simpletest";
+
+			pdf.Keywords = "test example pdf simple";
 
 
 			string stringLayoutData = File.ReadAllText(basePath + "SimpleReportWithCoverPage.json");
