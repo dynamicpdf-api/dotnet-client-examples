@@ -1,12 +1,9 @@
 ﻿using DynamicPDF.Api;
 using DynamicPDF.Api.Elements;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
-namespace UsersGuidePdfInstructions
+namespace DynamicPdfClientLibraryExamples.Examples
 {
     class InstructionsExample
     {
@@ -71,12 +68,12 @@ namespace UsersGuidePdfInstructions
 			PdfResponse response = pdf.Process();
 
 			Console.WriteLine("===================== JSON Instructions Document ======================");
-			Console.WriteLine(PrettyPrintUtil.JsonPrettify(pdf.GetInstructionsJson()));
+			Console.WriteLine(Utility.PrettyPrintUtil.JsonPrettify(pdf.GetInstructionsJson()));
 			Console.WriteLine("=========================================================================");
 
 			if (response.ErrorJson != null)
 			{
-				Console.WriteLine(PrettyPrintUtil.JsonPrettify(response.ErrorJson));
+				Console.WriteLine(Utility.PrettyPrintUtil.JsonPrettify(response.ErrorJson));
 			}
 			else
 			{

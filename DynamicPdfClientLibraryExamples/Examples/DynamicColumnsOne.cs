@@ -1,24 +1,22 @@
-﻿using DynamicPDF.Api;
+﻿
+using DynamicPDF.Api;
 using System;
 using System.IO;
 using System.Text;
 using System.Xml;
 
-namespace DynamicColumnsDlex
+namespace DynamicPdfClientLibraryExamples.Examples
 {
-    class Program
+    class DynamicColumnsOne
     {
-        static string BASEPATH = "c:/temp/dynamicpdf-api-samples/columns/";
-        static string APIKEY = "DP.xxx-api-key-xxx";
-
-        static void Main(string[] args)
+        public static void Run(string apiKey, string basePath, string outputPath)
         {
-            RunOriginal(APIKEY, BASEPATH + "report-with-cover-page.json", "samples/blog-dynamic-columns/report-with-cover-page.dlex", BASEPATH + "report-with-cover-page-original-output.pdf");
-            XmlDocument doc = ModifyDlexDocument(BASEPATH + "report-with-cover-page.dlex");
-            RunDlex(APIKEY, BASEPATH + "report-with-cover-page.json", doc, BASEPATH + "report-with-cover-page-output.pdf");
+            XmlDocument doc = ModifyDlexDocument(basePath + "report-with-cover-page.dlex");
+            RunDlex(apiKey, basePath, basePath + "report-with-cover-page.json", doc, outputPath + "report-with-cover-page-output.pdf");
         }
 
-        public static void RunDlex(string apiKey, string layoutDataPath, XmlDocument doc, string outputPath)
+        
+        public static void RunDlex(string apiKey, string basePath, string layoutDataPath, XmlDocument doc, string outputPath)
         {
             Pdf pdf = new Pdf();
             pdf.ApiKey = apiKey;
@@ -27,10 +25,9 @@ namespace DynamicColumnsDlex
 
             DlexResource dlexResource = new DlexResource(Encoding.Default.GetBytes(doc.OuterXml));
 
-            pdf.AddAdditionalResource(BASEPATH + "NorthwindLogo.gif");
+            pdf.AddAdditionalResource(basePath + "NorthwindLogo.gif");
             pdf.AddDlex(dlexResource, layoutDataResource);
 
-            Console.WriteLine(pdf.GetInstructionsJson());
             PdfResponse pdfResponse = pdf.Process();
 
             if (pdfResponse.IsSuccessful)
@@ -42,7 +39,6 @@ namespace DynamicColumnsDlex
                 Console.WriteLine(pdfResponse.ErrorJson);
             }
         }
-
 
         public static XmlDocument ModifyDlexDocument(string dlexFile)
         {
@@ -81,26 +77,5 @@ namespace DynamicColumnsDlex
 
             return doc;
         }
-
-        public static void RunOriginal(string apiKey, string layoutDataPath, string dlexPath, string outputPath)
-        {
-            Pdf pdf = new Pdf();
-            pdf.ApiKey = apiKey;
-
-            LayoutDataResource layoutDataResource = new LayoutDataResource(layoutDataPath);
-            pdf.AddDlex(dlexPath, layoutDataResource);
-            PdfResponse pdfResponse = pdf.Process();
-
-            if (pdfResponse.IsSuccessful)
-            {
-                File.WriteAllBytes(outputPath, pdfResponse.Content);
-            }
-            else
-            {
-                Console.WriteLine(pdfResponse.ErrorJson);
-            }
-
-        }
-
     }
 }

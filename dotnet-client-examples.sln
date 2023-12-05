@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtractingText", "Extractin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetImageInfo", "GetImageInfo\GetImageInfo.csproj", "{398228C3-5AF0-4142-9792-3E3C172129BA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsersGuidePdfInstructions", "UsersGuidePdfInstructions\UsersGuidePdfInstructions.csproj", "{25D8FDF5-3781-4668-8A43-025843DCC93C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DlexLayoutExample", "DlexLayoutExample\DlexLayoutExample.csproj", "{AD641688-64DB-4B34-9089-1C2F4BF73601}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageInfoExample", "ImageInfoExample\ImageInfoExample.csproj", "{FB449E3B-9257-4557-BAF3-18E3533F8EF6}"
@@ -51,7 +49,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DlexError", "DlexError\Dlex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PdfHtmlCssWorkaroundExample", "PdfHtmlCssWorkaroundExample\PdfHtmlCssWorkaroundExample.csproj", "{D0830B12-B082-4998-95A9-5F28971BF534}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicColumnsDlex", "DynamicColumnsDlex\DynamicColumnsDlex.csproj", "{7B45FD08-06EF-4C38-9EF9-5D401DCEF2AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicPdfClientLibraryExamples", "DynamicPdfClientLibraryExamples\DynamicPdfClientLibraryExamples.csproj", "{9BCBCC51-9727-4CDF-BE14-39A044E31856}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,10 +73,6 @@ Global
 		{398228C3-5AF0-4142-9792-3E3C172129BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{398228C3-5AF0-4142-9792-3E3C172129BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{398228C3-5AF0-4142-9792-3E3C172129BA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{25D8FDF5-3781-4668-8A43-025843DCC93C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25D8FDF5-3781-4668-8A43-025843DCC93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25D8FDF5-3781-4668-8A43-025843DCC93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25D8FDF5-3781-4668-8A43-025843DCC93C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AD641688-64DB-4B34-9089-1C2F4BF73601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AD641688-64DB-4B34-9089-1C2F4BF73601}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD641688-64DB-4B34-9089-1C2F4BF73601}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -151,10 +145,10 @@ Global
 		{D0830B12-B082-4998-95A9-5F28971BF534}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0830B12-B082-4998-95A9-5F28971BF534}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0830B12-B082-4998-95A9-5F28971BF534}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B45FD08-06EF-4C38-9EF9-5D401DCEF2AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B45FD08-06EF-4C38-9EF9-5D401DCEF2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B45FD08-06EF-4C38-9EF9-5D401DCEF2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B45FD08-06EF-4C38-9EF9-5D401DCEF2AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BCBCC51-9727-4CDF-BE14-39A044E31856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BCBCC51-9727-4CDF-BE14-39A044E31856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BCBCC51-9727-4CDF-BE14-39A044E31856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BCBCC51-9727-4CDF-BE14-39A044E31856}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
