@@ -1,0 +1,66 @@
+{
+  "title": "Concession Sales Report",
+  "author": "Alex Smith",
+  "sales": [
+    {
+      "id": "546RL",
+      "name": "Bottled Water",
+      "quantity": 30,
+      "price": 2.99
+    },
+    {
+      "id": "78YY",
+      "name": "Burrito",
+      "quantity": 13,
+      "price": 3.99
+    },
+    {
+      "id": "11XX",
+      "name": "Grape Soda",
+      "quantity": 40,
+      "price": 0.99
+    },
+    {
+      "id": "333YA",
+      "name": "Hotdog",
+      "quantity": 12,
+      "price": 1.99
+    },
+    {
+      "id": "898CE",
+      "name": "Peanuts",
+      "quantity": 35,
+      "price": 1.99
+    },
+    {
+      "id": "123XA",
+      "name": "Popcorn",
+      "quantity": 22,
+      "price": 2.22
+    },
+    {
+      "id": "986CY",
+      "name": "Potato Chips",
+      "quantity": 101,
+      "price": 1.39
+    },
+    {
+      "id": "7564A",
+      "name": "Samosa",
+      "quantity": 22,
+      "price": 2.99
+    },
+    {
+      "id": "9123J",
+      "name": "Snickers",
+      "quantity": 11,
+      "price": 1.99
+    },
+    {
+      "id": "997LQ",
+      "name": "Trail Mix",
+      "quantity": 2,
+      "price": 3.99
+    }
+  ]
+}

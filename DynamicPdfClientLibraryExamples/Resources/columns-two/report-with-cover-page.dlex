@@ -1,0 +1,10 @@
+<document xmlns="https://www.dynamicpdf.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.dynamicpdf.com https://www.dynamicpdf.com/schemas/DLEX20.xsd" version="2.0" author="" keywords="" subject="" title="" id="Document1">
+  <report id="Report1" dataName="Products" pageSize="letter" pageOrientation="portrait" leftMargin="50" topMargin="50" rightMargin="50" bottomMargin="50">
+    <template id="Template1"/>
+    <header id="Header1" height="25">
+    </header>
+    <detail id="detail1" autoSplit="false" height="20">
+    </detail>
+    <footer id="Footer" height="0"/>
+  </report>
+</document>

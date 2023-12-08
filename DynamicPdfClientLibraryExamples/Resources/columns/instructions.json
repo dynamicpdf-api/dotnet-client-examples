@@ -1,0 +1,8 @@
+{
+	"inputs":[
+		{
+			"type":"dlex",
+			"resourceName":"report-with-cover-page.dlex",
+			"layoutDataResourceName":"report-with-cover-page.json"
+		}]
+}

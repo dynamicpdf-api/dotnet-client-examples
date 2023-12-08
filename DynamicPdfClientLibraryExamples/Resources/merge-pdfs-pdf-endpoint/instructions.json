@@ -1,0 +1,19 @@
+{
+  "author": "Alex Smith",
+  "inputs": [
+    {
+      "type": "pdf",
+      "resourceName": "DocumentA.pdf",
+      "startPage": 1,
+      "pageCount": 1
+    },
+    {
+      "type": "pdf",
+      "resourceName": "DocumentB.pdf"
+    },
+    {
+      "type": "pdf",
+      "resourceName": "samples/merge-pdfs-pdf-endpoint/DocumentC.pdf"
+    }
+  ]
+}

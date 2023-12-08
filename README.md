@@ -34,6 +34,23 @@ For more information on the tutorials and example code, refer to:
 - https://cloud.dynamicpdf.com/docs/tutorials/tutorials-overview
 - https://cloud.dynamicpdf.com/docs/usersguide/cloud-api/cloud-api-overview
 
+## Run All At Once
+
+To run all the examples at once you must change the flag `runAll` to `true`, otherwise manually run the example you wish to run.
+
+You need the following samples folder in your Cloud Storage space to run all the examples.
+
+* samples/report-with-cover-page
+* samples/creating-pdf-pdf-endpoint
+* samples/creating-a-report-template-designer
+* samples/creating-a-page-template-designer
+* samples/dlex-layout
+* samples/merge-pdfs-pdf-endpoint
+* samples/fill-acro-form-pdf-endpoint
+* samples/creating-a-page-template-designer
+
+If you elect to run one example at a time, you must manually create any folder and move the local resources from the Resources folder or from the samples folder in Cloud Storage.
+
 ## **Tutorials**
 
 The following table lists the available tutorials.

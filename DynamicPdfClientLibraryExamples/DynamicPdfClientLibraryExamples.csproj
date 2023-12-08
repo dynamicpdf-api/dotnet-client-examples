@@ -10,4 +10,12 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\dlex-layout-object-example\" />
+    <Folder Include="Resources\fill-acro-form-pdf-endpoint\" />
+    <Folder Include="Resources\pdf-example\" />
+    <Folder Include="Resources\pdf-html-example\" />
+    <Folder Include="Resources\users-guide-output\" />
+  </ItemGroup>
+
 </Project>

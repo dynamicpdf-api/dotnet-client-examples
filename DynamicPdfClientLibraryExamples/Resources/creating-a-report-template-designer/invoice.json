@@ -1,0 +1,140 @@
+{
+    "OrderId": 124,
+    "OrderDate": "09/21/2021",
+    "CustomerId": "nab123",
+    "ShippedDate": "09/23/2021",
+    "ShippedVia": "Federal Express",
+    "ShipName": "John Doe",
+    "ShipAddress": "123 West Street",
+    "ShipCity": "New York",
+    "ShipState": "NY",
+    "ShipZip": "21456",
+    "BillName": "Joe Doe",
+    "BillAddress": "333 Nort Street",
+    "BillCity": "New York",
+    "BillState": "NY",
+    "BillZip": "21345",
+    "Orders": [
+      {
+        "Quantity": 10,
+        "Description": "Red Widget",
+        "UnitPrice": 25
+      },
+      {
+        "Quantity": 1,
+        "Description": "Green Widget",
+        "UnitPrice": 8.99
+      },
+      {
+        "Quantity": 1,
+        "Description": "Red Widget",
+        "UnitPrice": 10.99
+      },
+      {
+        "Quantity": 5,
+        "Description": "Red Widget",
+        "UnitPrice": 16.99
+      },
+      {
+        "Quantity": 2,
+        "Description": "Green Widget",
+        "UnitPrice": 15.9
+      },
+      {
+        "Quantity": 3,
+        "Description": "Blue Widget",
+        "UnitPrice": 12.09
+      },
+      {
+        "Quantity": 5,
+        "Description": "Red Widget",
+        "UnitPrice": 16.99
+      },
+      {
+        "Quantity": 2,
+        "Description": "Green Widget",
+        "UnitPrice": 15.9
+      },
+      {
+        "Quantity": 3,
+        "Description": "Blue Widget",
+        "UnitPrice": 12.09
+      },
+      {
+        "Quantity": 5,
+        "Description": "Red Widget",
+        "UnitPrice": 16.99
+      },
+      {
+        "Quantity": 2,
+        "Description": "Green Widget",
+        "UnitPrice": 15.9
+      },
+      {
+        "Quantity": 3,
+        "Description": "Blue Widget",
+        "UnitPrice": 12.09
+      },
+     {
+        "Quantity": 10,
+        "Description": "Red Widget",
+        "UnitPrice": 25
+      },
+      {
+        "Quantity": 1,
+        "Description": "Green Widget",
+        "UnitPrice": 8.99
+      },
+      {
+        "Quantity": 1,
+        "Description": "Red Widget",
+        "UnitPrice": 10.99
+      },
+      {
+        "Quantity": 5,
+        "Description": "Red Widget",
+        "UnitPrice": 16.99
+      },
+      {
+        "Quantity": 2,
+        "Description": "Green Widget",
+        "UnitPrice": 15.9
+      },
+      {
+        "Quantity": 3,
+        "Description": "Blue Widget",
+        "UnitPrice": 12.09
+      },
+      {
+        "Quantity": 5,
+        "Description": "Red Widget",
+        "UnitPrice": 16.99
+      },
+      {
+        "Quantity": 2,
+        "Description": "Green Widget",
+        "UnitPrice": 15.9
+      },
+      {
+        "Quantity": 3,
+        "Description": "Blue Widget",
+        "UnitPrice": 12.09
+      },
+      {
+        "Quantity": 5,
+        "Description": "Red Widget",
+        "UnitPrice": 16.99
+      },
+      {
+        "Quantity": 2,
+        "Description": "Green Widget",
+        "UnitPrice": 15.9
+      },
+      {
+        "Quantity": 3,
+        "Description": "Blue Widget",
+        "UnitPrice": 12.09
+      }
+    ],
+    "Freight": 400.32
+  }
