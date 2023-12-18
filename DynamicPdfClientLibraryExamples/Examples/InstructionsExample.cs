@@ -12,53 +12,53 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
 			
 				Pdf exampleOne = InstructionsExample.TopLevelMetaData();
-				InstructionsExample.printOut(exampleOne, apiKey, outputPath, "c-sharp-top-level-metadata-output.pdf");
+				InstructionsExample.printOut(exampleOne, apiKey, outputPath, "/c-sharp-top-level-metadata-output.pdf");
 
 				Pdf exampleTwo = InstructionsExample.FontsExample(basePath);
-				InstructionsExample.printOut(exampleTwo, apiKey, outputPath, "c-sharp-font-output.pdf");
+				InstructionsExample.printOut(exampleTwo, apiKey, outputPath, "/c-sharp-font-output.pdf");
 
 				Pdf exampleThree = InstructionsExample.SecurityExample(basePath);
-				InstructionsExample.printOut(exampleThree, apiKey, outputPath, "c-sharp-security-output.pdf");
+				InstructionsExample.printOut(exampleThree, apiKey, outputPath, "/c-sharp-security-output.pdf");
 
 				Pdf exampleFour = InstructionsExample.MergeExample(basePath);
-				InstructionsExample.printOut(exampleFour, apiKey, outputPath, "c-sharp-merge-output.pdf");
+				InstructionsExample.printOut(exampleFour, apiKey, outputPath, "/c-sharp-merge-output.pdf");
 				Pdf exampleFive = InstructionsExample.FormFieldsExample(basePath);
-				InstructionsExample.printOut(exampleFive, apiKey, outputPath, "c-sharp-form-fields-output.pdf");
+				InstructionsExample.printOut(exampleFive, apiKey, outputPath, "/c-sharp-form-fields-output.pdf");
 
 				Pdf exampleSix = InstructionsExample.AddOutlinesNewPdf();
-				InstructionsExample.printOut(exampleSix, apiKey, outputPath, "c-sharp-new-outline-output.pdf");
+				InstructionsExample.printOut(exampleSix, apiKey, outputPath, "/c-sharp-new-outline-output.pdf");
 
 				Pdf exampleSeven = InstructionsExample.AddOutlinesExistingPdf(basePath);
-				InstructionsExample.printOut(exampleSeven, apiKey, outputPath, "c-sharp-outline-existing-output.pdf");
+				InstructionsExample.printOut(exampleSeven, apiKey, outputPath, "/c-sharp-outline-existing-output.pdf");
 
 				Pdf exampleEight = InstructionsExample.TemplateExample(basePath);
-				InstructionsExample.printOut(exampleEight, apiKey, outputPath, "c-sharp-template-output.pdf");
+				InstructionsExample.printOut(exampleEight, apiKey, outputPath, "/c-sharp-template-output.pdf");
 
 				Pdf exampleNine = InstructionsExample.BarcodeExample(basePath);
-				InstructionsExample.printOut(exampleNine, apiKey, outputPath, "c-sharp-barcode-output.pdf");
+				InstructionsExample.printOut(exampleNine, apiKey, outputPath, "/c-sharp-barcode-output.pdf");
 			
 		
 				Pdf exampleTen = InstructionsExample.imageExample(basePath);
-				InstructionsExample.printOut(exampleTen, apiKey, outputPath, "image-output.pdf");
+				InstructionsExample.printOut(exampleTen, apiKey, outputPath, "/image-output.pdf");
 
 
 				Pdf exampleEleven = InstructionsExample.dlexResourceExample(basePath);
-				InstructionsExample.printOut(exampleEleven, apiKey, outputPath, "dlex-resource-output.pdf");
+				InstructionsExample.printOut(exampleEleven, apiKey, outputPath, "/dlex-resource-output.pdf");
 
 	
 				Pdf exampleTwelve = InstructionsExample.GoogleFontsExample();
-				InstructionsExample.printOut(exampleTwelve, apiKey, outputPath, "google-fonts-c-sharp-output.pdf");
+				InstructionsExample.printOut(exampleTwelve, apiKey, outputPath, "/google-fonts-c-sharp-output.pdf");
 
 
 			Pdf exampleThirteen = InstructionsExample.PdfInputExample(basePath);
-			InstructionsExample.printOut(exampleThirteen, apiKey, outputPath, "pdf-input-output.pdf");
+			InstructionsExample.printOut(exampleThirteen, apiKey, outputPath, "/pdf-input-output.pdf");
 
 
 			Pdf exampleFourteen = InstructionsExample.HtmlExample(basePath);
-			InstructionsExample.printOut(exampleThirteen, apiKey, outputPath, "pdf-html-output.pdf");
+			InstructionsExample.printOut(exampleThirteen, apiKey, outputPath, "/pdf-html-output.pdf");
 
 			Pdf exampleFifteen = InstructionsExample.WordExample(basePath);
-			InstructionsExample.printOut(exampleFifteen, apiKey, outputPath, "pdf-word-output.pdf");
+			InstructionsExample.printOut(exampleFifteen, apiKey, outputPath, "/pdf-word-output.pdf");
 
 		}
 

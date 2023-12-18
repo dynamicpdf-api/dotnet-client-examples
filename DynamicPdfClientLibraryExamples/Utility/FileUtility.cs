@@ -14,22 +14,19 @@ namespace DynamicPdfClientLibraryExamples.Utility
             return System.IO.Path.Combine(appRoot, filePath);
          }
 
-        public static void CopyAll(string SourcePath, string DestinationPath)
+        public static void CreatePath(string filePath)
         {
+            var exePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase);
 
-            string[] directories = System.IO.Directory.GetDirectories(SourcePath, "*.*", SearchOption.AllDirectories);
+            DirectoryInfo dirInfo = new DirectoryInfo(exePath + filePath);
 
-            Parallel.ForEach(directories, dirPath =>
+            if (!dirInfo.Exists)
             {
-                Directory.CreateDirectory(dirPath.Replace(SourcePath, DestinationPath));
-            });
-
-            string[] files = System.IO.Directory.GetFiles(SourcePath, "*.*", SearchOption.AllDirectories);
-
-            Parallel.ForEach(files, newPath =>
-            {
-                File.Copy(newPath, newPath.Replace(SourcePath, DestinationPath));
-            });
+                Regex appPathMatcher = new Regex(@"(?<!fil)[A-Za-z]:\\+[\S\s]*?(?=\\+bin)");
+                var appRoot = appPathMatcher.Match(exePath).Value;
+                
+                System.IO.Directory.CreateDirectory(System.IO.Path.Combine(appRoot, filePath));
+            }
         }
 
     }

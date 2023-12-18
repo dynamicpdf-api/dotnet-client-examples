@@ -6,7 +6,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 {
     class CreatePdf
     {
-        public static void Run(string apiKey, string basePath)
+        public static void Run(string apiKey, string basePath, string outputPath)
         {
             Pdf pdf = new Pdf();
             pdf.ApiKey = apiKey;
@@ -17,7 +17,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
             if (pdfResponse.IsSuccessful)
             {
-                File.WriteAllBytes(basePath + "create-pdf-pdf-output.pdf", pdfResponse.Content);
+                File.WriteAllBytes(outputPath + "/create-pdf-pdf-output.pdf", pdfResponse.Content);
             }
             else
             {

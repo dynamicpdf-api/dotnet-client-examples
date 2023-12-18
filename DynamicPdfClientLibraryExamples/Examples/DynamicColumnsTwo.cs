@@ -21,7 +21,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
             Console.WriteLine(Utility.PrettyPrintUtil.PrintXML(doc));
             
-            DynamicColumnsOne.RunDlex(apiKey, basePath, basePath + "report-with-cover-page.json", doc, outputPath + "report-with-cover-page-second-output.pdf");
+            DynamicColumnsOne.RunDlex(apiKey, basePath, basePath + "report-with-cover-page.json", doc, outputPath + "/report-with-cover-page-second-output.pdf");
         }
 
         private static XmlDocument ModifyDlexDocument(string dlexFile)

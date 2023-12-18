@@ -6,7 +6,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
     class PdfHtmlExample
     {
 
-        public static void Run(string apiKey, string basePath, string usersGuidePath)
+        public static void Run(string apiKey, string basePath, string outputPath)
         {
             Pdf pdf = new Pdf();
             pdf.ApiKey = apiKey;
@@ -18,7 +18,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
             // add html from a path on local drive
 
-            HtmlResource resource = new HtmlResource(System.IO.File.ReadAllText(usersGuidePath + "welcome.html"));
+            HtmlResource resource = new HtmlResource(System.IO.File.ReadAllText(basePath + "welcome.html"));
             pdf.AddHtml(resource);
 
             // use basepath in an HTML string
@@ -29,7 +29,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
 
             PdfResponse pdfResponse = pdf.Process();
-            System.IO.File.WriteAllBytes(basePath + "html-output-csharp.pdf", pdfResponse.Content);
+            System.IO.File.WriteAllBytes(outputPath + "/html-output-csharp.pdf", pdfResponse.Content);
         }
     }
 }

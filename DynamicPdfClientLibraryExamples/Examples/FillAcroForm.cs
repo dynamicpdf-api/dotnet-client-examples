@@ -10,7 +10,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 {
     class FillAcroForm
     {
-        public static void Run(string apiKey, string basePath)
+        public static void Run(string apiKey, string basePath, String outputPath)
         {
             // create new pdf instance and set api key
             Pdf pdf = new Pdf();
@@ -51,7 +51,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
             }
             else
             {
-                File.WriteAllBytes(basePath + "form-fill-output-csharp.pdf", response.Content);
+                File.WriteAllBytes(outputPath + "/form-fill-output-csharp.pdf", response.Content);
             }
 
         }

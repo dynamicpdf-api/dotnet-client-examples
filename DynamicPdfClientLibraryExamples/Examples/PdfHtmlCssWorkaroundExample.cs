@@ -42,7 +42,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 				}
 				else
 				{
-					File.WriteAllBytes(outputPath + "html-css-workaround.pdf", pdfResponse.Content);
+					File.WriteAllBytes(outputPath + "/html-css-workaround.pdf", pdfResponse.Content);
 				}
 
 

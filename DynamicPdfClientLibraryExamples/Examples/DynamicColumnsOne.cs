@@ -12,7 +12,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
         public static void Run(string apiKey, string basePath, string outputPath)
         {
             XmlDocument doc = ModifyDlexDocument(basePath + "report-with-cover-page.dlex");
-            RunDlex(apiKey, basePath, basePath + "report-with-cover-page.json", doc, outputPath + "report-with-cover-page-output.pdf");
+            RunDlex(apiKey, basePath, basePath + "report-with-cover-page.json", doc, outputPath + "/report-with-cover-page-output.pdf");
         }
 
         

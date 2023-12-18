@@ -6,7 +6,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 {
     class DesignerReportTemplate
     {
-        public static void Run(string apiKey, string basePath)
+        public static void Run(string apiKey, string basePath, string outputPath)
         {
             LayoutDataResource layoutData = new LayoutDataResource(basePath + "invoice.json");
             DlexLayout dlexEndpoint = new DlexLayout("samples/creating-a-report-template-designer/invoice.dlex", layoutData);
@@ -15,7 +15,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
             if (response.IsSuccessful)
             {
-                File.WriteAllBytes(basePath + "invoice-csharp-output.pdf", response.Content);
+                File.WriteAllBytes(outputPath + "/invoice-csharp-output.pdf", response.Content);
             }
             else
             {

@@ -7,7 +7,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
     class AddBookmarks
     {
 
-        public static void Run(string apiKey, string basePath)
+        public static void Run(string apiKey, string basePath, String outputPath)
         {
             Pdf pdf = new Pdf();
             pdf.ApiKey = apiKey;
@@ -45,7 +45,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
             if (response.IsSuccessful)
             {
-                File.WriteAllBytes(basePath + "add-bookmarks-csharp-output.pdf", response.Content);
+                File.WriteAllBytes(outputPath + "/add-bookmarks-csharp-output.pdf", response.Content);
             }
             else
             {

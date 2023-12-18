@@ -6,7 +6,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 {
     class GettingStartedInFive
     {
-        public static void Run(String apiKey, String basePath)
+        public static void Run(String apiKey, String basePath, string outputPath)
         {
             // Load the Layout Data. This will normally come from a dynamic source, but in this example, it is static
             LayoutDataResource layoutDataResource = new LayoutDataResource(basePath + "getting-started.json");
@@ -23,7 +23,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
             if (pdfResponse.IsSuccessful)
             {
                 // Write the PDF to a file
-                File.WriteAllBytes(Path.Combine(basePath, "getting-started-output.pdf"), pdfResponse.Content);
+                File.WriteAllBytes(outputPath + "/getting-started-output.pdf", pdfResponse.Content);
             }
             else
             {

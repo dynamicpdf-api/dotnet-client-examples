@@ -10,10 +10,10 @@ namespace DynamicPdfClientLibraryExamples.Examples
     class DlexLayoutObjectExample
     {
 
-		public static void Run(string apiKey, string basePath)
+		public static void Run(string apiKey, string outputPath)
 		{
 			Pdf pdf = DeserializeJsonDlexExample();
-			PrintOut(pdf, apiKey, basePath, "dlex-layout-object-csharp-output.pdf");
+			PrintOut(pdf, apiKey, outputPath, "/dlex-layout-object-csharp-output.pdf");
 		}
 
 		private static Pdf DeserializeJsonDlexExample()
@@ -49,7 +49,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 		}
 
 
-		private static void PrintOut(Pdf pdf, String apiKey, String basePath, String outputFile)
+		private static void PrintOut(Pdf pdf, String apiKey, String outputPath, String outputFile)
 		{
 			pdf.ApiKey = apiKey;
 			PdfResponse response = pdf.Process();
@@ -60,7 +60,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 			}
 			else
 			{
-				File.WriteAllBytes(basePath + outputFile, response.Content);
+				File.WriteAllBytes(outputPath + outputFile, response.Content);
 			}
 		}
 	}

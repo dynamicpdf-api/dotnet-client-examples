@@ -6,7 +6,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 {
     class CallDlexLayoutUsingTemplateExample
     {
-		public static void Run(String apiKey, String basePath)
+		public static void Run(String apiKey, String basePath, String outputPath)
 		{
 			LayoutDataResource layoutData = new LayoutDataResource(basePath + "consent-form.json");
 			DlexLayout dlexEndpoint = new DlexLayout("samples/creating-a-page-template-designer/consent-form.dlex", layoutData);
@@ -15,7 +15,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
 			if (response.IsSuccessful)
 			{
-				File.WriteAllBytes(basePath + "csharp-dlex-layout-example2-output.pdf", response.Content);
+				File.WriteAllBytes(outputPath + "/csharp-dlex-layout-example2-output.pdf", response.Content);
 			}
 			else
 			{

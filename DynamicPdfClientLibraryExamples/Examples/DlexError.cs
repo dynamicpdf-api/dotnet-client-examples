@@ -6,7 +6,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 {
     class DlexError
     {
-		public static void Run(String apiKey, String basePath)
+		public static void Run(string apiKey, string basePath, string outputPath)
 		{
 			LayoutDataResource layoutData = new LayoutDataResource(basePath + "consent-form.json");
 			DlexLayout dlexEndpoint = new DlexLayout("samples/creating-a-page-template-designer/consent-form.dlex", layoutData);
@@ -16,7 +16,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
 			if (response.IsSuccessful)
 			{
-				File.WriteAllBytes(basePath + "dlex-error-output.pdf", response.Content);
+				File.WriteAllBytes(outputPath + "/dlex-error-output.pdf", response.Content);
 			}
 			else
 			{

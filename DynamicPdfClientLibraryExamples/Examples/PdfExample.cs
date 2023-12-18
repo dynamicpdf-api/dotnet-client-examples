@@ -25,7 +25,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
             if (pdfResponse.IsSuccessful)
             {
-                File.WriteAllBytes(outputPath + "csharp-pdf-example-output.pdf", pdfResponse.Content);
+                File.WriteAllBytes(outputPath + "/csharp-pdf-example-output.pdf", pdfResponse.Content);
             }
             else
             {

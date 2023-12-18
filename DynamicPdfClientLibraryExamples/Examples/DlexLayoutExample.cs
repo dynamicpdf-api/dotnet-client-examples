@@ -7,7 +7,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 	class DlexLayoutExample
 	{
 
-		public static void Run(String apiKey, String basePath)
+		public static void Run(string apiKey, string basePath, string outputPath)
 		{
 			LayoutDataResource layoutData = new LayoutDataResource(basePath + "SimpleReportWithCoverPage.json");
 			DlexLayout dlexEndpoint = new DlexLayout("samples/dlex-layout/SimpleReportWithCoverPage.dlex", layoutData);
@@ -16,7 +16,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
 			if (response.IsSuccessful)
 			{
-				File.WriteAllBytes(basePath + "csharp-dlex-layout-example-output.pdf", response.Content);
+				File.WriteAllBytes(outputPath + "/csharp-dlex-layout-example-output.pdf", response.Content);
 			}
 			else
 			{

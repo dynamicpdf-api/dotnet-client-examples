@@ -9,26 +9,26 @@ namespace DynamicPdfClientLibraryExamples.Examples
     class AsyncExample
     {
 
-        public static void Run(string apiKey, string basePath)
+        public static void Run(string apiKey, string basePath, string outputPath)
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
-            RunAsync(apiKey, basePath);
+            RunAsync(apiKey, basePath, outputPath);
 
             Console.WriteLine("Total time: " + sw.Elapsed.TotalSeconds);
 
             sw.Stop();
         }
 
-        private static void RunAsync(String apiKey, String basePath)
+        private static void RunAsync(String apiKey, String basePath, string outputPath)
         {
             Task[] tasks = new Task[20];
 
             for (int i = 0; i < 20; i++)
             {
                 String user = "user" + i;
-                tasks[i] = ProcessAsync(apiKey, basePath, user).ContinueWith(x => SaveFile(x.Result, basePath, user));
+                tasks[i] = ProcessAsync(apiKey, basePath, user).ContinueWith(x => SaveFile(x.Result, outputPath, user));
             }
 
             Task.WaitAll(tasks);
@@ -49,12 +49,12 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
         }
 
-        private static void SaveFile(PdfResponse response, string basePath, string userId)
+        private static void SaveFile(PdfResponse response, string outputPath, string userId)
         {
             if (response.IsSuccessful)
             {
                 Console.WriteLine("saving: " + userId);
-                File.WriteAllBytes(basePath + userId + "-output.pdf", response.Content);
+                File.WriteAllBytes(outputPath + "/" + userId + "-output.pdf", response.Content);
             }
             else
             {

@@ -1,15 +1,15 @@
-﻿using System;
+﻿using DynamicPdfClientLibraryExamples.Utility;
+using System;
 using System.IO;
 
 namespace DynamicPdfClientLibraryExamples
 {
     class Program
     {
-        private const string basePath = "c:/temp/dynamicpdf-api-samples";
-        private const string usersGuideResourcePath = "c:/temp/dynamicpdf-api-samples/users-guide-resources/";
-        private const string outputPath = "c:/temp/dynamicpdf-api-samples";
+        private const string basePath = "Resources";
+        private const string outputPath = "Output";
 
-        private const string apiKey = "DP.xxx-api-key-xxx";
+        private const string apiKey = "DP---api-key---";
 
         static void Main(string[] args)
         {
@@ -24,13 +24,8 @@ namespace DynamicPdfClientLibraryExamples
                 return;
             }
 
-            DirectoryInfo dirInfo = new DirectoryInfo(basePath);
 
-            if (!dirInfo.Exists)
-            {
-                Utility.FileUtility.CopyAll(Utility.FileUtility.GetPath("Resources"), basePath);
-                System.IO.Directory.CreateDirectory(outputPath);
-            }
+            FileUtility.CreatePath(outputPath);
 
             Console.WriteLine("================================================================================");
             Console.WriteLine("THESE SAMPLE PROJECTS MUST EXIST IN DynamicPDF Cloud API Resource Manager!");
@@ -45,31 +40,32 @@ namespace DynamicPdfClientLibraryExamples
             Console.WriteLine("samples/creating-a-page-template-designer");
             Console.WriteLine("================================================================================");
 
-            Examples.DynamicColumnsOne.Run(apiKey, basePath + "/columns/", outputPath + "/columns/");
-            Examples.DynamicColumnsTwo.Run(apiKey, basePath + "/columns-two/", outputPath + "/columns-two/");
+            Examples.AddBookmarks.Run(apiKey, FileUtility.GetPath(basePath + "/add-bookmarks/"), FileUtility.GetPath(outputPath));
+            Examples.AsyncExample.Run(apiKey, FileUtility.GetPath(basePath + "/async-example/"), FileUtility.GetPath(outputPath));
+            Examples.DlexError.Run(apiKey, FileUtility.GetPath(basePath + "/dlex-error/"), FileUtility.GetPath(outputPath));
+            Examples.CreatePdf.Run(apiKey, FileUtility.GetPath(basePath + "/creating-pdf-pdf-endpoint/"), FileUtility.GetPath(outputPath));
+            Examples.DlexLayoutExample.Run(apiKey, FileUtility.GetPath(basePath + "/dlex-layout/"), FileUtility.GetPath(outputPath));
+            Examples.DlexLayoutObjectExample.Run(apiKey, FileUtility.GetPath(outputPath));
+            Examples.ExtractingText.Run(apiKey, FileUtility.GetPath(basePath + "/extract-text-pdf-text-endpoint/"));
+            Examples.GetImageInfo.Run(apiKey, FileUtility.GetPath(basePath + "/get-image-info-image-info-endpoint/"));
+            Examples.GetPdfInfo.Run(apiKey, FileUtility.GetPath(basePath + "/get-pdf-info-pdf-info-endpoint/"));
+            Examples.ImageInfoExample.Run(apiKey, FileUtility.GetPath(basePath + "/image-info/"));
+            Examples.PdfExample.Run(apiKey, FileUtility.GetPath(outputPath));
+            Examples.PdfInfoExample.Run(apiKey, FileUtility.GetPath(basePath + "/pdf-info/"));
+            Examples.PdfHtmlExample.Run(apiKey, FileUtility.GetPath(basePath + "/users-guide/"), FileUtility.GetPath(outputPath));
+            Examples.PdfHtmlCssWorkaroundExample.Run(apiKey, FileUtility.GetPath(basePath + "/users-guide/"), FileUtility.GetPath(outputPath));
+            Examples.MergePdfs.Run(apiKey, FileUtility.GetPath(basePath + "/merge-pdfs-pdf-endpoint/"), FileUtility.GetPath(outputPath));
+            Examples.GetXmpMetadata.Run(apiKey, FileUtility.GetPath(basePath + "/get-xmp-metadata-pdf-xmp-endpoint/"));
+            Examples.PdfTextExample.Run(apiKey, FileUtility.GetPath(basePath + "/extract-text-pdf-text-endpoint/"));
+            Examples.DesignerReportTemplate.Run(apiKey, FileUtility.GetPath(basePath + "/creating-a-report-template-designer/"), FileUtility.GetPath(outputPath));
+            Examples.GettingStartedInFive.Run(apiKey, FileUtility.GetPath(basePath + "/getting-started/"), FileUtility.GetPath(outputPath));
+            Examples.FillAcroForm.Run(apiKey, FileUtility.GetPath(basePath + "/fill-acro-form-pdf-endpoint/"), FileUtility.GetPath(outputPath));
+            Examples.CallDlexLayoutUsingTemplateExample.Run(apiKey, FileUtility.GetPath(basePath + "/creating-a-page-template-designer/"), FileUtility.GetPath(outputPath));
+            Examples.DynamicColumnsOne.Run(apiKey, FileUtility.GetPath(basePath + "/columns/"), FileUtility.GetPath(outputPath));
+            Examples.DynamicColumnsTwo.Run(apiKey, FileUtility.GetPath(basePath + "/columns-two/"), FileUtility.GetPath(outputPath));
 
-            Examples.InstructionsExample.DemoInstructions(apiKey, usersGuideResourcePath, outputPath + "/users-guide-output/");
-            Examples.AddBookmarks.Run(apiKey, basePath + "/add-bookmarks/");
-            Examples.AsyncExample.Run(apiKey, basePath + "/async-example/");
-            Examples.DlexError.Run(apiKey, basePath + "/dlex-error/");
-            Examples.CreatePdf.Run(apiKey, basePath + "/creating-pdf-pdf-endpoint/");
-            Examples.DlexLayoutExample.Run(apiKey, basePath + "/dlex-layout/");
-            Examples.DlexLayoutObjectExample.Run(apiKey, basePath + "/dlex-layout-object-example/");
-            Examples.ExtractingText.Run(apiKey, basePath + "/extract-text-pdf-text-endpoint/");
-            Examples.GetImageInfo.Run(apiKey, basePath + "/get-image-info-image-info-endpoint/");
-            Examples.GetPdfInfo.Run(apiKey, basePath + "/get-pdf-info-pdf-info-endpoint/");
-            Examples.ImageInfoExample.Run(apiKey, basePath + "/image-info/");
-            Examples.PdfExample.Run(apiKey, basePath + "/pdf-example/");
-            Examples.PdfInfoExample.Run(apiKey, basePath + "/pdf-info/");
-            Examples.PdfHtmlExample.Run(apiKey, basePath + "/pdf-html-example/", usersGuideResourcePath);
-            Examples.PdfHtmlCssWorkaroundExample.Run(apiKey, usersGuideResourcePath, outputPath + "/users-guide-output/");
-            Examples.MergePdfs.Run(apiKey, basePath + "/merge-pdfs-pdf-endpoint/");
-            Examples.GetXmpMetadata.Run(apiKey, basePath + "/get-xmp-metadata-pdf-xmp-endpoint/");
-            Examples.PdfTextExample.Run(apiKey, basePath + "/extract-text-pdf-text-endpoint/");
-            Examples.DesignerReportTemplate.Run(apiKey, basePath + "/creating-a-report-template-designer/");
-            Examples.GettingStartedInFive.Run(apiKey, basePath + "/getting-started/");
-            Examples.FillAcroForm.Run(apiKey, basePath + "/fill-acro-form-pdf-endpoint/");
-            Examples.CallDlexLayoutUsingTemplateExample.Run(apiKey, basePath + "/creating-a-page-template-designer/");
+            Examples.InstructionsExample.DemoInstructions(apiKey, FileUtility.GetPath(basePath + "/users-guide/"), FileUtility.GetPath(outputPath));
+
         }
 
     }

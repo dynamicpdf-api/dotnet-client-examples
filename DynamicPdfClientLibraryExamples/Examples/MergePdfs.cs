@@ -6,7 +6,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 {
     class MergePdfs
     {
-        public static void Run(string apiKey, string basePath)
+        public static void Run(string apiKey, string basePath, string outputPath)
         {
             Pdf pdf = new Pdf();
             pdf.ApiKey = apiKey;
@@ -23,7 +23,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
             if (pdfResponse.IsSuccessful)
             {
-                File.WriteAllBytes(Path.Combine(basePath, "merge-pdfs-output-csharp.pdf"), pdfResponse.Content);
+                File.WriteAllBytes(outputPath + "/merge-pdfs-output-csharp.pdf", pdfResponse.Content);
             }
             else
             {
