@@ -49,6 +49,8 @@ You need the following samples folder in your Cloud Storage space to run all the
 * samples/fill-acro-form-pdf-endpoint
 * samples/creating-a-page-template-designer
 
+The resources folder contains all the local resources and saves all results to <project-dir>/Output which is created when run.
+
 ## **Tutorials**
 
 The following table lists the available tutorials.
