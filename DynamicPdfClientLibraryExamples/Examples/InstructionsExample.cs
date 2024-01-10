@@ -187,6 +187,8 @@ namespace DynamicPdfClientLibraryExamples.Examples
 			pdf.Author = "John Doe.";
 			pdf.Title = "Simple Report With Cover Page";
 			pdf.Subject = "Simpletest";
+			pdf.Producer = "Acme Producer Inc.";
+			pdf.Tag = true;
 
 			pdf.Keywords = "test example pdf simple";
 

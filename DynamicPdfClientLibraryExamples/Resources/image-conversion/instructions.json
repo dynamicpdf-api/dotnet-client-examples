@@ -1,0 +1,24 @@
+{
+  "author": "CeteSoftware",
+  "creator": "DynamicPDF Cloud Api",	
+  "inputs": [
+	{
+      "type": "image",
+	  "resourceName":"testimage.tif",
+      "pageWidth": 612,
+	  "pageHeight":1008,
+	  "expandToFit":false,
+	  "align": "center",
+	  "vAlign": "center"	  
+	},
+	{
+      "type": "image",
+	  "resourceName":"dynamicpdfLogo.png",
+      "pageWidth": 1008,
+	  "pageHeight":612,
+	  "expandToFit":true,
+	  "align": "center",
+	  "vAlign": "center"	  
+	}
+  ]
+}

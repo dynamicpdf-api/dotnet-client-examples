@@ -1,0 +1,73 @@
+{
+  "author": "CeteSoftware",
+  "creator": "DynamicPDF Cloud Api",
+  "templates": [
+    {
+      "id": "Temp1",
+      "elements": [
+        {
+          "type": "text",
+          "color": "Blue",
+          "text": "Hello PDF",
+          "fontSize": 42,
+          "placement": "topCenter",
+          "xOffset": -50,
+          "yOffset": 100
+        },
+        {
+          "type": "rectangle",
+          "width": 100,
+          "height": 300,
+          "borderWidth": 5,
+          "cornerRadius": 10,
+          "fillColor": "Green",
+          "borderColor": "Blue",
+          "borderStyle": "dots",
+          "placement": "topCenter",
+          "xOffset": 150,
+          "yOffset": 100
+        },
+		{
+          "type": "line",
+          "color": "Red",
+          "lineStyle": "solid",
+          "x2Offset": 500,
+          "y2Offset": 150,
+          "width": 4,
+          "placement": "topLeft",
+          "xOffset": 105,
+          "yOffset": 50
+        },
+		{
+          "type": "image",
+          "resourceName": "dynamicpdfLogo.png",
+          "placement": "topLeft",
+          "xOffset": 400,
+          "yOffset": 10
+	   }
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "type": "pdf",
+      "resourceName": "DocumentA.pdf",
+      "templateId": "Temp1"
+    },
+    {
+      "type": "word",
+      "resourceName": "Doc1.docx",
+      "templateId": "Temp1"
+    },
+    {
+      "type": "image",
+      "resourceName": "testimage.png",
+      "templateId": "Temp1"
+    },
+    {
+      "type": "html",
+      "resourceName": "products.html",
+      "templateId": "Temp1"
+    }
+  ]
+}

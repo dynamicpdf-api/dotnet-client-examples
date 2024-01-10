@@ -9,7 +9,7 @@ namespace DynamicPdfClientLibraryExamples
         private const string basePath = "Resources";
         private const string outputPath = "Output";
 
-        private const string apiKey = "DP.J+G1BiQYH7x+3D7uR5jo+Jo0PPKrY0nU1l+j3XbOtobjTqpWSZErUV70";
+        private const string apiKey = "DP--api-key--";
 
         static void Main(string[] args)
         {
@@ -39,14 +39,12 @@ namespace DynamicPdfClientLibraryExamples
             Console.WriteLine("samples/fill-acro-form-pdf-endpoint");
             Console.WriteLine("samples/creating-a-page-template-designer");
             Console.WriteLine("================================================================================");
-            /*
+            
             Examples.AddBookmarks.Run(apiKey, FileUtility.GetPath(basePath + "/add-bookmarks/"), FileUtility.GetPath(outputPath));
             Examples.AsyncExample.Run(apiKey, FileUtility.GetPath(basePath + "/async-example/"), FileUtility.GetPath(outputPath));
             Examples.DlexError.Run(apiKey, FileUtility.GetPath(basePath + "/dlex-error/"), FileUtility.GetPath(outputPath));
             Examples.CreatePdf.Run(apiKey, FileUtility.GetPath(basePath + "/creating-pdf-pdf-endpoint/"), FileUtility.GetPath(outputPath));
-            */
             Examples.DlexLayoutExample.Run(apiKey, FileUtility.GetPath(basePath + "/dlex-layout/"), FileUtility.GetPath(outputPath));
-            /*
             Examples.DlexLayoutObjectExample.Run(apiKey, FileUtility.GetPath(outputPath));
             Examples.ExtractingText.Run(apiKey, FileUtility.GetPath(basePath + "/extract-text-pdf-text-endpoint/"));
             Examples.GetImageInfo.Run(apiKey, FileUtility.GetPath(basePath + "/get-image-info-image-info-endpoint/"));
@@ -65,9 +63,10 @@ namespace DynamicPdfClientLibraryExamples
             Examples.CallDlexLayoutUsingTemplateExample.Run(apiKey, FileUtility.GetPath(basePath + "/creating-a-page-template-designer/"), FileUtility.GetPath(outputPath));
             Examples.DynamicColumnsOne.Run(apiKey, FileUtility.GetPath(basePath + "/columns/"), FileUtility.GetPath(outputPath));
             Examples.DynamicColumnsTwo.Run(apiKey, FileUtility.GetPath(basePath + "/columns-two/"), FileUtility.GetPath(outputPath));
-
             Examples.InstructionsExample.DemoInstructions(apiKey, FileUtility.GetPath(basePath + "/users-guide/"), FileUtility.GetPath(outputPath));
-            */
+            Examples.Solutions.SolutionImagesTextRecs.Run(apiKey, FileUtility.GetPath(basePath + "/images-text-recs/"), FileUtility.GetPath(outputPath));
+            Examples.Solutions.TemplatesExample.Run(apiKey, FileUtility.GetPath(basePath + "/templates/"), FileUtility.GetPath(outputPath));
+            Examples.Solutions.ImageConversion.Run(apiKey, FileUtility.GetPath(basePath + "/image-conversion/"), FileUtility.GetPath(outputPath));
         }
 
     }
