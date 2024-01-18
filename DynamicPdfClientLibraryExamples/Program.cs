@@ -9,7 +9,7 @@ namespace DynamicPdfClientLibraryExamples
         private const string basePath = "Resources";
         private const string outputPath = "Output";
 
-        private const string apiKey = "DP--api-key--";
+        private const string apiKey = "DP.--api-key--";
 
         static void Main(string[] args)
         {
@@ -39,8 +39,10 @@ namespace DynamicPdfClientLibraryExamples
             Console.WriteLine("samples/fill-acro-form-pdf-endpoint");
             Console.WriteLine("samples/creating-a-page-template-designer");
             Console.WriteLine("================================================================================");
-            
-            Examples.AddBookmarks.Run(apiKey, FileUtility.GetPath(basePath + "/add-bookmarks/"), FileUtility.GetPath(outputPath));
+
+            Examples.Solutions.OutlinesSolution.Run(apiKey, FileUtility.GetPath(basePath + "/outlines/"), FileUtility.GetPath(outputPath));
+            //Examples.Solutions.PdfBarcode.Run(apiKey, FileUtility.GetPath(outputPath));
+ /*           Examples.AddBookmarks.Run(apiKey, FileUtility.GetPath(basePath + "/add-bookmarks/"), FileUtility.GetPath(outputPath));
             Examples.AsyncExample.Run(apiKey, FileUtility.GetPath(basePath + "/async-example/"), FileUtility.GetPath(outputPath));
             Examples.DlexError.Run(apiKey, FileUtility.GetPath(basePath + "/dlex-error/"), FileUtility.GetPath(outputPath));
             Examples.CreatePdf.Run(apiKey, FileUtility.GetPath(basePath + "/creating-pdf-pdf-endpoint/"), FileUtility.GetPath(outputPath));
@@ -67,6 +69,7 @@ namespace DynamicPdfClientLibraryExamples
             Examples.Solutions.SolutionImagesTextRecs.Run(apiKey, FileUtility.GetPath(basePath + "/images-text-recs/"), FileUtility.GetPath(outputPath));
             Examples.Solutions.TemplatesExample.Run(apiKey, FileUtility.GetPath(basePath + "/templates/"), FileUtility.GetPath(outputPath));
             Examples.Solutions.ImageConversion.Run(apiKey, FileUtility.GetPath(basePath + "/image-conversion/"), FileUtility.GetPath(outputPath));
+ */
         }
 
     }
