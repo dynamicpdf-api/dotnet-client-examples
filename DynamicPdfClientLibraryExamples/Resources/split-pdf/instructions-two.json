@@ -1,0 +1,12 @@
+{
+  "author": "CeteSoftware",
+  "creator": "DynamicPDF Cloud Api",
+  "inputs": [
+	{
+      "type": "pdf",
+      "resourceName": "pdfnumberedinput.pdf",
+	  "startPage": 6,
+	  "pageCount": 2
+    }
+  ]
+}
