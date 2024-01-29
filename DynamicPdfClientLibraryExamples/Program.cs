@@ -40,6 +40,8 @@ namespace DynamicPdfClientLibraryExamples
             Console.WriteLine("samples/creating-a-page-template-designer");
             Console.WriteLine("================================================================================");
 
+            Examples.Solutions.FormFieldFlattenAndRemove.Run(apiKey, FileUtility.GetPath(basePath + "/form-field-flatten/"), FileUtility.GetPath(outputPath));
+
             Examples.Solutions.SplitPdfs.Run(apiKey, FileUtility.GetPath(basePath + "/split-pdf/"), FileUtility.GetPath(outputPath));
 
             Examples.Solutions.DeletePages.Run(apiKey, FileUtility.GetPath(basePath + "/delete-pages/"), FileUtility.GetPath(outputPath));
