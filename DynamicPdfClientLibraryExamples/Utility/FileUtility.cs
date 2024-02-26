@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace DynamicPdfClientLibraryExamples.Utility
 {
-    class FileUtility
+    public class FileUtility
     {
         public static string GetPath(string filePath)
         {

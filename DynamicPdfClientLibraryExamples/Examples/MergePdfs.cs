@@ -4,7 +4,7 @@ using System.IO;
 
 namespace DynamicPdfClientLibraryExamples.Examples
 {
-    class MergePdfs
+    public class MergePdfs
     {
         public static void Run(string apiKey, string basePath, string outputPath)
         {
@@ -31,5 +31,6 @@ namespace DynamicPdfClientLibraryExamples.Examples
             }
 
         }
+
     }
 }
