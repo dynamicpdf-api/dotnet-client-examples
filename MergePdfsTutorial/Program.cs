@@ -17,6 +17,7 @@ namespace MergePdfsTutorial
 
         static void Main(string[] args)
         {
+            FileUtility.CreatePath(outputPath);
             MergePdfs.Run(apiKey, FileUtility.GetPath(basePath + "/merge-pdfs-pdf-endpoint/"), FileUtility.GetPath(outputPath));
         }
     }

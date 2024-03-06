@@ -6,11 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DynamicPdfClientLibraryExamples\DynamicPdfClientLibraryExamples.csproj" />
+    <Compile Remove="Output\**" />
+    <EmbeddedResource Remove="Output\**" />
+    <None Remove="Output\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Output\" />
+    <ProjectReference Include="..\DynamicPdfClientLibraryExamples\DynamicPdfClientLibraryExamples.csproj" />
   </ItemGroup>
 
 </Project>
