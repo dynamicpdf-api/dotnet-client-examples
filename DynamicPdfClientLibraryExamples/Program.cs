@@ -64,6 +64,7 @@ namespace DynamicPdfClientLibraryExamples
             Examples.PdfHtmlExample.Run(apiKey, FileUtility.GetPath(basePath + "/users-guide/"), FileUtility.GetPath(outputPath));
             Examples.PdfHtmlCssWorkaroundExample.Run(apiKey, FileUtility.GetPath(basePath + "/users-guide/"), FileUtility.GetPath(outputPath));
             Examples.MergePdfs.Run(apiKey, FileUtility.GetPath(basePath + "/merge-pdfs-pdf-endpoint/"), FileUtility.GetPath(outputPath));
+            Examples.GoogleFontsExample.Run(apiKey, FileUtility.GetPath(outputPath));
             Examples.GetXmpMetadata.Run(apiKey, FileUtility.GetPath(basePath + "/get-xmp-metadata-pdf-xmp-endpoint/"));
             Examples.PdfTextExample.Run(apiKey, FileUtility.GetPath(basePath + "/extract-text-pdf-text-endpoint/"));
             Examples.DesignerReportTemplate.Run(apiKey, FileUtility.GetPath(basePath + "/creating-a-report-template-designer/"), FileUtility.GetPath(outputPath));

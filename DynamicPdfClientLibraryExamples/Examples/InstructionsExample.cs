@@ -145,7 +145,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
 			//get pdf from cloud storage
 
-			pdf.AddPdf("samples/users-guide-resources/DocumentC.pdf");
+			pdf.AddPdf("DocumentC.pdf");
 
 			return pdf;
 
@@ -195,7 +195,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
 			string stringLayoutData = File.ReadAllText(basePath + "SimpleReportWithCoverPage.json");
 			LayoutDataResource layoutTwo = new LayoutDataResource(stringLayoutData);
-			pdf.AddDlex("samples/users-guide-resources/SimpleReportWithCoverPage.dlex", layoutTwo);
+			pdf.AddDlex("SimpleReportWithCoverPage.dlex", layoutTwo);
 
 
 			return pdf;
@@ -212,7 +212,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 			pdf.AddImage(ir2);
 
 
-			pdf.AddImage("samples/users-guide-resources/C.png");
+			pdf.AddImage("C.png");
 
 			return pdf;
         }
@@ -248,7 +248,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 			pageNumberingElement.Font = Font.Helvetica;
 			pageNumberingElement.FontSize = 42;
 
-			String cloudResourceName = "samples/users-guide-resources/Calibri.otf";
+			String cloudResourceName = "Calibri.otf";
 
 			PageNumberingElement pageNumberingElementTwo = new PageNumberingElement("B", ElementPlacement.TopLeft);
 			pageNumberingElementTwo.Color = RgbColor.DarkOrange;
