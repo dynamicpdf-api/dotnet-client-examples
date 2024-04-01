@@ -1,14 +1,10 @@
 ﻿using DynamicPDF.Api;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DynamicPdfClientLibraryExamples.Examples
 {
-    class FillAcroForm
+    public class FillAcroForm
     {
         public static void Run(string apiKey, string basePath, String outputPath)
         {

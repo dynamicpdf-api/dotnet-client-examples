@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicPdfClientLibraryExamples", "DynamicPdfClientLibraryExamples\DynamicPdfClientLibraryExamples.csproj", "{9BCBCC51-9727-4CDF-BE14-39A044E31856}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergePdfsTutorial", "MergePdfsTutorial\MergePdfsTutorial.csproj", "{5591F578-39D1-415F-A928-CB0E3BFF3242}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergePdfsTutorial", "MergePdfsTutorial\MergePdfsTutorial.csproj", "{5591F578-39D1-415F-A928-CB0E3BFF3242}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompletingAnAcroform", "CompletingAnAcroform\CompletingAnAcroform.csproj", "{8137F99F-24C8-41EC-993D-BE0FA1874405}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{5591F578-39D1-415F-A928-CB0E3BFF3242}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5591F578-39D1-415F-A928-CB0E3BFF3242}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5591F578-39D1-415F-A928-CB0E3BFF3242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8137F99F-24C8-41EC-993D-BE0FA1874405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8137F99F-24C8-41EC-993D-BE0FA1874405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8137F99F-24C8-41EC-993D-BE0FA1874405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8137F99F-24C8-41EC-993D-BE0FA1874405}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
