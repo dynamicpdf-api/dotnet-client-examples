@@ -69,7 +69,7 @@ namespace DynamicPdfClientLibraryExamples
             Examples.PdfTextExample.Run(apiKey, FileUtility.GetPath(basePath + "/extract-text-pdf-text-endpoint/"));
             Examples.DesignerReportTemplate.Run(apiKey, FileUtility.GetPath(basePath + "/creating-a-report-template-designer/"), FileUtility.GetPath(outputPath));
             Examples.GettingStartedInFive.Run(apiKey, FileUtility.GetPath(basePath + "/getting-started/"), FileUtility.GetPath(outputPath));
-            Examples.FillAcroForm.Run(apiKey, FileUtility.GetPath(basePath + "/fill-acro-form-pdf-endpoint/"), FileUtility.GetPath(outputPath));
+            Examples.FillAcroForm.Run(apiKey, FileUtility.GetPath(outputPath));
             Examples.CallDlexLayoutUsingTemplateExample.Run(apiKey, FileUtility.GetPath(basePath + "/creating-a-page-template-designer/"), FileUtility.GetPath(outputPath));
             Examples.DynamicColumnsOne.Run(apiKey, FileUtility.GetPath(basePath + "/columns/"), FileUtility.GetPath(outputPath));
             Examples.DynamicColumnsTwo.Run(apiKey, FileUtility.GetPath(basePath + "/columns-two/"), FileUtility.GetPath(outputPath));

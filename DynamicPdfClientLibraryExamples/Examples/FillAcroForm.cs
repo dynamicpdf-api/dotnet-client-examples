@@ -6,7 +6,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 {
     public class FillAcroForm
     {
-        public static void Run(string apiKey, string basePath, String outputPath)
+        public static void Run(string apiKey, String outputPath)
         {
             // create new pdf instance and set api key
             Pdf pdf = new Pdf();
