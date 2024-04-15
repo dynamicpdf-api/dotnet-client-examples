@@ -39,7 +39,7 @@ namespace DynamicPdfClientLibraryExamples
             Console.WriteLine("samples/fill-acro-form-pdf-endpoint");
             Console.WriteLine("samples/creating-a-page-template-designer");
             Console.WriteLine("================================================================================");
-
+/*
             Examples.Solutions.FormFieldFlattenAndRemove.Run(apiKey, FileUtility.GetPath(basePath + "/form-field-flatten/"), FileUtility.GetPath(outputPath));
 
             Examples.Solutions.SplitPdfs.Run(apiKey, FileUtility.GetPath(basePath + "/split-pdf/"), FileUtility.GetPath(outputPath));
@@ -77,6 +77,8 @@ namespace DynamicPdfClientLibraryExamples
             Examples.Solutions.SolutionImagesTextRecs.Run(apiKey, FileUtility.GetPath(basePath + "/images-text-recs/"), FileUtility.GetPath(outputPath));
             Examples.Solutions.TemplatesExample.Run(apiKey, FileUtility.GetPath(basePath + "/templates/"), FileUtility.GetPath(outputPath));
             Examples.Solutions.ImageConversion.Run(apiKey, FileUtility.GetPath(basePath + "/image-conversion/"), FileUtility.GetPath(outputPath));
+*/
+            Examples.ExcelConversion.Run(apiKey, FileUtility.GetPath(basePath + "/users-guide/"), FileUtility.GetPath(outputPath));
         }
 
     }
