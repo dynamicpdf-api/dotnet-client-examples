@@ -79,6 +79,8 @@ namespace DynamicPdfClientLibraryExamples
             Examples.Solutions.ImageConversion.Run(apiKey, FileUtility.GetPath(basePath + "/image-conversion/"), FileUtility.GetPath(outputPath));
 */
             Examples.ExcelConversion.Run(apiKey, FileUtility.GetPath(basePath + "/users-guide/"), FileUtility.GetPath(outputPath));
+
+            Examples.WordConversion.Run(apiKey, FileUtility.GetPath(basePath + "/users-guide/"), FileUtility.GetPath(outputPath));
         }
 
     }

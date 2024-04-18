@@ -1,13 +1,9 @@
 ﻿using DynamicPDF.Api;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DynamicPdfClientLibraryExamples.Examples
 {
-    class ImageInfoExample
+    public class ImageInfoExample
     {
         public static void Run(string apiKey, string basePath)
         {
@@ -28,7 +24,6 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
         private static void RunImageInfoTwo(String apiKey, String basePath)
         {
-            String key = apiKey;
             ImageResource imageResource = new ImageResource(basePath + "multipage.tiff");
             ImageInfo imageInfo = new ImageInfo(imageResource);
             imageInfo.ApiKey = apiKey;
