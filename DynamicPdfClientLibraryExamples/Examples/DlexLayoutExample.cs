@@ -4,7 +4,7 @@ using System.IO;
 
 namespace DynamicPdfClientLibraryExamples.Examples
 {
-	class DlexLayoutExample
+	public class DlexLayoutExample
 	{
 
 		public static void Run(string apiKey, string basePath, string outputPath)
@@ -15,8 +15,8 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
 		public static void RunFromCloud(string apiKey, string basePath, string outputPath)
 		{
-			LayoutDataResource layoutData = new LayoutDataResource(basePath + "SimpleReportWithCoverPage.json");
-			DlexLayout dlexEndpoint = new DlexLayout("samples/dlex-layout/SimpleReportWithCoverPage.dlex", layoutData);
+			LayoutDataResource layoutData = new LayoutDataResource(basePath + "creating-pdf-dlex-layout.json");
+			DlexLayout dlexEndpoint = new DlexLayout("samples/creating-pdf-dlex-layout-endpoint/creating-pdf-dlex-layout.dlex", layoutData);
 			dlexEndpoint.ApiKey = apiKey;
 			PdfResponse response = dlexEndpoint.Process();
 
@@ -32,10 +32,10 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
 		public static void RunFromLocal(string apiKey, string basePath, string outputPath)
 		{
-			LayoutDataResource layoutData = new LayoutDataResource(basePath + "SimpleReportWithCoverPage.json");
-			DlexResource dlexResource = new DlexResource(basePath + "SimpleReportWithCoverPage.dlex", "SimpleReportWithCoverPage.dlex");
+			LayoutDataResource layoutData = new LayoutDataResource(basePath + "creating-pdf-dlex-layout.json");
+			DlexResource dlexResource = new DlexResource(basePath + "creating-pdf-dlex-layout.dlex", "creating-pdf-dlex-layout.dlex");
 			DlexLayout dlexEndpoint = new DlexLayout(dlexResource , layoutData);
-			dlexEndpoint.AddAdditionalResource(basePath + "NorthwindLogo.gif", "NorthwindLogo.gif");
+			dlexEndpoint.AddAdditionalResource(basePath + "creating-pdf-dlex-layout.png", "creating-pdf-dlex-layout.png");
 			dlexEndpoint.ApiKey = apiKey;
 			PdfResponse response = dlexEndpoint.Process();
 

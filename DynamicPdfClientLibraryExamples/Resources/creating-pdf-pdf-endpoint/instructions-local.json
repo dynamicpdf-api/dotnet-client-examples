@@ -1,0 +1,11 @@
+{
+  "author": "Alex Smith",
+  "title": "My PDF From REST API",
+  "inputs": [
+    {
+      "type": "dlex",
+      "resourceName": "SimpleReportWithCoverPage.dlex",
+      "layoutDataResourceName": "SimpleReportWithCoverPage.json"
+    }
+  ]
+}

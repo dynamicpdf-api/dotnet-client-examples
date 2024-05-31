@@ -1,0 +1,30 @@
+{
+  "title": "Concession Sales Report",
+  "Author": "John Doe",
+  "sales": [
+    {
+      "id": "123XA",
+      "name": "Popcorn",
+      "quantity": 22,
+      "price": 2.22
+    },
+    {
+      "id": "333YA",
+      "name": "Hotdog",
+      "quantity": 12,
+      "price": 1.99
+    },
+    {
+      "id": "11XX",
+      "name": "Grape Soda",
+      "quantity": 40,
+      "price": 0.99
+    },
+    {
+      "id": "453XY",
+      "name": "Taco",
+      "quantity": 10,
+      "price": 2.99
+    }
+  ]
+}
