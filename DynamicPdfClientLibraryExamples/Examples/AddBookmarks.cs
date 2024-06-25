@@ -4,7 +4,7 @@ using System.IO;
 
 namespace DynamicPdfClientLibraryExamples.Examples
 {
-    class AddBookmarks
+    public class AddBookmarks
     {
 
         public static void Run(string apiKey, string basePath, String outputPath)
