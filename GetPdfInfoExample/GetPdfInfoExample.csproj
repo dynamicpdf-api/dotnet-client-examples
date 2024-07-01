@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DynamicPDF.API" Version="1.9.2" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\DynamicPdfClientLibraryExamples\DynamicPdfClientLibraryExamples.csproj" />
   </ItemGroup>
 

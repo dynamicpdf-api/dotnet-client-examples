@@ -3,11 +3,12 @@ using System;
 
 namespace DynamicPdfClientLibraryExamples.Examples
 {
-    class GetPdfInfo
+    public class GetPdfInfo
     {
         public static void Run(string apiKey, string basePath)
         {
-            PdfInfo pdfInfo = new PdfInfo(new PdfResource(basePath + "fw4.pdf"));
+            PdfResource resource = new PdfResource(basePath + "fw4.pdf");
+            PdfInfo pdfInfo = new PdfInfo(resource);
             pdfInfo.ApiKey = apiKey;
             PdfInfoResponse pdfInfoResponse = pdfInfo.Process();
 

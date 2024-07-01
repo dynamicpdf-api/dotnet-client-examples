@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DynamicPDF.API" Version="1.9.0" />
+    <PackageReference Include="DynamicPDF.API" Version="1.9.2" />
   </ItemGroup>
 
 </Project>
