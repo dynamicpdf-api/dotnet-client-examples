@@ -1,0 +1,14 @@
+{
+  "author": "Alex Smith",
+  "title": "Word and Excel Example",
+  "inputs": [
+      {
+      "type": "excel",
+      "resourceName": "sample-data.xlsx"
+    },
+    {
+      "type": "word",
+      "resourceName": "sample-doc.docx"
+    }
+  ]
+}
