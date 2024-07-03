@@ -1,22 +1,31 @@
-PDF Excel & Word to PDF
+#PowerShell Command Examples for the DynamicPDF API endpoints.
+#image-info, pdf-info, pdf-text, and pdf-xmp all use the -InFile parameter
 
-Invoke-RestMethod -Method Post -Headers @{"Authorization" = "Bearer --api-key--"} -Uri "https://api.dpdf.io/v1.0/pdf" -Form @{Instructions = Get-Item -Path "C:\temp\dynamicpdf-api-samples\powershell-example\instructions.json"; Resource = Get-Item -Path "C:\temp\dynamicpdf-api-samples\excel-word-conversion\sample-data.xlsx","C:\temp\dynamicpdf-api-samples\powershell-example\sample-doc.docx"} -ContentType "multipart/form-data" -Outfile "C:\temp\dynamicpdf-api-samples\powershell-example\output-one.pdf"
 
-Image Info
+#image-info endpoint
 
-Invoke-RestMethod -Method Post -Headers @{"Authorization" = "Bearer --api-key--"} -Uri "https://api.dpdf.io/v1.0/image-info" -Infile "C:\temp\dynamicpdf-api-samples\powershell-example\dynamicpdfLogo.png" -ContentType "image/png"
+Invoke-RestMethod -Method Post -Headers @{"Authorization" = "Bearer DP--api-key--"} -Uri "https://api.dpdf.io/v1.0/image-info" -Infile "C:\temp\dynamicpdf-api-samples\powershell-example\dynamicpdfLogo.png" -ContentType "image/png"
 
-pdf info
+#pdf-info endpoint
 
-Invoke-RestMethod -Method Post -Headers @{"Authorization" = "Bearer --api-key--"} -Uri "https://api.dpdf.io/v1.0/pdf-info" -Infile "C:\temp\dynamicpdf-api-samples\powershell-example\fw4.pdf" -ContentType "application/pdf" 
+Invoke-RestMethod -Method Post -Headers @{"Authorization" = "Bearer DP--api-key--"} -Uri "https://api.dpdf.io/v1.0/pdf-info" -Infile "C:\temp\dynamicpdf-api-samples\powershell-example\fw4.pdf" -ContentType "application/pdf" 
 
-pdf text
+#pdf-text endpoint
 
-Invoke-RestMethod -Method Post -Headers @{"Authorization" = "Bearer --api-key--"} -Uri "https://api.dpdf.io/v1.0/pdf-text" -Infile "C:\temp\dynamicpdf-api-samples\powershell-example\fw4.pdf" -ContentType "application/pdf" | Format-Table -Wrap -Autosize
+Invoke-RestMethod -Method Post -Headers @{"Authorization" = "Bearer DP--api-key--"} -Uri "https://api.dpdf.io/v1.0/pdf-text" -Infile "C:\temp\dynamicpdf-api-samples\powershell-example\fw4.pdf" -ContentType "application/pdf" | Format-Table -Wrap -Autosize
 
-Invoke-RestMethod -Method Post -Headers @{"Authorization" = "Bearer --api-key--"} -Uri "https://api.dpdf.io/v1.0/pdf-text" -Infile "C:\temp\dynamicpdf-api-samples\powershell-example\fw4.pdf" -ContentType "application/pdf" -Outfile "C:\temp\dynamicpdf-api-samples\powershell-example\output-two.json"
+Invoke-RestMethod -Method Post -Headers @{"Authorization" = "Bearer DP--api-key--"} -Uri "https://api.dpdf.io/v1.0/pdf-text" -Infile "C:\temp\dynamicpdf-api-samples\powershell-example\fw4.pdf" -ContentType "application/pdf" -Outfile "C:\temp\dynamicpdf-api-samples\powershell-example\output-two.json"
 
-dlex layout
+#pdf-xmp endpoint
 
-Invoke-RestMethod -Method Post -Headers @{"Authorization" = "Bearer --api-key--"} -Uri "https://api.dpdf.io/v1.0/dlex-layout" -Form @{LayoutData = Get-Item -Path "C:\temp\dynamicpdf-api-samples\powershell-example\creating-pdf-dlex-layout.json"; DlexPath = "samples/creating-pdf-dlex-layout-endpoint/creating-pdf-dlex-layout.dlex"} -ContentType "multipart/form-data" -Outfile "C:\temp\dynamicpdf-api-samples\powershell-example\output-three.pdf"
+Invoke-RestMethod -Method Post -Headers @{"Authorization" = "Bearer DP--api-key--"} -Uri "https://api.dpdf.io/v1.0/pdf-xmp" -Infile "C:\temp\dynamicpdf-api-samples\powershell-example\fw4.pdf" -ContentType "application/pdf" -Outfile "C:\temp\dynamicpdf-api-samples\powershell-example\output-three.xml"
 
+#pdf and dlex-layout endpoints use the -From parameter
+
+#dlex layout
+
+Invoke-RestMethod -Method Post -Headers @{"Authorization" = "Bearer DP--api-key--"} -Uri "https://api.dpdf.io/v1.0/dlex-layout" -Form @{LayoutData = Get-Item -Path "C:\temp\dynamicpdf-api-samples\powershell-example\creating-pdf-dlex-layout.json"; DlexPath = "samples/creating-pdf-dlex-layout-endpoint/creating-pdf-dlex-layout.dlex"} -ContentType "multipart/form-data" -Outfile "C:\temp\dynamicpdf-api-samples\powershell-example\output-four.pdf"
+
+#pdf endpoint
+
+Invoke-RestMethod -Method Post -Headers @{"Authorization" = "Bearer DP--api-key--"} -Uri "https://api.dpdf.io/v1.0/pdf" -Form @{Instructions = Get-Item -Path "C:\temp\dynamicpdf-api-samples\powershell-example\instructions.json"; Resource = Get-Item -Path "C:\temp\dynamicpdf-api-samples\excel-word-conversion\sample-data.xlsx","C:\temp\dynamicpdf-api-samples\powershell-example\sample-doc.docx"} -ContentType "multipart/form-data" -Outfile "C:\temp\dynamicpdf-api-samples\powershell-example\output-one.pdf"
