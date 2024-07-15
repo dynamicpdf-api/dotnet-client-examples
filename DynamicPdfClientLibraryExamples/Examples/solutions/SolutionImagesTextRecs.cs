@@ -13,8 +13,7 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
             pdf.ApiKey = apiKey;
 
             PageInput pageInput = pdf.AddPage(1008, 612);
-            pdf.Inputs.Add(pageInput);
-
+            
             TextElement textElement = new TextElement("Hello PDF", ElementPlacement.TopCenter, 50, 100);
             textElement.Color = RgbColor.Blue;
             textElement.FontSize = 42;
@@ -58,7 +57,7 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
 
             if (pdfResponse.IsSuccessful)
             {
-                File.WriteAllBytes(outputPath + "/create-pdf-img-text-rec-output.pdf", pdfResponse.Content);
+                File.WriteAllBytes(outputPath + "/create-pdf-csharp-img-text-rec-output.pdf", pdfResponse.Content);
             }
             else
             {

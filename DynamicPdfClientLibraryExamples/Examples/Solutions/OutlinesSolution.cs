@@ -39,14 +39,11 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
 			rootOutline.Children.AddPdfOutlines(inputA);
 
 
-			Console.WriteLine(pdf.GetInstructionsJson(true));
-
-
 			PdfResponse pdfResponse = pdf.Process();
 
 			if (pdfResponse.IsSuccessful)
 			{
-				File.WriteAllBytes(outputPath + "/outlines-output.pdf", pdfResponse.Content);
+				File.WriteAllBytes(outputPath + "/outlines-output-csharp.pdf", pdfResponse.Content);
 			}
 			else
 			{

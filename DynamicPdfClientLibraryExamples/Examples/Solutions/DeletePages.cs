@@ -47,7 +47,7 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
             }
             else
             {
-                File.WriteAllBytes(outputPath + "/delete-pages-output.pdf", response.Content);
+                File.WriteAllBytes(outputPath + "/delete-pages-csharp-output.pdf", response.Content);
             }
         }
     }
