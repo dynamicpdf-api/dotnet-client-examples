@@ -29,6 +29,9 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
             HtmlResource resource = new HtmlResource(System.IO.File.ReadAllText(basePath + "/users-guide/products.html"));
             pdf.AddHtml(resource);
 
+            Console.WriteLine(pdf.GetInstructionsJson(true));
+
+
             PdfResponse pdfResponse = pdf.Process();
 
             if (pdfResponse.IsSuccessful)

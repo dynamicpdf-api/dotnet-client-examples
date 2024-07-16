@@ -17,7 +17,7 @@ namespace DynamicPdfClientLibraryExamples
             // copy and paste the Example below here, for example:
             // Examples.Solutions.MergeSolution.Run(apiKey, FileUtility.GetPath(basePath), FileUtility.GetPath(outputPath));
 
-            bool runAll = false;
+            bool runAll = true;
 
             FileUtility.CreatePath(outputPath);
 

@@ -61,7 +61,7 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
             pdf.Author = "Test Author";
             pdf.Creator = "Test Creator";
 
-            PdfInput input = pdf.AddPdf(new PdfResource(basePath + "DocumentA.pdf"));
+            PdfInput input = pdf.AddPdf(new PdfResource(basePath + "multipage-doc.pdf"));
             input.Template = template;
 
 
