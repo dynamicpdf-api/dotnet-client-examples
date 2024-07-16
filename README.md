@@ -25,31 +25,31 @@ Install-Package DynamicPDF.API
 
 ## Resources
 
-To obtain the resources for the project, login to [cloud.dynamicpdf.com](https://cloud.dynamicpdf.com/) (assuming you have an account), and go to the **Resource Manager**. You use the `samples` folder to add the resources for the tutorials and examples from this project. All resources for the sample code in the Users Guide are available at `users-guide-resources`. 
-
-- [Resource Manager Samples](https://cloud.dynamicpdf.com/docs/usersguide/environment-manager/environment-manager-sample-resources)  
+To obtain the resources for the project, login to [cloud.dynamicpdf.com](https://cloud.dynamicpdf.com/) (assuming you have an account), and go to the **File Manager**. You use the `samples` folder to add the resources for some of the examples from this project. Local resources are in the Resources folder in the DynamicPdfClientLibraryExamples project.
 
 For more information on the tutorials and example code, refer to:
 
-- https://cloud.dynamicpdf.com/docs/tutorials/tutorials-overview
-- https://cloud.dynamicpdf.com/docs/usersguide/cloud-api/cloud-api-overview
+https://dpdf.io/docs/
 
 ## Run All At Once
+
+To run all examples at once, go to the DynamicPdfClientLibraryExamples project, and run this project.
 
 To run all the examples at once you must change the flag `runAll` to `true`, otherwise manually run the example you wish to run.
 
 You need the following samples folder in your Cloud Storage space to run all the examples.
 
-* samples/report-with-cover-page
-* samples/creating-pdf-pdf-endpoint
+* samples/creating-a-page-template-designer/
+* samples/report-with-cover-page/
 * samples/creating-a-report-template-designer
 * samples/creating-a-page-template-designer
-* samples/dlex-layout
-* samples/merge-pdfs-pdf-endpoint
-* samples/fill-acro-form-pdf-endpoint
-* samples/creating-a-page-template-designer
+* samples/creating-pdf-pdf-endpoint/
+* samples/creating-pdf-dlex-layout-endpoint/
+* samples/fill-acro-form-pdf-endpoint/
+* samples/getting-started/
+* samples/merge-pdfs-pdf-endpoint/
 
-The resources folder contains all the local resources and saves all results to <project-dir>/Output which is created when run.
+The resources folder contains all the local resources and saves all results to DynamicPdfClientLibraryExamples/Output which is created when run.
 
 ## **Tutorials**
 
