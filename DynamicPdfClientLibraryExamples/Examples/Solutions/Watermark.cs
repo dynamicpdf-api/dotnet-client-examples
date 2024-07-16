@@ -8,6 +8,14 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
 {
     public class Watermark
     {
+
+        /// <summary>
+        /// This example does not work as expected, this feature is still being implemented.
+        /// </summary>
+        /// <param name="apiKey"></param>
+        /// <param name="basePath"></param>
+        /// <param name="outputPath"></param>
+
         public static void Run(string apiKey, string basePath, string outputPath)
         {
             Template template = new Template("Temp1");
