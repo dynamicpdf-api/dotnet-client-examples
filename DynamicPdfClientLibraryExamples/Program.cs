@@ -4,6 +4,7 @@ using System.IO;
 
 namespace DynamicPdfClientLibraryExamples
 {
+
     class Program
     {
         private const string basePath = "Resources";
@@ -27,20 +28,7 @@ namespace DynamicPdfClientLibraryExamples
                 return;
             }
 
-            Console.WriteLine("================================================================================");
-            Console.WriteLine("THESE SAMPLE PROJECTS MUST EXIST IN DynamicPDF Cloud API Resource Manager!");
-            Console.WriteLine("Need following folders in cloud storage to work.");
-            Console.WriteLine("samples/report-with-cover-page");
-            Console.WriteLine("samples/creating-pdf-pdf-endpoint");
-            Console.WriteLine("samples/creating-a-report-template-designer");
-            Console.WriteLine("samples/creating-a-page-template-designer");
-            Console.WriteLine("samples/dlex-layout");
-            Console.WriteLine("samples/merge-pdfs-pdf-endpoint");
-            Console.WriteLine("samples/fill-acro-form-pdf-endpoint");
-            Console.WriteLine("samples/creating-a-page-template-designer");
-            Console.WriteLine("================================================================================");
-
-
+ 
 
             Examples.Solutions.MergeSolution.Run(apiKey, FileUtility.GetPath(basePath), FileUtility.GetPath(outputPath));
 
