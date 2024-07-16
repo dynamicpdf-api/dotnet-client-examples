@@ -21,12 +21,11 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
             textElement.XOffset = -50;
             textElement.YOffset = 100;
 
-            LineElement element = new LineElement(ElementPlacement.TopLeft, 200, 200);
+            LineElement element = new LineElement(ElementPlacement.TopLeft, 900, 150);
             element.Color = RgbColor.Red;
             element.XOffset = 305;
             element.YOffset = 150;
-            element.X2Offset = 900;
-            element.Y2Offset = 150;
+
             element.LineStyle = LineStyle.Solid;
             element.Width = 4;
             pageInput.Elements.Add(element);
