@@ -1,11 +1,8 @@
 ﻿using DynamicPDF.Api;
 using DynamicPDF.Api.Elements;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DynamicPdfClientLibraryExamples.Examples.Solutions
 {
@@ -50,11 +47,13 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
 
             ImageResource imgResource = new ImageResource(basePath + "/dynamicpdfLogo.png");
             ImageElement imageElement = new ImageElement(imgResource);
-            imageElement.XOffset = 400;
-            imageElement.YOffset = 10;
-            imageElement.Placement = ElementPlacement.TopLeft;
 
-            template.Elements.Add(imageElement);
+            imageElement.ScaleX = 1;
+            imageElement.ScaleY = 1;
+
+            imageElement.Placement = ElementPlacement.TopCenter;
+
+            template.Elements.Add(imageElement); 
 
             //add pdf inputs
 
@@ -65,28 +64,12 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
             PdfInput input = pdf.AddPdf(new PdfResource(basePath + "DocumentA.pdf"));
             input.Template = template;
 
-            WordResource wordResource = new WordResource(basePath + "Doc1.docx");
-            WordInput word = new WordInput(wordResource);
-            word.PageWidth = 300;
-            word.PageHeight = 200;
-            word.TopMargin = 10;
-            word.BottomMargin = 10;
-            word.RightMargin = 40;
-            word.LeftMargin = 40;
-            word.Template = template;
-            pdf.Inputs.Add(word);
 
             ImageResource ir = new ImageResource(basePath + "testimage.png");
             ImageInput imageInput = new ImageInput(ir);
             imageInput.Template = template;
 
             pdf.Inputs.Add(imageInput);
-
-
-            HtmlResource hr = new HtmlResource(basePath + "products.html");
-            HtmlInput hi = new HtmlInput(hr);
-            hi.Template = template;
-            pdf.Inputs.Add(hi);
 
             // output combined pdf
 
@@ -105,7 +88,7 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
             }
             else
             {
-                File.WriteAllBytes(outputPath + "/combined-pdf-output.pdf", response.Content);
+                File.WriteAllBytes(outputPath + "/combined-template-csharp-pdf-output.pdf", response.Content);
             }
         }
     }
