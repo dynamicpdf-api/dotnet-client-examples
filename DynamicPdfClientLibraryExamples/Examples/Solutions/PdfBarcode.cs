@@ -21,7 +21,7 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
             pageInput.Elements.Add(code11BarcodeElement);
 
 
-            Console.WriteLine(pdf.GetInstructionsJson(true));
+           // Console.WriteLine(pdf.GetInstructionsJson(true));
 
 
             PdfResponse pdfResponse = pdf.Process();

@@ -33,7 +33,7 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
             imageInputTwo.PageHeight = 612;
             imageInputTwo.PageWidth = 1008;
 
-            Console.WriteLine(pdf.GetInstructionsJson(true));
+            //Console.WriteLine(pdf.GetInstructionsJson(true));
 
 
             PdfResponse pdfResponse = pdf.Process();

@@ -42,7 +42,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
 			Pdf pdf = new Pdf();
 			LayoutDataResource layout = new LayoutDataResource(simpleReport);
-			pdf.AddDlex("SimpleReportWithCoverPage.dlex", layout);
+			pdf.AddDlex("samples/creating-pdf-pdf-endpoint/SimpleReportWithCoverPage.dlex", layout);
 
 			return pdf;
 

@@ -46,7 +46,7 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
 
             PdfResponse response = pdf.Process();
 
-            Console.WriteLine(pdf.GetInstructionsJson(true));
+            //Console.WriteLine(pdf.GetInstructionsJson(true));
 
 
             if (response.ErrorJson != null)

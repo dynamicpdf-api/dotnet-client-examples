@@ -49,7 +49,7 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
             pageInput.Elements.Add(imageElement);
 
 
-            Console.WriteLine(pdf.GetInstructionsJson(true));
+            //Console.WriteLine(pdf.GetInstructionsJson(true));
 
 
             PdfResponse pdfResponse = pdf.Process();

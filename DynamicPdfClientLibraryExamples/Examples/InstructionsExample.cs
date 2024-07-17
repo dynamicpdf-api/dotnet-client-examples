@@ -67,9 +67,9 @@ namespace DynamicPdfClientLibraryExamples.Examples
 			pdf.ApiKey = apiKey;
 			PdfResponse response = pdf.Process();
 
-			Console.WriteLine("===================== JSON Instructions Document ======================");
-			Console.WriteLine(Utility.PrettyPrintUtil.JsonPrettify(pdf.GetInstructionsJson()));
-			Console.WriteLine("=========================================================================");
+			//Console.WriteLine("===================== JSON Instructions Document ======================");
+			//Console.WriteLine(Utility.PrettyPrintUtil.JsonPrettify(pdf.GetInstructionsJson()));
+			//Console.WriteLine("=========================================================================");
 
 			if (response.ErrorJson != null)
 			{
@@ -145,7 +145,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
 			//get pdf from cloud storage
 
-			pdf.AddPdf("DocumentC.pdf");
+			pdf.AddPdf("samples/merge-pdfs-pdf-endpoint/DocumentC.pdf");
 
 			return pdf;
 
@@ -195,7 +195,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
 			string stringLayoutData = File.ReadAllText(basePath + "SimpleReportWithCoverPage.json");
 			LayoutDataResource layoutTwo = new LayoutDataResource(stringLayoutData);
-			pdf.AddDlex("SimpleReportWithCoverPage.dlex", layoutTwo);
+			pdf.AddDlex("samples/creating-pdf-pdf-endpoint/SimpleReportWithCoverPage.dlex", layoutTwo);
 
 
 			return pdf;
@@ -212,7 +212,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 			pdf.AddImage(ir2);
 
 
-			pdf.AddImage("C.png");
+			pdf.AddImage("samples/image-info/getting-started.png");
 
 			return pdf;
         }
@@ -248,11 +248,9 @@ namespace DynamicPdfClientLibraryExamples.Examples
 			pageNumberingElement.Font = Font.Helvetica;
 			pageNumberingElement.FontSize = 42;
 
-			String cloudResourceName = "Calibri.otf";
-
+			
 			PageNumberingElement pageNumberingElementTwo = new PageNumberingElement("B", ElementPlacement.TopLeft);
 			pageNumberingElementTwo.Color = RgbColor.DarkOrange;
-			pageNumberingElementTwo.Font = new Font(cloudResourceName);
 			pageNumberingElementTwo.FontSize = 32;
 
 
