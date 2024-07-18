@@ -1,32 +1,24 @@
-﻿using DynamicPDF.Api;
-using System;
-using System.IO;
+﻿
+
+using DynamicPdfClientLibraryExamples.Utility;
 
 namespace CallDlexLayoutUsingTemplateExample
 {
 	class Program
 	{
+		private const string basePath = "../DynamicPdfClientLibraryExamples/Resources//creating-a-page-template-designer/";
+		private const string outputPath = "Output";
+
+		private const string apiKey = "DP--api-key--";
+		
 		static void Main(string[] args)
 		{
-			Run("DP.xxx-api-key-xxx", "c:/temp/dynamicpdf-api-samples/dlex-layout-template/");			
+			FileUtility.CreatePath(outputPath);
+			DynamicPdfClientLibraryExamples.Examples.CallDlexLayoutUsingTemplateExample.Run(apiKey, FileUtility.GetPath(basePath), FileUtility.GetPath(outputPath));
+					
 		}
 
-		public static void Run(String apiKey, String basePath)
-		{
-			LayoutDataResource layoutData = new LayoutDataResource(basePath + "consent-form.json");
-			DlexLayout dlexEndpoint = new DlexLayout("samples/creating-a-page-template-designer/consent-form.dlex", layoutData);
-			dlexEndpoint.ApiKey = apiKey;
-			PdfResponse response = dlexEndpoint.Process();
 
-			if (response.IsSuccessful)
-			{
-				File.WriteAllBytes(basePath + "csharp-dlex-layout-example2-output.pdf", response.Content);
-			}
-			else
-			{
-				Console.WriteLine(response.ErrorJson);
-			}
-		}
 
 	}
 }

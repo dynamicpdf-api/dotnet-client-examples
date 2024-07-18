@@ -7,7 +7,7 @@ namespace PdfDlexTutorial
     {
         static void Main(string[] args)
         {
-            string apiKey = "DP.dASL7G5Gz8VJgEwjUly9+ooHTbSSO7pOhGrt36dHXllYQK4E1wURRI+x";
+            string apiKey = "DP--api-key";
             string basePath = "../DynamicPdfClientLibraryExamples/Resources/creating-pdf-pdf-endpoint/";
             string outputPath = "Output";
 

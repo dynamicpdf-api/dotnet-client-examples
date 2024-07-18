@@ -8,7 +8,7 @@ namespace WordExcelExamples
         private const string basePath = "../DynamicPdfClientLibraryExamples/Resources/users-guide/";
         private const string outputPath = "Output";
 
-        private const string apiKey = "DP.ayD+TI8ncTr/GOLDXMvQzSU9JUvupmbPC2t14/A7nsLYTrsu7Xb/6v0z";
+        private const string apiKey = "DP--api-key--";
 
         static void Main(string[] args)
         {

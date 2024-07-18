@@ -4,7 +4,7 @@ using System.IO;
 
 namespace DynamicPdfClientLibraryExamples.Examples
 {
-    class CallDlexLayoutUsingTemplateExample
+    public class CallDlexLayoutUsingTemplateExample
     {
 		public static void Run(String apiKey, String basePath, String outputPath)
 		{
@@ -15,7 +15,7 @@ namespace DynamicPdfClientLibraryExamples.Examples
 
 			if (response.IsSuccessful)
 			{
-				File.WriteAllBytes(outputPath + "/csharp-dlex-layout-example2-output.pdf", response.Content);
+				File.WriteAllBytes(outputPath + "/csharp-dlex-layout-using-template-example-output.pdf", response.Content);
 			}
 			else
 			{
