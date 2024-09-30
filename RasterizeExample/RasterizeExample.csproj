@@ -6,8 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DynamicPDF.API" Version="1.10.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <ProjectReference Include="..\DynamicPdfClientLibraryExamples\DynamicPdfClientLibraryExamples.csproj" />
   </ItemGroup>
 
 </Project>

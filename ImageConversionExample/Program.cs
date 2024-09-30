@@ -9,7 +9,7 @@ namespace ImageConversionExample
     {
         private const string basePath = "../DynamicPdfClientLibraryExamples/Resources";
         private const string outputPath = "Output";
-        private const string apiKey = "DP.KEqlPCWJzlKsqsNlRzhxheXiB4Pm9n0859v9WgWaPSSOT7fYxzARCbtI";
+        private const string apiKey = "DP--api-key--";
 
         static void Main(string[] args)
         {
