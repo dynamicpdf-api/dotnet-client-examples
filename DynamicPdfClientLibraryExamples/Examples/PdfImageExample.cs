@@ -5,7 +5,7 @@ using System.IO;
 
 namespace DynamicPdfClientLibraryExamples.Examples
 {
-    public class PdfRasterizeExample
+    public class PdfImageExample
     {
         public static void Run(string apiKey, string basePath, string outputPath)
         {

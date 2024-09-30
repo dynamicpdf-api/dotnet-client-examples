@@ -13,7 +13,7 @@ namespace RasterizeExample
         static void Main(string[] args)
         {
             FileUtility.CreatePath(outputPath);
-            PdfRasterizeExample.Run(apiKey, FileUtility.GetPath(basePath), FileUtility.GetPath(outputPath));
+            PdfImageExample.Run(apiKey, FileUtility.GetPath(basePath), FileUtility.GetPath(outputPath));
         }
     }
 }
