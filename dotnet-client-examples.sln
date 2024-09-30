@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetPdfInfoExample", "GetPdf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageConversionExample", "ImageConversionExample\ImageConversionExample.csproj", "{72826042-9893-48F1-BD81-439FEB676D43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RasterizeExample", "RasterizeExample\RasterizeExample.csproj", "{D12211B0-EDD7-4756-A899-456DA89EFFF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PdfImageExample", "RasterizeExample\PdfImageExample.csproj", "{D12211B0-EDD7-4756-A899-456DA89EFFF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
