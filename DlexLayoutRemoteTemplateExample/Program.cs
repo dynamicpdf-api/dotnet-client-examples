@@ -10,7 +10,6 @@ namespace DlexLayoutRemoteTemplateExample
     {
 		private const string basePath = "Resources/";
 		private const string outputPath = "Output/";
-		private const string apiKey = "DP--api-key--";
 
 		private const string static_template = "https://github.com/dynamicpdf-api/dotnet-client-examples/blob/main/DlexLayoutRemoteTemplateExample/Resources/template_example.pdf";
 		private const string static_image = "https://github.com/dynamicpdf-api/dotnet-client-examples/blob/main/DlexLayoutRemoteTemplateExample/Resources/signature-one.png";
@@ -21,7 +20,8 @@ namespace DlexLayoutRemoteTemplateExample
         {
 			FileUtility.CreatePath(outputPath);
 			RunFromLocalWithRemoteTemplate(apiKey, basePath, outputPath);
-        }
+			RunFromLocalWithFiles(apiKey, basePath, outputPath);
+		}
 
 		public static void RunFromLocalWithRemoteTemplate(string apiKey, string basePath, string outputPath)
 		{
@@ -49,5 +49,28 @@ namespace DlexLayoutRemoteTemplateExample
 				Console.WriteLine(response.ErrorJson);
 			}
 		}
+
+		public static void RunFromLocalWithFiles(string apiKey, string basePath, string outputPath)
+		{
+			LayoutDataResource layoutData = new LayoutDataResource(FileUtility.GetPath(basePath + "ExampleTemplate.json"));
+			DlexResource dlexResource = new DlexResource(FileUtility.GetPath(basePath + "ExampleTemplate.dlex"), "ExampleTemplate.dlex");
+			DlexLayout dlexEndpoint = new DlexLayout(dlexResource, layoutData);
+			
+			dlexEndpoint.AddAdditionalResource(FileUtility.GetPath(basePath + "template_example.pdf"), "template_example.pdf");
+			dlexEndpoint.AddAdditionalResource(FileUtility.GetPath(basePath + "signature-one.png"), "signature-one.png");
+
+			dlexEndpoint.ApiKey = apiKey;
+			PdfResponse response = dlexEndpoint.Process();
+
+			if (response.IsSuccessful)
+			{
+				File.WriteAllBytes(FileUtility.GetPath(outputPath + "local-template-example-output.pdf"), response.Content);
+			}
+			else
+			{
+				Console.WriteLine(response.ErrorJson);
+			}
+		}
+
 	}
 }
