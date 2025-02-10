@@ -28,7 +28,7 @@ namespace DlexLayoutRemoteTemplateExample
 			WebClient myWebClient = new WebClient();
 			byte[] myDataBuffer = myWebClient.DownloadData(static_template);
 
-			dlexEndpoint.AddAdditionalResource(FileUtility.GetPath(basePath + "template_example.pdf"), "template_example.pdf");
+			dlexEndpoint.AddAdditionalResource(myDataBuffer, AdditionalResourceType.Pdf, "template_example.pdf");
 			dlexEndpoint.ApiKey = apiKey;
 			PdfResponse response = dlexEndpoint.Process();
 
