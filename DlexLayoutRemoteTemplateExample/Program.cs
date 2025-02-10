@@ -13,6 +13,9 @@ namespace DlexLayoutRemoteTemplateExample
 		private const string apiKey = "DP--api-key--";
 
 		private const string static_template = "https://github.com/dynamicpdf-api/dotnet-client-examples/blob/main/DlexLayoutRemoteTemplateExample/Resources/template_example.pdf";
+		private const string static_image = "https://github.com/dynamicpdf-api/dotnet-client-examples/blob/main/DlexLayoutRemoteTemplateExample/Resources/signature-one.png";
+
+
 
 		static void Main(string[] args)
         {
@@ -29,6 +32,11 @@ namespace DlexLayoutRemoteTemplateExample
 			byte[] myDataBuffer = myWebClient.DownloadData(static_template);
 
 			dlexEndpoint.AddAdditionalResource(myDataBuffer, AdditionalResourceType.Pdf, "template_example.pdf");
+						
+			byte[] myImageDataBuffer = myWebClient.DownloadData(static_image);
+
+			dlexEndpoint.AddAdditionalResource(myDataBuffer, AdditionalResourceType.Image, "signature-one.png");
+			
 			dlexEndpoint.ApiKey = apiKey;
 			PdfResponse response = dlexEndpoint.Process();
 

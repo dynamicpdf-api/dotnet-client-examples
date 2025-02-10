@@ -5,6 +5,7 @@
     <detail id="Detail1" autoSplit="false" height="225">
       <recordBox id="RecordBox1" x="14" y="8" width="132" height="14" underline="false" autoLeading="true" cleanParagraphBreaks="true" expandable="false" rightToLeft="false" splittable="false" dataName="Name"/>
       <recordBox id="RecordBox2" x="14" y="32" width="135" height="14" underline="false" autoLeading="true" cleanParagraphBreaks="true" expandable="false" rightToLeft="false" splittable="false" dataName="Business"/>
+      <image id="Image1" x="343" y="167" width="160" height="33" path="samples/creating-a-page-template-designer/signature-one.png"/>
     </detail>
     <footer id="Footer1" height="50"/>
   </report>
