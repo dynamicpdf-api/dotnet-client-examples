@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageConversionExample", "I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PdfImageExample", "RasterizeExample\PdfImageExample.csproj", "{D12211B0-EDD7-4756-A899-456DA89EFFF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonObjectModelExample", "JsonObjectModelExample\JsonObjectModelExample.csproj", "{E9C1A0BB-507E-48C4-8D27-F1BD61D6D853}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,10 @@ Global
 		{D12211B0-EDD7-4756-A899-456DA89EFFF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D12211B0-EDD7-4756-A899-456DA89EFFF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D12211B0-EDD7-4756-A899-456DA89EFFF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9C1A0BB-507E-48C4-8D27-F1BD61D6D853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9C1A0BB-507E-48C4-8D27-F1BD61D6D853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9C1A0BB-507E-48C4-8D27-F1BD61D6D853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9C1A0BB-507E-48C4-8D27-F1BD61D6D853}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
