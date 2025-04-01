@@ -13,16 +13,12 @@ namespace DynamicPdfClientLibraryExamples.Examples.Solutions
             pdf.ApiKey = apiKey;
 
             PageInput pageInput = pdf.AddPage(1008, 612);
-            pdf.Inputs.Add(pageInput);
-
+        
             Code11BarcodeElement code11BarcodeElement = new Code11BarcodeElement("12345678", ElementPlacement.TopCenter, 200, 50, 50);
             code11BarcodeElement.Color = RgbColor.Red;
 
             pageInput.Elements.Add(code11BarcodeElement);
-
-
            // Console.WriteLine(pdf.GetInstructionsJson(true));
-
 
             PdfResponse pdfResponse = pdf.Process();
 
