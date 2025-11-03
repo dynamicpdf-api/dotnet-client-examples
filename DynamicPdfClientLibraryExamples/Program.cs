@@ -62,6 +62,7 @@ namespace DynamicPdfClientLibraryExamples
             Examples.PdfInfoExample.Run(apiKey, FileUtility.GetPath(basePath + "/pdf-info/"));
             Examples.PdfHtmlExample.Run(apiKey, FileUtility.GetPath(basePath + "/users-guide/"), FileUtility.GetPath(outputPath));
             Examples.PdfHtmlCssWorkaroundExample.Run(apiKey, FileUtility.GetPath(basePath + "/users-guide/"), FileUtility.GetPath(outputPath));
+            Examples.PdfSecurityInfoExample.Run(apiKey, FileUtility.GetPath(basePath + "/security-info/" ));
             Examples.PdfTextExample.Run(apiKey, FileUtility.GetPath(basePath + "/extract-text-pdf-text-endpoint/"));
             Examples.Solutions.SolutionImagesTextRecs.Run(apiKey, FileUtility.GetPath(basePath + "/images-text-recs/"), FileUtility.GetPath(outputPath));
             Examples.Solutions.TemplatesExample.Run(apiKey, FileUtility.GetPath(basePath + "/templates/"), FileUtility.GetPath(outputPath));
